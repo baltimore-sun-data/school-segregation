@@ -1,0 +1,20 @@
+
+=links($color, $text-decoration)
+	a:link, a:visited, a:hover, a:active
+		color: $color
+		text-decoration: $text-decoration
+
+
+=circle-w-centering($size, $border)
+	width: $size
+	height: $size
+	border-radius: ($size + $border)/2
+	line-height: ($size - ($border * 2))
+	text-align: center
+
+=animate-height($max-height, $duration)
+	max-height: 0px
+	overflow: hidden
+	transition: max-height $duration cubic-bezier(1, 0, 0.5, 1)
+	&.is-visible
+		max-height: $max-height

@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'icons';
+	src:url('fonts/icons/icons.eot?r4m6mg');
+	src:url('fonts/icons/icons.eot?r4m6mg#iefix') format('embedded-opentype'),
+		url('fonts/icons/icons.woff2?r4m6mg') format('woff2'),
+		url('fonts/icons/icons.ttf?r4m6mg') format('truetype'),
+		url('fonts/icons/icons.woff?r4m6mg') format('woff'),
+		url('fonts/icons/icons.svg?r4m6mg#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down3:before {
+	content: "\e603";
+}
+.icon-arrow-left3:before {
+	content: "\e900";
+}
+.icon-arrow-right3:before {
+	content: "\e901";
+}
+.icon-arrow-up3:before {
+	content: "\e604";
+}
+.icon-comment:before {
+	content: "\e902";
+}
+.icon-star2:before {
+	content: "\e903";
+}
+.icon-facebook:before {
+	content: "\e904";
+}
+.icon-twitter:before {
+	content: "\e905";
+}
+.icon-close:before {
+	content: "\e117";
+}
+

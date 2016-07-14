@@ -1,0 +1,284 @@
+doctype html
+//if lt IE 7
+	<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+//if IE 7
+	<html class="no-js lt-ie9 lt-ie8">
+//if IE 8
+	<html class="no-js lt-ie9">
+
+html(class="no-js", lang="en")
+
+	head
+
+		//Basic page needs
+		meta(charset="utf-8")
+		title 
+		meta(name="description", content="")
+		meta(name="author", content="")
+
+		//Mobile Specific Metas
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+		//CSS
+		link(rel="stylesheet", type="text/css", href="stylesheets/style.css")
+
+		//Fonts
+		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Prata|Roboto+Condensed:400,700")
+
+		//Facebook OpenGraph
+		meta(property="og:title", content="")
+		meta(property="og:url", content="")
+		meta(property="og:image", content="")
+		meta(property="og:site_name", content="The Baltimore Sun")
+		meta(property="og:description", content="")
+		meta(property="fb:app_id", content="310302989040998")
+
+		//Twitter 
+		meta(name="twitter:card", content="summary")
+		meta(name="twitter:site", content="@baltimoresun")
+		meta(name="twitter:creator", content="@baltimoresun")
+		meta(name="twitter:title", content="")
+		meta(name="twitter:description", content="")
+		meta(name="twitter:image", content="")
+		meta(name="twitter:domain", content="baltimoresun.com")
+
+		//Omniture Code
+		include includes/omniture.html
+
+		//BS Ad Code
+		include includes/ad-for-header.html
+
+		//Prefetching gallery images
+		- for (var i = 1; i <= 3; i++)
+			link(rel="prefetch" href="")
+
+	body
+		script(src="http://www.baltimoresun.com/thirdpartyservice?disablessor=true")
+		div(data-trb-thirdpartynav)
+		.header
+			.header__background-video
+				// video(loop="true" width="100%" height="100%" autoplay muted)
+					source(src="" type="video/mp4")
+					source(src="" type="video/webm")
+			.header__text
+				.container.container--header
+					.header__part-no Series title
+					.header__title Title
+
+		include includes/_gallery.pug
+
+		.container.container--article
+			.article
+				.article__byline Byline
+				.article__dateline Date
+				
+				p.article__dropcap(data-dropcap="H")
+					span ere is an example of a paragraph with a dropcap. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. 
+				p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+	
+
+				#featured-video.featured-video
+					figure.fv__video
+						iframe(src="https://player.vimeo.com/video/143650587" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+
+		.container.container--article
+			.article
+
+				
+				include includes/ad-for-body--cube.html
+
+				p Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales. Sed at dapibus justo. Donec tempus nec felis convallis consequat. 
+				p Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. Suspendisse semper egestas sem sed cursus. Etiam sed mauris lorem. Vestibulum accumsan commodo vestibulum.
+				p Sed viverra, libero a sagittis condimentum, dui sapien cursus mauris, a aliquet mi mauris ac augue.  Sed id ligula ac enim luctus euismod. Etiam dapibus venenatis magna. Suspendisse ac condimentum massa, sit amet egestas risus. Vestibulum tempus diam ac malesuada pellentesque.                   
+				
+		include interactives/video-grid.pug
+
+		.container.container--article
+			.article
+
+				p Maecenas aliquet in sapien et finibus. Fusce tincidunt ligula mauris, sit amet vulputate elit lacinia sit amet. Etiam interdum mi id est lacinia, quis tincidunt sapien accumsan.  Fusce arcu orci, iaculis vel laoreet non, fermentum vitae turpis. 
+				p Maecenas varius rutrum tellus eget mollis. Praesent ut euismod ante, eu laoreet erat. In eu posuere lectus. Cras leo turpis, accumsan eu sem eget, gravida ultrices magna. Quisque vitae odio imperdiet, cursus tellus condimentum, tincidunt est.
+				p Proin lacinia convallis dolor ac elementum. Quisque venenatis augue ipsum, ut sollicitudin libero sagittis non. Praesent finibus semper enim vitae volutpat. Nullam placerat non ipsum eu laoreet.
+
+				.inline-media.inline-media--pullquote.inline-media--small(data-sr)
+					.inline-media--pullquote__text &ldquo;Pull quote&rdquo;
+					.inline-media--pullquote__src Quote attribution
+				
+				.article__chapter-title
+					.article__chapter-title__text Chapter title
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. Praesent quis pretium ipsum, eget efficitur neque. Sed et congue libero. Praesent dapibus posuere lobortis. Suspendisse pretium sed ex nec tristique. 
+		
+				figure.inline-media.inline-media--pic.inline-media--big(data-sr)
+					img(src="images/inline/example.jpg")
+					figcaption.inline-media--pic__caption Caption goes here
+					.inline-media--pic__open-gallery
+						span OPEN GALLERY
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+				p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+
+				
+				figure.media-package
+					img.media-package__img.media-package__img--left(src="images/inline/vertical-example.jpg" data-sr="enter left")
+					img.media-package__img.media-package__img--right(src="images/inline/example.jpg" data-sr="enter right")
+					.media-package__caption Caption for multiphoto package
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.article__chapter-title
+					.article__chapter-title__text Chapter title
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..
+
+				figure.inline-media.inline-media--chart.inline-media--small.inline-media--has-title(data-sr)
+					.inline-media__title Chart			
+					include charts/bars.html
+					
+				p Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales. Sed at dapibus justo. Donec tempus nec felis convallis consequat. 
+				p Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. Suspendisse semper egestas sem sed cursus. Etiam sed mauris lorem. Vestibulum accumsan commodo vestibulum.
+				p Sed viverra, libero a sagittis condimentum, dui sapien cursus mauris, a aliquet mi mauris ac augue.  Sed id ligula ac enim luctus euismod. Etiam dapibus venenatis magna. Suspendisse ac condimentum massa, sit amet egestas risus. Vestibulum tempus diam ac malesuada pellentesque.
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				figure.inline-media.inline-media--pic.inline-media--full(data-sr="enter bottom")
+					img(src="images/inline/example.jpg")
+					figcaption.inline-media--pic__caption Caption goes here
+					.inline-media--pic__open-gallery
+						a(href="#" target="_blank") SEE MORE PHOTOS
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				figure.inline-media.inline-media--pullquote.inline-media--big(data-sr)
+					.inline-media--pullquote__text &ldquo;Pull quote&rdquo;
+					.inline-media--pullquote__src Quote attribution
+		
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				figure.inline-media.inline-media--pullquote.inline-media--small(data-sr)
+					.inline-media--external-link__icon
+						span.icon-star2
+					.inline-media--external-link__title External link title
+					.inline-media--external-link__content External link description
+					.inline-media--external-link__link <a href="#" target="_blank"> Learn more. </a>
+
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+				.article__chapter-title
+					.article__chapter-title__text Chapter title
+
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				figure.inline-media.inline-media--pic.inline-media--full(data-sr="enter bottom")
+					img(src="images/inline/example.jpg")
+					figcaption.inline-media--pic__caption Caption goes here
+					.inline-media--pic__open-gallery
+						span OPEN GALLERY					
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.inline-media--timeline.timeline-container 
+					.tl-item
+						.tl-date 2001-2003
+						.tl-name Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales.
+						.arrow-right
+					.tl-item
+						.tl-date 2003-2005
+						.tl-name Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. 
+						.arrow-right  
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.article__chapter-title
+					.article__chapter-title__text Chapter title
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		include interactives/maps/example.html
+
+		.container.container--article
+			.article
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				figure.inline-media.inline-media--video.inline-media--big(data-sr)
+					iframe(src="https://player.vimeo.com/video/142890066?color=ffffff")
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.article__chapter-title
+					.article__chapter-title__text Chapter title
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				figure.inline-media.inline-media--pic.inline-media--small(data-sr)
+					img(src="images/inline/vertical-example.jpg")
+					figcaption.inline-media--pic__caption Caption goes here
+					.inline-media--pic__open-gallery
+						span OPEN GALLERY
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				p.reporter-email Contact reporter reporter at <a href="mailto:#" target="_blank"> reporter email </a>
+	
+				figure.inline-media.inline-media--pullquote.inline-media--full.inline-media--has-title.inline-media--mobile(data-sr)
+					.inline-media__title More in the series
+					include includes/_parts-menu.pug
+
+
+		include includes/ad-for-body--leaderboard.html
+
+		footer.footer
+			
+			section.footer__credits
+				ul
+					li.label Credit
+					li Name(s)
+
+			section.footer__share Share the story: <span class="icon-facebook"></span> <span class="icon-twitter"></span>
+
+			section.footer__comments
+				include includes/comments.html
+
+			
+			section.footer__logo
+				img(src="images/baltimore-sun-logo-white.png" width="300")
+
+
+
+
+
+
+
+		// Javascript
+
+		//Load jQuery CDN, fall back to local version if necessary		
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+		script.
+			window.jQuery || document.write('<script src="scripts/jquery-1.10.2.min.js">\x3C/script>')
+
+		//Load the rest
+		script(src="scripts/min/javascript-min.js")
+
+		//Configuration for scrollReveal.js
+		script.
+			var config = {
+				enter: 'right',
+				move: '50px',
+			 	scale:    { direction: 'up', power: '0' },
+			 	vFactor: 0.5
+			}
+			window.sr = new scrollReveal(config);
+
+
+
+	

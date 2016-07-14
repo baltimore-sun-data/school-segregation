@@ -1,0 +1,84 @@
+// Featured video styles, prefixed with .fv
+
+.featured-video
+	position: relative
+	overflow: hidden
+	margin: 0 0 25px 0
+
+	&:hover
+		.fv__play-btn
+			transform: translateY(-50%) scale(1.1)
+			transform: translate3d(0, -50%, 0) scale(1.1)
+
+
+.fv
+	
+	&__video
+		position: relative
+		margin: 0
+
+		@media (max-width: 960px)
+			padding-top: 56.25%
+		
+
+		iframe
+			display: block
+			margin: 0 auto
+
+			@media (max-width: 960px)
+				position: absolute
+				top: 0
+				left: 0
+				+size(100%)
+	
+	&__overlay
+		position: absolute
+		top: 0
+		left: 0
+		+size(100%)
+		background-image: url("../images/featured-video.jpg")
+		background-position: center center
+		background-size: cover
+		cursor: pointer
+		opacity: 1
+		visibility: visible
+		transition: all 0.5s
+
+		&.is-hidden
+			opacity: 0
+			visibility: hidden
+	
+	&__play-btn
+		position: absolute
+		top: 50%
+		left: 0
+		width: 100%
+		text-align: center
+		cursor: pointer
+		opacity: 1
+		visibility: visible
+		transform: translateY(-50%) scale(1)
+		transform: translate3d(0, -50%, 0) scale(1)
+		transition: all 0.5s
+
+		&:before
+			content: ''
+			display: inline-block
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 50px 0 50px 80px
+			border-color: transparent transparent transparent #ffffff
+
+			@media (max-width: 500px)
+				border-width: 35px 0 35px 50px
+				
+
+		&.is-hidden
+			opacity: 0
+			visibility: hidden	
+
+
+
+
+

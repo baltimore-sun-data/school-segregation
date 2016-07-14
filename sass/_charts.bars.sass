@@ -1,0 +1,48 @@
+
+.pop-charts
+
+	&__tabs
+		width: 250px
+		margin: 0 auto 20px auto
+		+clearfix
+
+	&__tab
+		text-transform: uppercase
+		cursor: pointer
+		float: left
+		width: 50%
+		padding: 10px 0
+		text-align: center
+		color: #A9A9A9
+		border: 1px solid #CCC
+		font:
+			family: $roboto
+		&:hover
+			background-color: #F0F0F0
+
+		&.is-selected
+			cursor: default
+			background-color: $navy
+			border-color: $navy
+			color: white
+
+.pop-chart
+	width: 100%
+	height: 0
+	opacity: 0
+	visibility: hidden
+
+	&.is-visible
+		height: auto
+		opacity: 1
+		visibility: visible
+
+	&__title
+		font:
+			family: $roboto
+			size: 15px
+		color: #555
+		padding-bottom: 10px
+		border-bottom: 2px solid #E0E0E0
+		margin-bottom: 10px
+
