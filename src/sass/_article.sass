@@ -1,0 +1,386 @@
+/* Article Styles */
+
+
+.article
+	position: relative
+	z-index: 2
+
+	p
+		max-width: 700px
+		font:
+			family: $georgia
+			size: 16px
+		color: #555
+		line-height: 1.6
+		margin-bottom: 25px
+		+links(maroon, underline)
+		@media (max-width: $no-rail)
+			margin: 0 auto 25px auto
+
+		&.reporter-email
+			font-family: $roboto
+			color: #999
+			padding-top: 10px
+			border-top: 1px solid #F0F0F0
+
+	&__byline
+		font:
+			family: $roboto
+		color: #A9A9A9
+		margin-bottom: 0px
+		text-transform: uppercase
+
+		span
+
+			@media (min-width: $header-bp5+1)
+				&:before
+					content: ' | '
+
+			@media (max-width: $header-bp5)
+				display: block
+
+	&__dateline
+		font:
+			family: $roboto
+			style: italic
+		color: #A9A9A9
+		margin-bottom: 40px
+
+	&__dropcap
+		position: relative
+
+		span
+			position: relative
+			z-index: 2
+
+		&:before
+			content: attr(data-dropcap)
+			// position: absolute
+			// z-index: 1
+			// top: 0
+			// right: 95%
+			// line-height: 90px
+			margin-top: -10px
+			font:
+				family: $prata
+				// size: 90px
+				size: 70px
+			color: maroon
+			line-height: 70px
+			// @media (max-width: 4023px)
+			position: static
+			float: left
+			padding-top: 4px
+			padding-right: 8px
+			padding-left: 3px
+
+		// &__replacee
+		// 	@media (max-width: 4023px)
+		// 		display: none
+
+	&__chapter-title
+		margin: 100px 0 20px 0
+		max-width: 590px
+		text-align: center
+		@media (max-width: $no-rail)
+			margin: 100px auto 20px auto
+
+		&__text
+			display: inline-block
+			padding: 10px 30px
+			border-top: 1px solid $navy
+			font:
+				family: $prata
+				size: 30px
+			color: #333
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: -3px
+				left: 50%
+				+size(100px 5px)
+				background-color: $navy
+				transform: translateX(-50%)
+
+
+
+.inline-media
+	float: right
+	//border: $navy solid
+	background-color: white
+	margin: 20px 0 20px 30px
+	position: relative
+	border-top: 2px solid $navy
+
+	&__title
+		position: absolute
+		bottom: 100%
+		left: 0
+		width: 100%
+		padding: 10px 0 15px 0
+		margin-bottom: 2px
+		text-align: center
+		text-transform: uppercase
+		color: #999
+		background-color: white
+		font:
+			family: $roboto
+			size: 18px
+		+links(#999, none)
+		a:hover
+			color: maroon
+
+
+	&__source
+		font:
+			family: $roboto
+			size: 12px
+		color: #888
+		text-align: left
+
+
+	
+	&--big
+		width: 450px
+		@media (max-width: 730px)
+			float: none
+			width: 95%
+			margin: 40px auto
+
+	&--small
+		width: 300px
+		@media (max-width: 550px)
+			float: none
+			width: 95%
+			margin: 40px auto
+
+	&--has-title
+		margin: 70px 0 20px 30px
+
+	&--full
+		float: none
+		margin-left: 0
+		margin-right: 0
+
+	&--not-mobile
+		@media (max-width: 600px)
+			display: none
+
+	&--mobile
+		@media (min-width: 601px)
+			display: none
+			
+
+	&--pullquote
+		border-width: 2px 0 5px 0
+		padding: 15px 0
+		font:
+			family: $prata
+			size: 30px
+
+		&__src
+			margin-top: 10px
+			font:
+				family: $roboto
+				size: 14px
+			color: #888
+			text-align: right
+			text-transform: uppercase
+
+	&--pic
+		border-width: 0 0 5px 0
+		img
+			display: block
+			width: 100%
+		
+		&__caption
+			padding: 10px 10px 20px 10px
+			font:
+				family: $roboto
+				size: 14px
+			color: #555
+
+		&__source
+			text-align: right
+			padding: 5px 10px 0 10px
+			text-transform: uppercase
+
+		&__open-gallery
+			font:
+				family: $roboto
+				size: 14px
+				weight: 700
+			color: white
+			background-color: $navy
+			display: block
+			width: 100%
+			text-align: center
+			margin: 5px 0
+			padding: 5px 0 5px 0
+			cursor: pointer
+			+links(#999, none)
+			&:hover, a:hover
+				color: #555
+
+
+	&--chart
+		border: 0
+		@media (max-width: 550px)		
+			border-top: 1px solid #E0E0E0
+			border-bottom: 1px solid #E0E0E0
+			padding: 20px 0
+			margin-left: auto
+			margin-right: auto
+
+
+	&--external-link
+
+		&__title
+			text-align: center
+			margin-bottom: 10px
+
+		&__content
+			font:
+				family: $roboto
+				size: 18px
+			color: #555
+
+		&__link
+			text-align: center
+			margin-top: 10px
+			font:
+				family: $roboto
+				size: 18px
+
+			+links(maroon, underline)
+
+
+	&--video
+		border: 0
+		height: 0
+		padding-top: (450px * 0.5625)
+		background-color: black
+		position: relative
+
+		@media (max-width: 730px)
+			padding-top: 56.25%
+
+		iframe
+			position: absolute
+			top: 0
+			left: 0
+			+size(100%)
+			border: 0
+	&--timeline
+		float: right
+		position: relative
+
+.media-package
+	+clearfix
+	margin: 20px auto
+	padding: 20px 0
+	background-color: white
+	
+	&__img
+		//width: 49%
+		float: left
+
+		&--left
+			width: 35%
+			margin-right: 2%
+
+		&--right
+			width: 63%
+
+		@media (max-width: 500px)
+			&--left, &--right
+				width: 100%
+				margin: 0 0 10px 0
+
+	&__caption
+		@extend .inline-media--pic__caption
+		float: left
+		width: 60%
+		@media (max-width: 500px)
+			width: auto
+			float: none
+
+
+
+	&__open-gallery
+		font:
+			family: $roboto
+			size: 14px
+			weight: 700
+		color: #999
+		margin: 10px 0 5px 0
+		cursor: pointer
+		&:hover
+			color: #555		
+
+//Timeline
+.timeline-container
+	display: inline-block
+	vertical-align: top
+	width: 320px
+	border-left: 2px solid #E0E0E0
+	margin: 0px
+	padding-top: 1px
+	color: #666666
+	text-align: left
+	@media (max-width: 1000px)
+		display: none
+
+
+.tl-item
+	padding: 10px 0px 10px 20px
+	position: relative
+	margin-top: 20px
+	min-height: 300px
+
+.tl-date
+	text-transform: uppercase
+	color: lighten(#A9A9A9, 5%)
+	display: inline-block
+
+.tl-name
+	color: #666666
+
+.tl-more
+	max-height: 0px
+	overflow: hidden
+	@include transition( all 0.5s )
+	&.expanded
+		max-height: 200px
+
+.toggle-more
+	cursor: pointer
+	font-size: 20px
+	display: inline-block
+	@include transition-property(transform)
+	@include transition-duration(0.8s)
+	@include transition-delay(0.5s)
+	&.flipped
+		@include transform(rotate(180deg))
+
+.arrow-right
+	position: absolute
+	top: 20px
+	left: 0px
+	margin-top: 0px
+	width: 0px
+	height: 0px
+	border-top: 10px solid transparent
+	border-bottom: 10px solid transparent
+	border-left: 10px solid #E0E0E0
+	&:before
+		content: ''
+		width: 0 
+		height: 0
+		border-top: 9px solid transparent
+		border-bottom: 9px solid transparent
+		border-left: 9px solid white
+		position: absolute
+		top: -9px
+		left: -12px

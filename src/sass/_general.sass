@@ -1,0 +1,51 @@
+/* General Styles */
+
+
+.container
+	width: 1000px
+	margin: 0 auto
+	
+	@media (max-width: 970px)
+		width: auto
+		padding: 0 20px
+
+
+	//temp
+	//border: 1px solid red
+	//min-height: 1000px
+	&--header
+		position: relative
+
+	&--article
+		position: relative
+		overflow-x: hidden
+		//&:before
+		//	content: ''
+		//	position: absolute
+		//	top: 0
+		//	left: 610px
+		//	bottom: 0
+		//	width: 1px
+		//	background-color: #CCC	
+		//	z-index: 1
+		//	@media (max-width: $no-rail)
+		//		display: none
+
+
+	&--interactive
+		width: 1200px
+		@media (max-width: 1220px)
+			width: auto
+			padding: 0 10px
+
+
+/* Keyframes */
+
+
+@keyframes fade-in-up
+	from
+		opacity: 0
+		transform: translateY(30px)
+	to
+		opacity: 1
+		transform: translateY(0)

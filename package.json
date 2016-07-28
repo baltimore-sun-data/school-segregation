@@ -1,0 +1,30 @@
+{
+  "name": "longform-template",
+  "version": "1.0.0",
+  "description": "A template for longform and in-depth stories from The Baltimore Sun.",
+  "main": "index.js",
+  "scripts": {
+    "pug": "pug  -P -p src/index.pug < src/index.pug > index.html",
+    "sass": "node-sass --output-style compressed -o dist/stylesheets src/sass",
+    "uglify": "mkdir -p dist/js && uglifyjs src/scripts/*.js -m -o dist/min/app.js && uglifyjs src/scripts/*.js -m -c -o dist/min/app.min.js",
+    "build:all": "npm run pug && npm run sass && npm run uglify",
+    "watch:css": "onchange 'src/sass/*.sass' -- npm run sass",
+    "watch:js": "onchange 'src/scripts/*.js' -- npm run uglify",
+    "watch:pug": "onchange 'src/*.pug' -- npm run pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baltimore-sun-data/template-longform.git"
+  },
+  "author": " (Caroline Pate)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baltimore-sun-data/template-longform/issues"
+  },
+  "homepage": "https://github.com/baltimore-sun-data/template-longform#readme",
+  "devDependencies": {
+    "node-sass": "^3.8.0",
+    "onchange": "^2.5.0",
+    "uglify-js": "^2.7.0"
+  }
+}

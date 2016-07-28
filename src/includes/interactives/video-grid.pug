@@ -1,0 +1,44 @@
+//This interactive is prefixed with "vg" for video grid
+
+- var kids = [{"name":"Exel Estrada","lang":"Spanish","id":"exel-estrada"},{"name":"Carlotta","lang":"Italian","id":"carlotta"},{"name":"Faraz Nadeem","lang":"Urdu","id":"faraz-nadeem"},{"name":"Fayza Al halabi","lang":"Arabic","id":"fayza-al-halabi"},{"name":"Franck Kibinda","lang":"French","id":"franck-kibinda"},{"name":"Franklin Aguilar","lang":"Spanish","id":"franklin-aguilar"},{"name":"Karen Abuel","lang":"Tagalog","id":"karen-abuel"},{"name":"Kibra Buluts","lang":"Tigrignya","id":"kibra-buluts"},{"name":"Maria Lourenco","lang":"Portuguese","id":"maria-lourenco"},{"name":"Mona Al halabi","lang":"Arabic","id":"mona-al-halabi"},{"name":"Monique Ngomba","lang":"Sango","id":"monique-ngomba"},{"name":"Mussa Alenga","lang":"Swahili","id":"mussa-alenga"},{"name":"Nan Wang","lang":"Mandarin, Shangai dialect","id":"nan-wang"},{"name":"Nar Bahadur Darjee","lang":"Nepali","id":"nar-bahadur-darjee"},{"name":"Narmin Al Eethawi","lang":"Arabic","id":"narmin-aleethawi"},{"name":"Norma Argueta","lang":"Spanish","id":"norma-argueta"},{"name":"Reema Alfaheed","lang":"Arabic","id":"reema-alfaheed"},{"name":"Tina Lin","lang":"Mandarin","id":"tina-lin"},{"name":"Vigueur Kibinda","lang":"French","id":"vigueur-kibinda"},{"name":"Yonas Fishaye","lang":"Tigrignya/Amharic","id":"yonas-fishaye"}];
+
+.vg
+	.container.container--interactive
+		.vg__header Video or image grid
+
+		.vg__portraits
+
+			.vg__spotlight
+				.vg__spotlight__content
+					.vg__spotlight__video
+						iframe(src="" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen autoplay)
+					.vg__spotlight__info
+						.vg__spotlight__name
+						.vg__spotlight__age Age: <span></span>
+						.vg__spotlight__country Country of origin: <span></span>
+						.vg__spotlight__language Native language: <span></span>
+						.vg__spotlight__btns
+							.vg__spotlight__btn.vg__spotlight__btn--other.is-selected(data-src="")
+								div in <span></span>
+							.vg__spotlight__btn.vg__spotlight__btn--english(data-src="")
+								div in English
+						.vg__spotlight__mobile-dropdown
+							select
+								option(value="" disabled selected) Hear another voice:
+								each kid in kids
+									option(value=kid.id) #{kid.name} / #{kid.lang}
+
+			- for (var x = 1; x < 6; x++)
+				.vg__portraits-row(data-row=x)
+					- for (var y = 4; y > 0; y--)
+						- var z = (4 * x - y)
+						unless z > 21
+							.vg__portrait(data-kid=kids[z].id style="background-image: url('dist/images/example.jpg');")
+								.vg__portrait__details
+									.vg__portrait__name #{kids[z].name}
+									.vg__portrait__lang #{kids[z].lang}
+
+		.vg__expand-btn-container
+			.vg__expand-btn Expand
+
+

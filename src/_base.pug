@@ -1,0 +1,105 @@
+mixin footer(credits)
+	footer.footer
+		section.footer__credits
+			ul
+				each credit in credits
+					li.label #{credit.role}
+					li #{credit.name}
+		section.footer__comments
+			include includes/comments.html
+		section.footer__logo
+			img(src="images/baltimore-sun-logo-white.png" width="300")
+
+
+doctype html
+//if lt IE 7
+	<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+//if IE 7
+	<html class="no-js lt-ie9 lt-ie8">
+//if IE 8
+	<html class="no-js lt-ie9">
+
+html(class="no-js", lang="en")
+
+	head
+
+		//Basic page needs
+		meta(charset="utf-8")
+		title 
+		meta(name="description", content="")
+		meta(name="author", content="")
+
+		//Mobile Specific Metas
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+		//CSS
+		link(rel="stylesheet", type="text/css", href="dist/stylesheets/style.css")
+
+		//Fonts
+		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Prata|Roboto+Condensed:400,700")
+
+		//Facebook OpenGraph
+		meta(property="og:title", content="")
+		meta(property="og:url", content="")
+		meta(property="og:image", content="")
+		meta(property="og:site_name", content="The Baltimore Sun")
+		meta(property="og:description", content="")
+		meta(property="fb:app_id", content="310302989040998")
+
+		//Twitter 
+		meta(name="twitter:card", content="summary")
+		meta(name="twitter:site", content="@baltimoresun")
+		meta(name="twitter:creator", content="@baltimoresun")
+		meta(name="twitter:title", content="")
+		meta(name="twitter:description", content="")
+		meta(name="twitter:image", content="")
+		meta(name="twitter:domain", content="baltimoresun.com")
+
+		//Omniture Code
+		include includes/omniture.html
+
+		//BS Ad Code
+		include includes/ads/ad-for-header.html
+
+		//Prefetching gallery images
+		- for (var i = 1; i <= 3; i++)
+			link(rel="prefetch" href="")
+
+	body
+		script(src="http://www.baltimoresun.com/thirdpartyservice?disablessor=true")
+		div(data-trb-thirdpartynav)
+
+		//block for story layout
+		block content
+
+		include includes/ads/ad-for-body--leaderboard.html
+
+		//footer mixin
+		+footer([{'role': 'That Role','name': 'This Person'},{'role': 'This Role', 'name': 'That Person'}])
+
+
+
+
+
+
+
+		// Javascript
+
+		//Load jQuery CDN, fall back to local version if necessary		
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+		script.
+			window.jQuery || document.write('<script src="src/scripts/jquery-1.10.2.min.js">\x3C/script>')
+
+		//Load the rest
+		//script(src="dist/min/javascript-min.js")
+		script(src="dist/min/app.min.js")
+
+		//Configuration for scrollReveal.js
+		script.
+			var config = {
+				enter: 'right',
+				move: '50px',
+			 	scale:    { direction: 'up', power: '0' },
+			 	vFactor: 0.5
+			}
+			window.sr = new scrollReveal(config);

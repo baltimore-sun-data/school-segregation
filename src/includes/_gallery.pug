@@ -1,0 +1,22 @@
+
+.overlay
+#gallery.gallery
+	.gallery__visible-photo
+		.gallery__photos
+			- for (var i = 1; i <= 3; i++)
+				.gallery__photo(style="background-image: url('dist/images/example.jpg');")
+
+		.gallery__caption
+	.gallery__info
+		.gallery__progress-bar
+		.gallery__toggle-caption
+			.gallery__control.gallery__control--clickable CAPTION
+		.gallery__controls
+			.gallery__control.gallery__control--slide.gallery__control--clickable(data-dir="left")
+				span.icon-arrow-left3
+			.gallery__control.gallery__control--counter <span id="gallery__current-img"> 1 </span> of 3
+			.gallery__control.gallery__control--slide.gallery__control--clickable(data-dir="right")
+				span.icon-arrow-right3
+		.gallery__close
+			.gallery__control.gallery__control--close.gallery__control--clickable
+				span.icon-close

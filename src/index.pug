@@ -1,0 +1,188 @@
+extends _base.pug
+
+mixin timeline(items)
+	.inline-media--timeline.timeline-container
+		each item in items 
+			.tl-item
+				.tl-date #{item.date}
+				.tl-name #{item.description}
+				.arrow-right
+block content
+		.header
+			//.header__background-video
+				video(loop="true" width="100%" height="100%" autoplay muted)
+					source(src="" type="video/mp4")
+					source(src="" type="video/webm")
+			.header__text
+				.container.container--header
+					.header__part-no Series title
+					.header__title Title
+
+		//load photo gallery			
+		include includes/_gallery.pug
+
+		.container.container--article
+			.article
+				.article__byline Byline
+				.article__dateline Date
+
+				//menu for series
+				figure.inline-media.inline-media--pullquote.inline-media--small.inline-media--has-title.inline-media--not-mobile(data-sr)
+					.inline-media__title
+						a(href="#") More in the series
+					include includes/_parts-menu.pug
+				
+				p.article__dropcap(data-dropcap="H")
+					span ere is an example of a paragraph with a dropcap. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. 
+				p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+				p Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. Suspendisse semper egestas sem sed cursus. Etiam sed mauris lorem. Vestibulum accumsan commodo vestibulum.
+
+				//large inline video
+				#featured-video.featured-video
+					figure.fv__video
+						iframe(src="https://player.vimeo.com/video/143650587" width="100%" height="560" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+
+		.container.container--article
+			.article
+
+				//ad
+				include includes/ads/ad-for-body--cube.html
+
+				p Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales. Sed at dapibus justo. Donec tempus nec felis convallis consequat. 
+				p Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. Suspendisse semper egestas sem sed cursus. Etiam sed mauris lorem. Vestibulum accumsan commodo vestibulum.
+				p Sed viverra, libero a sagittis condimentum, dui sapien cursus mauris, a aliquet mi mauris ac augue.  Sed id ligula ac enim luctus euismod. Etiam dapibus venenatis magna. Suspendisse ac condimentum massa, sit amet egestas risus. Vestibulum tempus diam ac malesuada pellentesque.                   
+				
+
+		.container.container--article
+			.article
+
+				p Maecenas aliquet in sapien et finibus. Fusce tincidunt ligula mauris, sit amet vulputate elit lacinia sit amet. Etiam interdum mi id est lacinia, quis tincidunt sapien accumsan.  Fusce arcu orci, iaculis vel laoreet non, fermentum vitae turpis. 
+				p Maecenas varius rutrum tellus eget mollis. Praesent ut euismod ante, eu laoreet erat. In eu posuere lectus. Cras leo turpis, accumsan eu sem eget, gravida ultrices magna. Quisque vitae odio imperdiet, cursus tellus condimentum, tincidunt est.
+				p Proin lacinia convallis dolor ac elementum. Quisque venenatis augue ipsum, ut sollicitudin libero sagittis non. Praesent finibus semper enim vitae volutpat. Nullam placerat non ipsum eu laoreet.
+
+				//small pull quote in sidebar
+				.inline-media.inline-media--pullquote.inline-media--small(data-sr)
+					.inline-media--pullquote__text &ldquo;Pull quote&rdquo;
+					.inline-media--pullquote__src Quote attribution
+				
+				.article__chapter-title
+					.article__chapter-title__text Chapter title
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. Praesent quis pretium ipsum, eget efficitur neque. Sed et congue libero. Praesent dapibus posuere lobortis. Suspendisse pretium sed ex nec tristique. 
+		
+				
+				//large photo gallery link in sidebar
+				figure.inline-media.inline-media--pic.inline-media--big(data-sr)
+					img(src="dist/images/example.jpg")
+					figcaption.inline-media--pic__caption Caption goes here
+					btn.inline-media--pic__open-gallery OPEN GALLERY
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+				p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+
+				
+				//multiphoto package - photos enter from left and right
+				figure.media-package
+					img.media-package__img.media-package__img--left(src="dist/images/vertical-example.jpg" data-sr="enter left")
+					img.media-package__img.media-package__img--right(src="dist/images/example.jpg" data-sr="enter right")
+					.media-package__caption Caption for multiphoto package
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+				//chart or interactive in sidebar
+				figure.inline-media.inline-media--chart.inline-media--small.inline-media--has-title(data-sr)
+					.inline-media__title Chart			
+					include includes/interactives/bars.html
+					
+				p Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales. Sed at dapibus justo. Donec tempus nec felis convallis consequat. 
+				p Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. Suspendisse semper egestas sem sed cursus. Etiam sed mauris lorem. Vestibulum accumsan commodo vestibulum.
+				p Sed viverra, libero a sagittis condimentum, dui sapien cursus mauris, a aliquet mi mauris ac augue.  Sed id ligula ac enim luctus euismod. Etiam dapibus venenatis magna. Suspendisse ac condimentum massa, sit amet egestas risus. Vestibulum tempus diam ac malesuada pellentesque.
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				//large pull quote
+				figure.inline-media.inline-media--pullquote.inline-media--big(data-sr)
+					.inline-media--pullquote__text &ldquo;Pull quote&rdquo;
+					.inline-media--pullquote__src Quote attribution
+		
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				//small external link
+				figure.inline-media.inline-media--pullquote.inline-media--small(data-sr)
+					.inline-media--external-link__title External link title
+					.inline-media--external-link__content External link description
+					.inline-media--external-link__link <a href="#" target="_blank"> Learn more. </a>
+
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				
+				//full-width link to photo gallery
+				figure.inline-media.inline-media--pic.inline-media--full(data-sr="enter bottom")
+					img(src="dist/images/example.jpg")
+					figcaption.inline-media--pic__caption Caption goes here
+					btn.inline-media--pic__open-gallery OPEN GALLERY					
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				//timeline mixin
+				+timeline([{'date': '2001-2003','description': 'Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales.'},{'date': '2003-2005', 'description': 'Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. '}]) 
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.article__chapter-title
+					.article__chapter-title__text Chapter title
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		//full-width interactive
+		include includes/interactives/example.html
+
+		.container.container--article
+			.article
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				figure.inline-media.inline-media--video.inline-media--big(data-sr)
+					iframe(src="https://player.vimeo.com/video/142890066?color=ffffff")
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+		//full-width video or photo grid
+		include includes/interactives/video-grid.pug
+
+		.container.container--article
+			.article
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				//small link to photo gallery in sidebar
+				figure.inline-media.inline-media--pic.inline-media--small(data-sr)
+					img(src="dist/images/vertical-example.jpg")
+					figcaption.inline-media--pic__caption Caption goes here
+					.inline-media--pic__open-gallery OPEN GALLERY
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				p.reporter-email Contact reporter reporter at <a href="mailto:#" target="_blank"> reporter email </a>
+	
+				//series menu for mobile
+				figure.inline-media.inline-media--pullquote.inline-media--full.inline-media--has-title.inline-media--mobile(data-sr)
+					.inline-media__title More in the series
+					include includes/_parts-menu.pug
+
+
+	

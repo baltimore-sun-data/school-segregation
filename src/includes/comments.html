@@ -1,0 +1,18 @@
+<!-- Facebook Commenting -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- /Facebook Commenting -->
+
+<div id="comments">
+	<h1> <span class="icon-comment"></span> Leave a comment </h1>
+  <!--replace data-href with page url to enable facebook comments-->
+  <div class="fb-comments" data-href="#" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
+</div>

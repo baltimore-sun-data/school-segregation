@@ -1,0 +1,107 @@
+/* Header styles */
+
+$header-bp1: 1125px //Video proportions make the video shorter than the header height, so allow video to supply height
+$header-bp2: 1024px //Replace video with still
+$header-bp3: 768px //Tablet
+$header-bp4: 515px //Adjust title size
+$header-bp5: 415px //Adjust title size again
+
+.header
+	height: 650px
+	max-height: 100vh //Maxes out at the screen's height
+	position: relative
+	background-color: #222 //temp?
+	overflow: hidden
+	margin: 50px 0 30px 0
+	@media (max-width: $header-bp1)
+		height: auto
+	
+	@media (max-width: $header-bp3)
+		max-height: none
+
+	&__background-video
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		width: 100%
+		min-height: 100%
+		video
+			+size(100%)
+			display: block
+			@media (max-width: $header-bp2)
+				display: none
+		img
+			background-color: #222
+			width: 100%
+			display: block
+			@media (min-width: $header-bp2 + 1)
+				display: none
+
+			
+		@media (max-width: $header-bp1)
+			position: static
+
+		@media (min-width: $header-bp3+1)
+
+			&:before //Overlay to darken the video
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				+size(100%)
+				background-color: rgba(0,0,0,0.5)
+
+	&__text
+		@media (min-width: $header-bp3+1)
+			position: absolute
+			bottom: 70px
+			left: 0
+			width: 100%
+			color: white
+			z-index: 5
+			opacity: 0
+			animation: fade-in-up 0.8s 1.5s forwards
+
+		@media (max-width: $header-bp3)
+			background-color: white
+
+
+	&__part-no
+		font:
+			family: $roboto
+			size: 20px
+		text-transform: uppercase
+		margin-bottom: 15px
+		color: white
+		color: rgba(255,255,255,0.7)
+		
+		@media (max-width: $header-bp3)
+			font-size: 18px
+			color: maroon
+			padding-top: 10px
+
+
+
+	&__title
+		font:
+			family: $prata
+			size: 90px
+		line-height: 1
+		
+		@media (max-width: $header-bp2)
+			font-size: 70px	
+
+		@media (max-width: $header-bp4)
+			font-size: 55px
+
+		@media (max-width: $header-bp5)
+			font-size: 40px
+
+
+
+
+
+
+
+
