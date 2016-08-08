@@ -1,11 +1,3 @@
-// @codekit-prepend "modernizr.js"
-// @codekit-prepend "jquery-1.10.2.min.js"
-// @codekit-prepend "d3.min.js"
-// @codekit-prepend "scrollReveal.min.js"
-// @codekit-prepend "chart.min.js"
-// @codekit-prepend "barchartdata.js"
-
-
 var app = app || {
 
 	init: function(){
