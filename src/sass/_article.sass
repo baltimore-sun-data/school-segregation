@@ -1,117 +1,127 @@
 /* Article Styles */
 
-
 .article
 	position: relative
 	z-index: 2
 
 	p
-		max-width: 700px
+		max-width: 800px
 		font:
 			family: $georgia
-			size: 16px
-		color: #555
-		line-height: 1.6
-		margin-bottom: 25px
+			size: 1em
+		color: $dark-grey
+		line-height: 1.5
+		margin: 0 10% 25px 10%
 		+links(maroon, underline)
 		@media (max-width: $no-rail)
 			margin: 0 auto 25px auto
 
 		&.reporter-email
-			font-family: $roboto
-			color: #999
+			font-family: $franklin
+			color: $dark-grey
 			padding-top: 10px
-			border-top: 1px solid #F0F0F0
+			border-top: 1px solid $light-grey
 
 	&__byline
 		font:
-			family: $roboto
-		color: #A9A9A9
+			family: $franklin
+		color: $dark-grey
 		margin-bottom: 0px
 		text-transform: uppercase
 
 		span
 
-			@media (min-width: $header-bp5+1)
+			@media (min-width: $size-phone2+1)
 				&:before
 					content: ' | '
 
-			@media (max-width: $header-bp5)
+			@media (max-width: $size-phone2)
 				display: block
 
 	&__dateline
 		font:
-			family: $roboto
+			family: $franklin
 			style: italic
-		color: #A9A9A9
+		color: $dark-grey
 		margin-bottom: 40px
 
 	&__dropcap
 		position: relative
-
+		
 		span
 			position: relative
 			z-index: 2
+			font:
+				family: $franklin
+				size: 2em
+			color: $dark-grey
+
+			@media (max-width: $size-laptop)
+				font-size: 1.6em
+
+			@media (max-width: $size-phone1)
+				font-size: 1.3em
+			
+		&--intro
+			color: $dark-red !important
+			font-weight: 700
 
 		&:before
 			content: attr(data-dropcap)
-			// position: absolute
-			// z-index: 1
-			// top: 0
-			// right: 95%
-			// line-height: 90px
-			margin-top: -10px
 			font:
-				family: $prata
-				// size: 90px
-				size: 70px
-			color: maroon
-			line-height: 70px
-			// @media (max-width: 4023px)
+				family: $franklin
+				size: 17em
+				weight: 700
+			color: $dark-red
+			line-height: 200px
 			position: static
 			float: left
-			padding-top: 4px
-			padding-right: 8px
-			padding-left: 3px
+			border-top: 10px solid
+			margin: 23px 10px 0 0
 
-		// &__replacee
-		// 	@media (max-width: 4023px)
-		// 		display: none
+			@media (max-width: $size-laptop)
+				font-size: 10em
+				line-height: 120px
+				margin: 17px 10px 0 0
 
 	&__chapter-title
-		margin: 100px 0 20px 0
-		max-width: 590px
-		text-align: center
+		margin: 0 10% 20px 10%
+		max-width: 800px
+		font-weight: 700
 		@media (max-width: $no-rail)
-			margin: 100px auto 20px auto
+			margin: 100px auto 20px auto		
+
+		&__number
+			font:
+				family: $franklin
+				size: 1.7em
+			color: $light-grey
+			@media (max-width: $size-phone1)
+				font-size: 1.5em
+
+			svg
+				width: 25px
+				height: 25px
+				padding-top: 8px
+				path
+					color: $light-grey
+					fill: $light-grey
 
 		&__text
 			display: inline-block
-			padding: 10px 30px
-			border-top: 1px solid $navy
 			font:
-				family: $prata
-				size: 30px
-			color: #333
+				family: $franklin
+				size: 3.5em
+			color: $dark-red
 			position: relative
-			&:before
-				content: ''
-				position: absolute
-				top: -3px
-				left: 50%
-				+size(100px 5px)
-				background-color: $navy
-				transform: translateX(-50%)
+			@media (max-width: $size-phone1)
+				font-size: 3em
+
 
 
 
 .inline-media
-	float: right
-	//border: $navy solid
-	background-color: white
-	margin: 20px 0 20px 30px
 	position: relative
-	border-top: 2px solid $navy
 
 	&__title
 		position: absolute
@@ -122,31 +132,33 @@
 		margin-bottom: 2px
 		text-align: center
 		text-transform: uppercase
-		color: #999
+		color: $dark-grey
 		background-color: white
 		font:
-			family: $roboto
+			family: $franklin
 			size: 18px
-		+links(#999, none)
+		+links($dark-grey, none)
 		a:hover
-			color: maroon
-
+			color: $dark-red
 
 	&__source
 		font:
-			family: $roboto
+			family: $franklin
 			size: 12px
-		color: #888
+		color: $dark-grey
 		text-align: left
-
-
 	
 	&--big
-		width: 450px
+		width: 800px
+		margin: 0 10% 0 10%
 		@media (max-width: 730px)
 			float: none
 			width: 95%
 			margin: 40px auto
+
+		h4
+			margin: 0 0 10px 0
+			width: 100%
 
 	&--small
 		width: 300px
@@ -163,6 +175,12 @@
 		margin-left: 0
 		margin-right: 0
 
+		h4
+			margin: 0 10% 10px 10%
+			max-width: 800px
+			@media (max-width: $no-rail)
+				margin: 0 0 10px 0
+
 	&--not-mobile
 		@media (max-width: 600px)
 			display: none
@@ -171,35 +189,75 @@
 		@media (min-width: 601px)
 			display: none
 			
-
 	&--pullquote
 		border-width: 2px 0 5px 0
-		padding: 15px 0
+		color: $dark-red
 		font:
 			family: $prata
 			size: 30px
 
+		&__text
+			padding: 0 10px 0 10px
+
 		&__src
 			margin-top: 10px
+			padding: 0 10px 0 10px
 			font:
-				family: $roboto
+				family: $franklin
 				size: 14px
-			color: #888
-			text-align: right
+			color: $dark-grey
 			text-transform: uppercase
+
+	&--graphic
+		border-width: 0 0 5px 0
+		//img
+		//	display: block
+		//	width: 100%
+		//	height: auto
+
+		&__title
+			font:
+				family: $franklin
+				size: 2em
+				weight: 700
+			text-transform: uppercase
+			float: left
+			color: $dark-grey
+			@media (max-width: $size-phone1)
+				font-size: 1.8em
+
+			svg
+				height: 30px
+				width: 30px
+				padding-top: 10px
+				path
+					fill: $dark-red
+
+			&--red
+				color: $dark-red !important
+
+		&__chatter
+			font:
+				family: $franklin !important
+				size: 1.1em !important
+				weight: 700
+
 
 	&--pic
 		border-width: 0 0 5px 0
 		img
 			display: block
 			width: 100%
+			height: auto
 		
 		&__caption
-			padding: 10px 10px 20px 10px
+			padding: 10px
 			font:
-				family: $roboto
+				family: $franklin
 				size: 14px
-			color: #555
+			color: $dark-grey
+			text-transform: uppercase
+			text-align: center
 
 		&__source
 			text-align: right
@@ -208,20 +266,17 @@
 
 		&__open-gallery
 			font:
-				family: $roboto
-				size: 14px
+				family: $franklin
+				size: 16px
 				weight: 700
-			color: white
-			background-color: $navy
+			color: $dark-red
 			display: block
 			width: 100%
 			text-align: center
-			margin: 5px 0
-			padding: 5px 0 5px 0
 			cursor: pointer
-			+links(#999, none)
+			+links($dark-grey, none)
 			&:hover, a:hover
-				color: #555
+				color: $light-grey
 
 
 	&--chart
@@ -242,7 +297,7 @@
 
 		&__content
 			font:
-				family: $roboto
+				family: $franklin
 				size: 18px
 			color: #555
 
@@ -250,7 +305,7 @@
 			text-align: center
 			margin-top: 10px
 			font:
-				family: $roboto
+				family: $franklin
 				size: 18px
 
 			+links(maroon, underline)
@@ -283,15 +338,18 @@
 	background-color: white
 	
 	&__img
-		//width: 49%
 		float: left
 
 		&--left
-			width: 35%
+			width: 49.9%
 			margin-right: 2%
 
 		&--right
-			width: 63%
+			width: 48.1%
+
+		&--bottom
+			margin-top: 2%
+			margin-bottom: 10px
 
 		@media (max-width: 500px)
 			&--left, &--right
@@ -300,59 +358,19 @@
 
 	&__caption
 		@extend .inline-media--pic__caption
-		float: left
-		width: 60%
-		@media (max-width: 500px)
-			width: auto
-			float: none
 
 
 
 	&__open-gallery
 		font:
-			family: $roboto
-			size: 14px
+			family: $franklin
+			size: 16px
 			weight: 700
 		color: #999
 		margin: 10px 0 5px 0
 		cursor: pointer
 		&:hover
 			color: #555		
-
-//Timeline
-.timeline-container
-	display: inline-block
-	vertical-align: top
-	width: 320px
-	border-left: 2px solid #E0E0E0
-	margin: 0px
-	padding-top: 1px
-	color: #666666
-	text-align: left
-	@media (max-width: 1000px)
-		display: none
-
-
-.tl-item
-	padding: 10px 0px 10px 20px
-	position: relative
-	margin-top: 20px
-	min-height: 300px
-
-.tl-date
-	text-transform: uppercase
-	color: lighten(#A9A9A9, 5%)
-	display: inline-block
-
-.tl-name
-	color: #666666
-
-.tl-more
-	max-height: 0px
-	overflow: hidden
-	@include transition( all 0.5s )
-	&.expanded
-		max-height: 200px
 
 .toggle-more
 	cursor: pointer

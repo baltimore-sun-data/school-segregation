@@ -1,5 +1,102 @@
 /* General Styles */
+html 
+	font-size: 16px
 
+#tophat
+	height: 50px
+	background-color: #000
+	overflow: hidden
+	position: fixed
+	z-index: 9999
+	width: 100%
+	border-bottom: #FFF 1px solid
+
+	ul
+		list-style-type: none
+		float: right
+
+		li
+			float: left
+			padding-left: 10px
+
+			a
+				font:
+					family: $franklin
+					weight: 700
+				text-transform: uppercase
+				text-decoration: none
+				color: #FFF
+
+				span
+					padding: 5px
+				
+			svg
+				width: 20px
+				height: 20px
+				visibility: hidden
+				margin-top: -20px
+				padding-top: 5px
+
+				path
+					color: $dark-red
+					fill: $dark-red
+
+			&:hover
+				span
+					background-color: $dark-red
+
+				svg
+					visibility: visible
+
+#logo
+	width: 250px
+	height: 100%
+	float: left
+	line-height: 55px
+	vertical-align: middle
+	img
+		margin: 0 10px
+		width: 90%
+	@media (max-width: 400px)
+		width: 200px
+
+
+.tophat-share-tools
+	float: left
+	padding-left: 15px
+	height: 100%
+	font-size: 24px
+	vertical-align: middle
+	margin: -6px 10px 0 15px
+	text-align: center
+	color: #FFF
+	span
+		cursor: pointer
+		vertical-align: middle
+		margin-right: 8px
+		&:hover
+			color: #CCC 
+	@media (max-width: 760px)
+		font-size: 18px
+		line-height: 40px
+
+.active
+	span
+		background-color: $dark-red
+
+	svg
+		visibility: visible
+
+.img-responsive
+	display: block
+	width: 100%
+	height: auto
+
+.ad--leaderboard
+	margin: 0 10% 0 10%
+	width: 800px
+	@media (max-width: $size-tablet)
+		display: none
 
 .container
 	width: 1000px
@@ -9,31 +106,17 @@
 		width: auto
 		padding: 0 20px
 
-
-	//temp
-	//border: 1px solid red
-	//min-height: 1000px
 	&--header
 		position: relative
 
 	&--article
 		position: relative
 		overflow-x: hidden
-		//&:before
-		//	content: ''
-		//	position: absolute
-		//	top: 0
-		//	left: 610px
-		//	bottom: 0
-		//	width: 1px
-		//	background-color: #CCC	
-		//	z-index: 1
-		//	@media (max-width: $no-rail)
-		//		display: none
 
 
 	&--interactive
-		width: 1200px
+		max-width: 2000px
+		margin-bottom: 25px
 		@media (max-width: 1220px)
 			width: auto
 			padding: 0 10px
