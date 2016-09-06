@@ -4,23 +4,6 @@ var app = app || {
 
 		//app.share();
 		app.show_video();
-		app.navigation();
-
-	},
-
-	navigation: function(){
-
-		$("section").mouseenter(function(){
-			var id = $(this).attr('id');
-			$('a').removeClass('active');
-			$("[href=#"+id+"]").addClass('active');
-		});
-
-		$("section").on("touchmove", function(){
-			var id = $(this).attr('id');
-			$('a').removeClass('active');
-			$("[href=#"+id+"]").addClass('active');
-		});
 
 	},
 

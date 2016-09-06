@@ -1,18 +1,23 @@
+/* Header styles */
+
+$header-bp1: 1125px //Video proportions make the video shorter than the header height, so allow video to supply height
+$header-bp2: 1024px //Replace video with still
+$header-bp3: 768px //Tablet
+$header-bp4: 515px //Adjust title size
+$header-bp5: 415px //Adjust title size again
+
 .header
 	height: 650px
 	max-height: 100vh //Maxes out at the screen's height
 	position: relative
 	background-color: #222 //temp?
 	overflow: hidden
-	margin-bottom: 30px
-	@media (max-width: $size-laptop)
-		height: 250px
-	
-	@media (max-width: $size-tablet)
-		max-height: none
+	margin: 50px 0 30px 0
+	@media (max-width: $header-bp1)
 		height: auto
-		background-color: white
-
+	
+	@media (max-width: $header-bp3)
+		max-height: none
 
 	&__background-video
 		position: absolute
@@ -24,20 +29,20 @@
 		video
 			+size(100%)
 			display: block
-			@media (max-width: $size-laptop)
+			@media (max-width: $header-bp2)
 				display: none
 		img
 			background-color: #222
 			width: 100%
 			display: block
-			@media (min-width: $size-laptop + 1)
+			@media (min-width: $header-bp2 + 1)
 				display: none
 
 			
-		@media (max-width: $size-desktop)
+		@media (max-width: $header-bp1)
 			position: static
 
-		@media (min-width: $size-tablet+1)
+		@media (min-width: $header-bp3+1)
 
 			&:before //Overlay to darken the video
 				content: ''
@@ -48,9 +53,9 @@
 				background-color: rgba(0,0,0,0.5)
 
 	&__text
-		@media (min-width: $size-tablet+1)
+		@media (min-width: $header-bp3+1)
 			position: absolute
-			top: 60px
+			bottom: 70px
 			left: 0
 			width: 100%
 			color: white
@@ -58,9 +63,8 @@
 			opacity: 0
 			animation: fade-in-up 0.8s 1.5s forwards
 
-		@media (max-width: $size-tablet)
+		@media (max-width: $header-bp3)
 			background-color: white
-			margin-top: 50px
 
 
 	&__part-no
@@ -72,7 +76,7 @@
 		color: white
 		color: rgba(255,255,255,0.7)
 		
-		@media (max-width: $size-tablet)
+		@media (max-width: $header-bp3)
 			font-size: 18px
 			color: maroon
 			padding-top: 10px
@@ -80,73 +84,20 @@
 
 
 	&__title
-		max-width: 800px
-		margin: 0 10% 0 10%
 		font:
-			family: $franklin
-			size: 13em
-			weight: 700
+			family: $prata
+			size: 90px
 		line-height: 1
-		text-transform: uppercase
-		text-align: center
 		
-		@media (max-width: $size-laptop)
+		@media (max-width: $header-bp2)
 			font-size: 70px	
 
-		@media (max-width: $size-phone1)
+		@media (max-width: $header-bp4)
 			font-size: 55px
 
-		@media (max-width: $size-phone2)
+		@media (max-width: $header-bp5)
 			font-size: 40px
 
-		&--red
-			color: $dark-red !important
-
-		svg
-			width: 100px
-			height: 100px
-			margin: 0 -30px 15px 0
-
-			@media (max-width: $size-laptop)
-				width: 50px
-				height: 50px
-				margin: 0	
-
-			@media (max-width: $size-phone1)
-				width: 30px
-				height: 30px
-				margin: 0	
-			
-			path
-				color: #FFF
-				fill: #FFF
-
-				@media (max-width: $size-tablet)
-					color: #000
-					fill: #000	
-
-
-	&__chatter
-		max-width: 800px
-		margin: 0 10% 0 10%
-		font:
-			family: $franklin
-			weight: 700
-			size: 2em
-		text-transform: uppercase
-		text-align: center
-
-		@media (max-width: $size-laptop)
-			font-size: 1.8em	
-
-		@media (max-width: $size-phone1)
-			font-size: 1.5em
-
-		@media (max-width: $size-phone2)
-			font-size: 1.3em
-
-		&--red
-			color: $dark-red !important
 
 
 
