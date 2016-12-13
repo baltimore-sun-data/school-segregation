@@ -8,57 +8,31 @@ mixin timeline(items)
 				.tl-name #{item.description}
 				.arrow-right
 block content
-		.header
-			//.header__background-video
-				video(loop="true" width="100%" height="100%" autoplay muted)
-					source(src="" type="video/mp4")
-					source(src="" type="video/webm")
-			.header__text
-				.container.container--header
-					.header__part-no Series title
-					.header__title Title
 
-		//load photo gallery			
-		include includes/_gallery.pug
-
+		//full-width interactive
+		include includes/interactives/full-map.html
+		
 		.container.container--article
 			.article
-				.article__byline Byline
-				.article__dateline Date
+				.header__title Examining Baltimore's 2016 rise in robberies
+				.article__byline Adam Marton
+				.article__dateline December 2016
 
-				//menu for series
-				figure.inline-media.inline-media--pullquote.inline-media--small.inline-media--has-title.inline-media--not-mobile(data-sr)
-					.inline-media__title
-						a(href="#") More in the series
-					include includes/_parts-menu.pug
-				
-				p.article__dropcap(data-dropcap="H")
-					span ere is an example of a paragraph with a dropcap. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. 
-				p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-				p Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. Suspendisse semper egestas sem sed cursus. Etiam sed mauris lorem. Vestibulum accumsan commodo vestibulum.
-
-				//large inline video
-				#featured-video.featured-video
-					figure.fv__video
-						iframe(src="https://player.vimeo.com/video/143650587" width="100%" height="560" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
-
-		.container.container--article
-			.article
-
-				//ad
+				p Baltimore has experienced a rise in robberies in 2016. Baltimore Police has assigned more detectives to work these cases as a result. Baltimore police classify robberies in one of four ways: carjacking, commercial, residential and street robberies. Examining data from Open Baltimore, it would appear that robberies are generally up across the board and in particular in two key categories: street robberies and carjackings. 
+				p
+					em See map above to explore Baltimore carjackings and street robberies in 2016
+					//ad
 				include includes/ads/ad-for-body--cube.html
-
-				p Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales. Sed at dapibus justo. Donec tempus nec felis convallis consequat. 
-				p Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. Suspendisse semper egestas sem sed cursus. Etiam sed mauris lorem. Vestibulum accumsan commodo vestibulum.
-				p Sed viverra, libero a sagittis condimentum, dui sapien cursus mauris, a aliquet mi mauris ac augue.  Sed id ligula ac enim luctus euismod. Etiam dapibus venenatis magna. Suspendisse ac condimentum massa, sit amet egestas risus. Vestibulum tempus diam ac malesuada pellentesque.                   
-				
+				p Baltimore 5,036 total robberies in 2016* as compared to 4,717 in 2015: a 6% increase across all categories. Two of those categories-- carjackings and street robberies-- were up significantly while the others -- residential and commerical -- saw declines or only slight increases.  
+				p Commercial robberies were actually down significantly year over year from 874 in 2015 down to 754 in 2016, a 16% decline in commercial robberies. While residential robberies were up slightly from last year (from 434 in 2015 to 446 in 2016, a 3% jump), these robberies are actually down 30% since 2011 (when there were 581 residential robberies). Residential robberies in 2016 were highest in the Northeastern section of the city, which has experienced a 20% rise in residential robberies since 2015. 
+				p Carjackings rose 26% from 283 in 2015 to 380 in 2016. Street robberies saw a 10% jump with 3,126 total street robberies in 2015 up to 3,456 in 2016. Since these two categories saw a precipitous jump in 2016, the rest of this analysis will focus on street robberies and carjackings. 
+				p
+					strong INSERT CHART-- 4 TYPES OF ROBBERIES 2015 - 2016
+		//full-width interactive
+		include includes/interactives/example.html
 
 		.container.container--article
 			.article
-
-				p Maecenas aliquet in sapien et finibus. Fusce tincidunt ligula mauris, sit amet vulputate elit lacinia sit amet. Etiam interdum mi id est lacinia, quis tincidunt sapien accumsan.  Fusce arcu orci, iaculis vel laoreet non, fermentum vitae turpis. 
-				p Maecenas varius rutrum tellus eget mollis. Praesent ut euismod ante, eu laoreet erat. In eu posuere lectus. Cras leo turpis, accumsan eu sem eget, gravida ultrices magna. Quisque vitae odio imperdiet, cursus tellus condimentum, tincidunt est.
-				p Proin lacinia convallis dolor ac elementum. Quisque venenatis augue ipsum, ut sollicitudin libero sagittis non. Praesent finibus semper enim vitae volutpat. Nullam placerat non ipsum eu laoreet.
 
 				//small pull quote in sidebar
 				.inline-media.inline-media--pullquote.inline-media--small(data-sr)
@@ -66,7 +40,7 @@ block content
 					.inline-media--pullquote__src Quote attribution
 				
 				.article__chapter-title
-					.article__chapter-title__text Chapter title
+					.article__chapter-title__text Carjackings in 2016
 
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. Praesent quis pretium ipsum, eget efficitur neque. Sed et congue libero. Praesent dapibus posuere lobortis. Suspendisse pretium sed ex nec tristique. 
 		
@@ -156,8 +130,6 @@ block content
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-		//full-width video or photo grid
-		include includes/interactives/video-grid.pug
 
 		.container.container--article
 			.article
@@ -179,10 +151,7 @@ block content
 				
 				p.reporter-email Contact reporter reporter at <a href="mailto:#" target="_blank"> reporter email </a>
 	
-				//series menu for mobile
-				figure.inline-media.inline-media--pullquote.inline-media--full.inline-media--has-title.inline-media--mobile(data-sr)
-					.inline-media__title More in the series
-					include includes/_parts-menu.pug
+
 
 
 	
