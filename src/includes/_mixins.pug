@@ -1,0 +1,7 @@
+mixin timeline(items)
+	.inline-media--timeline.timeline-container
+		each item in items 
+			.tl-item
+				.tl-date #{item.date}
+				.tl-name #{item.description}
+				.arrow-right
