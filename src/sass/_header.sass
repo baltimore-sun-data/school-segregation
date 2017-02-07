@@ -7,18 +7,111 @@ $header-bp4: 515px //Adjust title size
 $header-bp5: 415px //Adjust title size again
 
 .header
-	height: 650px
-	max-height: 100vh //Maxes out at the screen's height
 	position: relative
+	display: table
+	width: 100%
+	height: 100vh
+	max-height: 100vh //Maxes out at the screen's height
+	margin: 50px 0 30px 0
+	border: 0
 	background-color: #222 //temp?
 	overflow: hidden
-	margin: 50px 0 30px 0
 	@media (max-width: $header-bp1)
 		height: auto
 	
 	@media (max-width: $header-bp3)
 		max-height: none
 
+	&__colorBlock
+		position: absolute
+		top: -9999px
+		left: -9999px
+		bottom: -9999px
+		right: -9999px
+		display: flex
+		width: 100%
+		height: 100%
+		margin: auto
+		&--bg
+			background-image: linear-gradient(right, black 50%, white 50%)
+			background-image: -o-linear-gradient(right, black 50%, white 50%)
+			background-image: -moz-linear-gradient(right, black 50%, white 50%)
+			background-image: -webkit-linear-gradient(right, black 50%, white 50%)
+			background-image: -ms-linear-gradient(right, black 50%, white 50%)
+			z-index: 1
+		&--rotate
+			width: 999%
+			height: 999%
+			background-image: linear-gradient(bottom, black 50%, white 50%)
+			background-image: -o-linear-gradient(bottom, black 50%, white 50%)
+			background-image: -moz-linear-gradient(bottom, black 50%, white 50%)
+			background-image: -webkit-linear-gradient(bottom, black 50%, white 50%)
+			background-image: -ms-linear-gradient(bottom, black 50%, white 50%)
+			z-index: 2
+			@include transition(transform 1.5s ease)
+			&.active
+				@include transform(rotate(-90deg))
+	&__seriesTitle
+		position: relative
+		// top: -9999px
+		// left: -9999px
+		// bottom: -9999px
+		// right: -9999px
+		// top: 50%
+		display: table-cell
+		width: 100%
+		height: 0
+		margin: auto
+		text-align: center
+		vertical-align: middle
+		z-index: 3
+		h1
+			display: inline-block
+			width: 100%
+			margin: 0 auto
+			text-transform: uppercase
+			font-size: 72px
+		.titlePart
+			&--0
+				color: black
+				&.active
+					position: absolute
+					right: 50%
+			&--1
+				color: white
+				&.active
+					position: absolute
+					left: 50%
+
+
+	// &__colorBlockWrapper
+	// 	display: table
+	// 	width: 100%
+	// 	height: 100%
+	// 	.color
+	// 		display: table-cell
+	// 		&--0
+	// 			background-color: #F44336
+	// 		&--1
+	// 			background-color: #FF9800
+	// 		&--2
+	// 			background-color: #FFEB3B
+	// 		&--3
+	// 			background-color: #4CAF50
+	// 		&--4
+	// 			background-color: #2196F3
+	// 		&--5
+	// 			background-color: #3F51B5
+	// 		&--6
+	// 			background-color: #9C27B0
+	// &__overlay
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 0
+	// 	display: block
+	// 	width: 100%
+	// 	height: 100%
+	// 	background-color: rgba(black, .3)
 	&__background-video
 		position: absolute
 		top: 0
@@ -69,7 +162,7 @@ $header-bp5: 415px //Adjust title size again
 
 	&__part-no
 		font:
-			family: $roboto
+			family: $accentFont-0
 			size: 20px
 		text-transform: uppercase
 		margin-bottom: 15px
@@ -85,7 +178,7 @@ $header-bp5: 415px //Adjust title size again
 
 	&__title
 		font:
-			family: $prata
+			family: $headFont-0
 			size: 90px
 		line-height: 1
 		

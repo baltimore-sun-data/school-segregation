@@ -18,7 +18,7 @@ html(class="no-js", lang="en")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 
 		link(rel="stylesheet", type="text/css", href="stylesheets/style.css")
-		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Prata|Roboto+Condensed:400,700")
+		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Lato|Montserrat|Old+Standard+TT|PT+Sans|PT+Serif|Prata|Roboto+Condensed:400,700")
 
 		//Facebook OpenGraph
 		meta(property="og:title", content="")
@@ -49,7 +49,7 @@ html(class="no-js", lang="en")
 
 	body
 		script(src="http://www.baltimoresun.com/thirdpartyservice?disablessor=true")
-		div(data-trb-thirdpartynav)
+		div(data-trb-thirdpartynav style='position: fixed;')
 
 		//block for story layout
 		block content
@@ -72,9 +72,9 @@ html(class="no-js", lang="en")
 		//Load jQuery CDN, fall back to local version if necessary		
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
 		script.
-			window.jQuery || document.write('<script src="../src/js/jquery-1.10.2.min.js">\x3C/script>')
+			window.jQuery || document.write('<script src="../src/scripts/jquery-1.10.2.min.js">\x3C/script>')
 		//Load the rest
-		script(src="js/app.min.js")
+		script(src="scripts/app.js")
 		//Configuration for scrollReveal.js
 		script.
 			var config = {

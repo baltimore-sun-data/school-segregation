@@ -1,6 +1,4 @@
 /* Article Styles */
-
-
 .article
 	position: relative
 	z-index: 2
@@ -8,40 +6,38 @@
 	p
 		max-width: 700px
 		font:
-			family: $georgia
+			family: $bodyFont
 			size: 16px
 		color: #555
 		line-height: 1.6
 		margin-bottom: 25px
-		+links(maroon, underline)
+		+links($red, underline)
 		@media (max-width: $no-rail)
 			margin: 0 auto 25px auto
 
 		&.reporter-email
-			font-family: $roboto
+			font-family: $accentFont-0
 			color: #999
 			padding-top: 10px
 			border-top: 1px solid #F0F0F0
 
 	&__byline
 		font:
-			family: $roboto
+			family: $accentFont-0
 		color: #A9A9A9
 		margin-bottom: 0px
 		text-transform: uppercase
 
 		span
-
 			@media (min-width: $header-bp5+1)
 				&:before
 					content: ' | '
-
 			@media (max-width: $header-bp5)
 				display: block
 
 	&__dateline
 		font:
-			family: $roboto
+			family: $accentFont-0
 			style: italic
 		color: #A9A9A9
 		margin-bottom: 40px
@@ -62,10 +58,10 @@
 			// line-height: 90px
 			margin-top: -10px
 			font:
-				family: $prata
+				family: $headFont-0
 				// size: 90px
 				size: 70px
-			color: maroon
+			color: $red
 			line-height: 70px
 			// @media (max-width: 4023px)
 			position: static
@@ -81,16 +77,16 @@
 	&__chapter-title
 		margin: 100px 0 20px 0
 		max-width: 590px
-		text-align: center
+		text-align: center		
 		@media (max-width: $no-rail)
 			margin: 100px auto 20px auto
 
 		&__text
 			display: inline-block
 			padding: 10px 30px
-			border-top: 1px solid $navy
+			border-top: 1px solid $red
 			font:
-				family: $prata
+				family: $headFont-0
 				size: 30px
 			color: #333
 			position: relative
@@ -100,23 +96,76 @@
 				top: -3px
 				left: 50%
 				+size(100px 5px)
-				background-color: $navy
+				background-color: $red
 				transform: translateX(-50%)
 
+.chapterTitleImage
+	position: relative
+	width: 100%
+	height: 66vh
+	// max-height: 100vh
+	margin-bottom: 1em
+	// margin: 100px 0 20px 0
+	// max-width: 590px
+	// text-align: center		
+	// @media (max-width: $no-rail)
+	// 	margin: 100px auto 20px auto
+	// box-shadow: 0 0 24px rgba(0,0,0,0.3)
+	background-image: url('http://data.baltimoresun.com/news/unsettled-journeys/part-1/images/inline/patterson.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
 
+	&__text
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		width: 1000px
+		margin: 0 auto
+		padding: .5em 0
+		color: #fff
+		font:
+			family: $headFont-0
+			size: 48px
+
+	img
+		position: relative
+		z-index: -1
+		width: 100%
+		height: auto	
+		// padding: 10px 30px
+		// border-top: 1px solid $red
+		// position: relative
+
+	&:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		bottom: 0
+		background: -moz-linear-gradient(top, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 100%) /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))) /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%) /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%) /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%) /* IE10+ */
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%) /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ) /* IE6-9 */
 
 .inline-media
 	float: right
-	//border: $navy solid
 	background-color: white
-	margin: 20px 0 20px 30px
 	position: relative
-	border-top: 2px solid $navy
+	background: #fff
+	border-radius: 2px
+	position: relative
+	box-shadow: 0 3px 6px rgba(black,0.1)
+	padding: .5em
 
 	&__title
-		position: absolute
-		bottom: 100%
-		left: 0
+		// position: absolute
+		// bottom: 100%
+		// left: 0
 		width: 100%
 		padding: 10px 0 15px 0
 		margin-bottom: 2px
@@ -125,21 +174,18 @@
 		color: #999
 		background-color: white
 		font:
-			family: $roboto
+			family: $accentFont-0
 			size: 18px
 		+links(#999, none)
 		a:hover
-			color: maroon
-
+			color: $red
 
 	&__source
 		font:
-			family: $roboto
+			family: $accentFont-0
 			size: 12px
 		color: #888
 		text-align: left
-
-
 	
 	&--big
 		width: 450px
@@ -156,12 +202,14 @@
 			margin: 40px auto
 
 	&--has-title
-		margin: 70px 0 20px 30px
+		// margin: 70px 0 20px 30px
+		padding-top: 0
 
 	&--full
 		float: none
-		margin-left: 0
-		margin-right: 0
+		// margin: 0 auto
+		// margin-left: 0
+		// margin-right: 0
 
 	&--not-mobile
 		@media (max-width: 600px)
@@ -171,18 +219,17 @@
 		@media (min-width: 601px)
 			display: none
 			
-
 	&--pullquote
 		border-width: 2px 0 5px 0
-		padding: 15px 0
+		// padding: 15px 0
 		font:
-			family: $prata
+			family: $headFont-0
 			size: 30px
 
 		&__src
 			margin-top: 10px
 			font:
-				family: $roboto
+				family: $accentFont-0
 				size: 14px
 			color: #888
 			text-align: right
@@ -190,6 +237,7 @@
 
 	&--pic
 		border-width: 0 0 5px 0
+
 		img
 			display: block
 			width: 100%
@@ -197,7 +245,7 @@
 		&__caption
 			padding: 10px 10px 20px 10px
 			font:
-				family: $roboto
+				family: $accentFont-0
 				size: 14px
 			color: #555
 
@@ -208,11 +256,11 @@
 
 		&__open-gallery
 			font:
-				family: $roboto
+				family: $accentFont-0
 				size: 14px
 				weight: 700
 			color: white
-			background-color: $navy
+			background-color: $red
 			display: block
 			width: 100%
 			text-align: center
@@ -223,17 +271,6 @@
 			&:hover, a:hover
 				color: #555
 
-
-	&--chart
-		border: 0
-		@media (max-width: 550px)		
-			border-top: 1px solid #E0E0E0
-			border-bottom: 1px solid #E0E0E0
-			padding: 20px 0
-			margin-left: auto
-			margin-right: auto
-
-
 	&--external-link
 
 		&__title
@@ -242,7 +279,7 @@
 
 		&__content
 			font:
-				family: $roboto
+				family: $accentFont-0
 				size: 18px
 			color: #555
 
@@ -250,11 +287,9 @@
 			text-align: center
 			margin-top: 10px
 			font:
-				family: $roboto
+				family: $accentFont-0
 				size: 18px
-
-			+links(maroon, underline)
-
+			+links($red, underline)
 
 	&--video
 		border: 0
@@ -272,27 +307,51 @@
 			left: 0
 			+size(100%)
 			border: 0
+
 	&--timeline
 		float: right
 		position: relative
 
+.container--article	
+	.inline-media
+		// box-shadow: 0 3px 6px rgba($red,0.1)
+		&__title
+		&__source
+		&--big
+		&--small
+		&--has-title
+		&--full
+		&--pullquote
+		&--pic
+			img
+			&__caption
+			&__source
+			&__open-gallery
+				&:hover, a:hover
+		&--external-link
+			&__title
+			&__content
+			&__link
+		&--video
+			// @media (max-width: 730px)
+			iframe
+		&--timeline
+
 .media-package
 	+clearfix
-	margin: 20px auto
-	padding: 20px 0
-	background-color: white
-	
+	width: 100%
+	margin: 0
+	padding: 1em
+	background-color: white	
+	box-shadow: 0 0 18px rgba(0,0,0,0.1)
 	&__img
 		//width: 49%
 		float: left
-
 		&--left
 			width: 35%
 			margin-right: 2%
-
 		&--right
 			width: 63%
-
 		@media (max-width: 500px)
 			&--left, &--right
 				width: 100%
@@ -306,11 +365,9 @@
 			width: auto
 			float: none
 
-
-
 	&__open-gallery
 		font:
-			family: $roboto
+			family: $accentFont-0
 			size: 14px
 			weight: 700
 		color: #999
@@ -331,7 +388,6 @@
 	text-align: left
 	@media (max-width: 1000px)
 		display: none
-
 
 .tl-item
 	padding: 10px 0px 10px 20px
