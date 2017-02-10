@@ -11,7 +11,7 @@
 		color: #555
 		line-height: 1.6
 		margin-bottom: 25px
-		+links($red, underline)
+		+links($blue, underline)
 		@media (max-width: $no-rail)
 			margin: 0 auto 25px auto
 
@@ -61,7 +61,7 @@
 				family: $headFont-0
 				// size: 90px
 				size: 70px
-			color: $red
+			color: $blue
 			line-height: 70px
 			// @media (max-width: 4023px)
 			position: static
@@ -84,7 +84,7 @@
 		&__text
 			display: inline-block
 			padding: 10px 30px
-			border-top: 1px solid $red
+			border-top: 1px solid $blue
 			font:
 				family: $headFont-0
 				size: 30px
@@ -96,7 +96,7 @@
 				top: -3px
 				left: 50%
 				+size(100px 5px)
-				background-color: $red
+				background-color: $blue
 				transform: translateX(-50%)
 
 .chapterTitleImage
@@ -115,6 +115,7 @@
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center center
+	// border-bottom: 7px solid $blue
 
 	&__text
 		position: absolute
@@ -122,12 +123,29 @@
 		right: 0
 		bottom: 0
 		width: 1000px
-		margin: 0 auto
-		padding: .5em 0
+		// margin: 0 auto
+		margin: 1.5em auto
 		color: #fff
 		font:
 			family: $headFont-0
-			size: 48px
+			size: 36px
+		h2
+			display: inline-block
+			margin: 0
+			border-left: 3px solid $blue
+			padding-left: .5em
+			// position: relative
+			// background-color: $blue
+			// z-index: 1
+			// &:before
+			// 	content: ""
+			// 	position: absolute
+			// 	top: 0
+			// 	left: -99%
+			// 	width: 100%
+			// 	height: 100%
+			// 	background-color: $blue
+			// 	z-index: -1
 
 	img
 		position: relative
@@ -135,7 +153,7 @@
 		width: 100%
 		height: auto	
 		// padding: 10px 30px
-		// border-top: 1px solid $red
+		// border-top: 1px solid $blue
 		// position: relative
 
 	&:before
@@ -144,12 +162,12 @@
 		width: 100%
 		height: 100%
 		bottom: 0
-		background: -moz-linear-gradient(top, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 100%) /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))) /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%) /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%) /* Opera 11.10+ */
-		background: -ms-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%) /* IE10+ */
-		background: linear-gradient(to bottom, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%) /* W3C */
+		background: -moz-linear-gradient(top, rgba(0,0,0,.3) 30%, rgba(0,0,0,.8) 80%) /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(0,0,0,.3)), color-stop(80%,rgba(0,0,0,.8))) /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,.3) 30%,rgba(0,0,0,.8) 80%) /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(0,0,0,.3) 30%,rgba(0,0,0,.8) 80%) /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(0,0,0,.3) 30%,rgba(0,0,0,.8) 80%) /* IE10+ */
+		background: linear-gradient(to bottom, rgba(0,0,0,.3) 30%,rgba(0,0,0,.8) 80%) /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ) /* IE6-9 */
 
 .inline-media
@@ -159,8 +177,9 @@
 	background: #fff
 	border-radius: 2px
 	position: relative
-	box-shadow: 0 3px 6px rgba(black,0.1)
+	box-shadow: 0 3px 6px rgba($dkBlue,0.1)
 	padding: .5em
+	border-top: 3px solid $blue
 
 	&__title
 		// position: absolute
@@ -178,7 +197,7 @@
 			size: 18px
 		+links(#999, none)
 		a:hover
-			color: $red
+			color: $blue
 
 	&__source
 		font:
@@ -220,24 +239,25 @@
 			display: none
 			
 	&--pullquote
-		border-width: 2px 0 5px 0
 		// padding: 15px 0
 		font:
 			family: $headFont-0
 			size: 30px
+		text-align: center
 
 		&__src
+			display: inline-block
 			margin-top: 10px
+			border-top: 1px solid #ddd
 			font:
 				family: $accentFont-0
 				size: 14px
 			color: #888
 			text-align: right
 			text-transform: uppercase
+			// float: right
 
 	&--pic
-		border-width: 0 0 5px 0
-
 		img
 			display: block
 			width: 100%
@@ -259,8 +279,8 @@
 				family: $accentFont-0
 				size: 14px
 				weight: 700
-			color: white
-			background-color: $red
+			color: $blue
+			// background-color: $blue
 			display: block
 			width: 100%
 			text-align: center
@@ -289,7 +309,7 @@
 			font:
 				family: $accentFont-0
 				size: 18px
-			+links($red, underline)
+			+links($blue, none)
 
 	&--video
 		border: 0
@@ -314,7 +334,7 @@
 
 .container--article	
 	.inline-media
-		// box-shadow: 0 3px 6px rgba($red,0.1)
+		// box-shadow: 0 3px 6px rgba($blue,0.1)
 		&__title
 		&__source
 		&--big
@@ -343,7 +363,7 @@
 	margin: 0
 	padding: 1em
 	background-color: white	
-	box-shadow: 0 0 18px rgba(0,0,0,0.1)
+	box-shadow: 0 0 18px rgba($dkBlue,0.1)
 	&__img
 		//width: 49%
 		float: left

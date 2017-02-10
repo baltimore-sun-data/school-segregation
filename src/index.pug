@@ -36,7 +36,7 @@ block content
 				.article__dateline Date
 
 				//menu for series
-				figure.inline-media.inline-media--pullquote.inline-media--small.inline-media--has-title.inline-media--not-mobile(data-sr)
+				figure.inline-media.inline-media--small.inline-media--has-title.inline-media--not-mobile(data-sr)
 					.inline-media__title
 						a(href="#") More in the series
 					include includes/_parts-menu.pug
@@ -79,7 +79,8 @@ block content
 
 		.chapterTitleImage
 			//- img.chapterTitleImage(src='http://data.baltimoresun.com/news/unsettled-journeys/part-1/images/inline/patterson.jpg')
-			.chapterTitleImage__text Chapter title
+			.chapterTitleImage__text 
+				h2 Chapter title
 
 		.container.container--article
 			.article
@@ -124,7 +125,8 @@ block content
 				figure.inline-media.inline-media--pullquote.inline-media--small(data-sr)
 					.inline-media--external-link__title External link title
 					.inline-media--external-link__content External link description
-					.inline-media--external-link__link <a href="#" target="_blank"> Learn more. </a>
+					.inline-media--external-link__link
+						a(href="#" target="_blank") Learn more.
 
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -183,7 +185,8 @@ block content
 
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				
-				p.reporter-email Contact reporter reporter at <a href="mailto:#" target="_blank"> reporter email </a>
+				p.reporter-email Contact reporter reporter at 
+					a(href="mailto:#" target="_blank") reporter email
 	
 				//series menu for mobile
 				figure.inline-media.inline-media--pullquote.inline-media--full.inline-media--has-title.inline-media--mobile(data-sr)

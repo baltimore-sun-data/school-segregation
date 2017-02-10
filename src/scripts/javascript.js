@@ -2,7 +2,7 @@ var app = app || {
 	init: function(){
 		//app.share();
 		app.show_video();
-		app.onClick();
+		app.mouseEvents();
 
 	},
 	show_video: function(){
@@ -26,10 +26,18 @@ var app = app || {
 			window.open(facebook_url, 'mywin','left=200,top=200,width=500,height=300,toolbar=1,resizable=0'); return false;
 		});
 	},
-	onClick: function(){
-		$('.header').on('click', function(){
-			console.log('ctest');
-			$('.rotateToggle').toggleClass('active');
+	mouseEvents: function(){
+		// $('.header').on('click', function(){
+		// 	console.log('ctest');
+		// 	$('.rotateToggle').toggleClass('active');
+		// });
+		var newWidth;
+		var scrollHeight = $(document).height();
+		var scrollPosition = $(window).height() + $(window).scrollTop();
+		$(window).scroll(function() {
+			scrollPosition = $(window).height() + $(window).scrollTop();
+			newWidth = (1 - ((scrollHeight - scrollPosition) / scrollHeight)) * 100;
+			$('.progressbar').width(newWidth + '%');
 		});
 	}
 }

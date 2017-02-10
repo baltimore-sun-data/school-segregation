@@ -1,7 +1,21 @@
 /* General Styles */
 
 body
-	background-color: #fdfdfd
+	background-color: #fdfdff
+.progressbar
+	position: fixed
+	top: 50px
+	width: 0
+	max-width: 100%
+	border-bottom: 5px solid $blue
+	z-index: 9
+	&:before
+		position: fixed
+		top: 50px
+		width: 100%
+		max-width: 100%
+		border-bottom: 5px solid #888
+		z-index: 8
 
 .container
 	width: 1000px
