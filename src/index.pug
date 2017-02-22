@@ -1,32 +1,19 @@
 extends _base.pug
 
 
+
 block content
+	include includes/_data.pug
+
 		.header
 			//- .header__background-video
 				video(loop="true" width="100%" height="100%" autoplay muted)
 					source(src="" type="video/mp4")
 					source(src="" type="video/webm")
-			//- .header__overlay
-			//- .header__colorBlockWrapper
-				.color.color--0
-				.color.color--1
-				.color.color--2
-				.color.color--3
-				.color.color--4
-				.color.color--5
-				.color.color--6
 			.header__text
 				.container.container--header
-					.header__part-no Series title
+					.header__part-no Bridging the Divide
 					h1.header__title Title text
-			//- .header__seriesTitle
-				h1 
-					span.titlePart.titlePart--0.rotateToggle School
-					br
-					span.titlePart.titlePart--1.rotateToggle Segregation
-			//- .header__colorBlock.header__colorBlock--bg
-			//- .header__colorBlock.header__colorBlock--rotate.rotateToggle
 		//load photo gallery
 		include includes/_gallery.pug
 
@@ -43,8 +30,14 @@ block content
 
 				p.article__dropcap(data-dropcap="H")
 					span ere is an example of a paragraph with a dropcap. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. 
-				p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-				p Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. Suspendisse semper egestas sem sed cursus. Etiam sed mauris lorem. Vestibulum accumsan commodo vestibulum.
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
 
 		#featured-video.featured-video
 			figure.fv__video
@@ -58,29 +51,51 @@ block content
 				//ad
 				include includes/ads/ad-for-body--cube.html
 
-				p Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales. Sed at dapibus justo. Donec tempus nec felis convallis consequat. 
-				p Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. Suspendisse semper egestas sem sed cursus. Etiam sed mauris lorem. Vestibulum accumsan commodo vestibulum.
-				p Sed viverra, libero a sagittis condimentum, dui sapien cursus mauris, a aliquet mi mauris ac augue.  Sed id ligula ac enim luctus euismod. Etiam dapibus venenatis magna. Suspendisse ac condimentum massa, sit amet egestas risus. Vestibulum tempus diam ac malesuada pellentesque.				
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque sed massa ac commodo. Etiam finibus posuere iaculis. Integer pharetra scelerisque suscipit. Etiam in ullamcorper justo, non ultricies quam. Cras feugiat mollis consectetur. Etiam vel tempor neque. Suspendisse sit amet facilisis arcu. Vivamus dignissim turpis risus, in lobortis erat laoreet eu.
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
 
 		.container.container--article
 			.article
 
-				p Maecenas aliquet in sapien et finibus. Fusce tincidunt ligula mauris, sit amet vulputate elit lacinia sit amet. Etiam interdum mi id est lacinia, quis tincidunt sapien accumsan.  Fusce arcu orci, iaculis vel laoreet non, fermentum vitae turpis. 
-				p Maecenas varius rutrum tellus eget mollis. Praesent ut euismod ante, eu laoreet erat. In eu posuere lectus. Cras leo turpis, accumsan eu sem eget, gravida ultrices magna. Quisque vitae odio imperdiet, cursus tellus condimentum, tincidunt est.
-				p Proin lacinia convallis dolor ac elementum. Quisque venenatis augue ipsum, ut sollicitudin libero sagittis non. Praesent finibus semper enim vitae volutpat. Nullam placerat non ipsum eu laoreet.
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque sed massa ac commodo. Etiam finibus posuere iaculis. Integer pharetra scelerisque suscipit. Etiam in ullamcorper justo, non ultricies quam. Cras feugiat mollis consectetur. Etiam vel tempor neque. Suspendisse sit amet facilisis arcu. Vivamus dignissim turpis risus, in lobortis erat laoreet eu.
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
 
 				//small pull quote in sidebar
 				figure.inline-media.inline-media--pullquote.inline-media--small(data-sr)
 					.inline-media--pullquote__text &ldquo;Pull quote&rdquo;
 					.inline-media--pullquote__src Quote attribution
 
-				p Proin lacinia convallis dolor ac elementum. Quisque venenatis augue ipsum, ut sollicitudin libero sagittis non. Praesent finibus semper enim vitae volutpat. Nullam placerat non ipsum eu laoreet.
-				p Proin lacinia convallis dolor ac elementum. Quisque venenatis augue ipsum, ut sollicitudin libero sagittis non. Praesent finibus semper enim vitae volutpat. Nullam placerat non ipsum eu laoreet.
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
 
-		.chapterTitleImage
-			//- img.chapterTitleImage(src='http://data.baltimoresun.com/news/unsettled-journeys/part-1/images/inline/patterson.jpg')
-			.chapterTitleImage__text 
-				h2 Chapter title
+				p Aliquam eu enim eget dolor placerat dignissim. Nullam nec ligula fringilla, consectetur diam at, posuere neque. Phasellus porttitor quam at metus luctus, eu eleifend nisl elementum. Donec malesuada, lectus ac ultricies dapibus, leo turpis ultricies sem, sit amet euismod mi magna ut lorem.
+
+				p Etiam dapibus, turpis quis ullamcorper scelerisque, urna augue egestas urna, vel pellentesque velit risus in tortor. Vivamus felis ex, eleifend volutpat tortor volutpat, consequat laoreet mauris. Donec laoreet felis consequat, faucibus dolor ac, interdum orci. Nulla molestie elementum finibus. Proin arcu eros, feugiat pretium felis vitae, aliquet posuere purus.
+
+				p Proin porta ut neque vitae ornare. Aenean maximus libero id turpis imperdiet porttitor. Vivamus ac erat egestas mauris fringilla accumsan. Etiam sit amet justo vitae lorem posuere egestas sed ut tellus. Donec a urna nec leo gravida pretium. Praesent viverra, magna id lobortis ultricies, dolor urna finibus arcu, ac fermentum odio nulla ac dolor.
+
+				p Praesent pretium suscipit mi et viverra. Praesent vehicula arcu arcu, sed pulvinar diam sagittis eget. Mauris nec odio in sapien porttitor efficitur. Donec diam lectus, vestibulum maximus sem quis, blandit gravida nisl. Quisque a porttitor enim. Donec scelerisque erat bibendum sapien auctor faucibus.
+
+				p Nullam ac quam porta, pellentesque libero in, mollis odio. Sed semper ac elit sit amet tempus. Donec venenatis euismod metus non consequat. Mauris lobortis felis quis rutrum elementum.
+
+		.article__chapter-title
+			.article__chapter-title__text Chapter title
+
+		p.chapterIntro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		//- .chapterTitleImage
+		//- 	//- img.chapterTitleImage(src='http://data.baltimoresun.com/news/unsettled-journeys/part-1/images/placeholder/ph-inline/patterson.jpg')
+		//- 	.chapterTitleImage__text 
+		//- 		h2 Chapter title
 
 		.container.container--article
 			.article
@@ -88,31 +103,81 @@ block content
 
 				//large photo gallery link in sidebar
 				figure.inline-media.inline-media--pic.inline-media--big(data-sr)
-					img(src="images/example.jpg")
+					img(src="images/placeholder/ph-7.jpg")
 					figcaption.inline-media--pic__caption Caption goes here
 					btn.inline-media--pic__open-gallery OPEN GALLERY
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-				p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
 
 		//multiphoto package - photos enter from left and right
 		figure.media-package
-			img.media-package__img.media-package__img--left(src="images/vertical-example.jpg" data-sr="enter left")
-			img.media-package__img.media-package__img--right(src="images/example.jpg" data-sr="enter right")
+			img.media-package__img.media-package__img--left(src="images/placeholder/ph-1.jpg" data-sr="enter bottom")
+			img.media-package__img.media-package__img--right(src="images/placeholder/ph-2.jpg" data-sr="enter bottom")
 			.media-package__caption Caption for multiphoto package
 
 		.container.container--article
 			.article
 
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					
-				p Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales. Sed at dapibus justo. Donec tempus nec felis convallis consequat. 
-				p Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. Suspendisse semper egestas sem sed cursus. Etiam sed mauris lorem. Vestibulum accumsan commodo vestibulum.
-				p Sed viverra, libero a sagittis condimentum, dui sapien cursus mauris, a aliquet mi mauris ac augue.  Sed id ligula ac enim luctus euismod. Etiam dapibus venenatis magna. Suspendisse ac condimentum massa, sit amet egestas risus. Vestibulum tempus diam ac malesuada pellentesque.
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
+
+				figure.inline-media.inline-media--full(data-sr)
+					include includes/exposure/index.html
+			
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+		figure.media-package.media-package--tables
+			each race in compRacial
+				table.racialComp(class="racialComp--"+race.id)
+					caption #{race.caption}
+					tr
+						th.blank
+						th 1990
+						th 2014
+						th Change
+					each area in race.comp
+						tr
+							td #{area.area}
+							td #{area.pct1990}
+							td #{area.pct2014}
+							if area.pctDiff >= 0
+								td +#{area.pctDiff}%
+							else
+								td #{area.pctDiff}%
+
+		.container.container--article
+			.article
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
+
+				p Aliquam eu enim eget dolor placerat dignissim. Nullam nec ligula fringilla, consectetur diam at, posuere neque. Phasellus porttitor quam at metus luctus, eu eleifend nisl elementum. Donec malesuada, lectus ac ultricies dapibus, leo turpis ultricies sem, sit amet euismod mi magna ut lorem.
+
+				p Etiam dapibus, turpis quis ullamcorper scelerisque, urna augue egestas urna, vel pellentesque velit risus in tortor. Vivamus felis ex, eleifend volutpat tortor volutpat, consequat laoreet mauris. Donec laoreet felis consequat, faucibus dolor ac, interdum orci. Nulla molestie elementum finibus. Proin arcu eros, feugiat pretium felis vitae, aliquet posuere purus.
+
+				p Proin porta ut neque vitae ornare. Aenean maximus libero id turpis imperdiet porttitor. Vivamus ac erat egestas mauris fringilla accumsan. Etiam sit amet justo vitae lorem posuere egestas sed ut tellus. Donec a urna nec leo gravida pretium. Praesent viverra, magna id lobortis ultricies, dolor urna finibus arcu, ac fermentum odio nulla ac dolor.
+
+				p Praesent pretium suscipit mi et viverra. Praesent vehicula arcu arcu, sed pulvinar diam sagittis eget. Mauris nec odio in sapien porttitor efficitur. Donec diam lectus, vestibulum maximus sem quis, blandit gravida nisl. Quisque a porttitor enim. Donec scelerisque erat bibendum sapien auctor faucibus.
+
+				p Nullam ac quam porta, pellentesque libero in, mollis odio. Sed semper ac elit sit amet tempus. Donec venenatis euismod metus non consequat. Mauris lobortis felis quis rutrum elementum.
 				
 				//large pull quote
 				figure.inline-media.inline-media--pullquote.inline-media--big(data-sr)
@@ -127,30 +192,41 @@ block content
 					.inline-media--external-link__content External link description
 					.inline-media--external-link__link
 						a(href="#" target="_blank") Learn more.
-
+				
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-								
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
 				//full-width link to photo gallery
 				figure.inline-media.inline-media--pic.inline-media--full(data-sr="enter bottom")
-					img(src="images/example.jpg")
+					img(src="images/placeholder/ph-3.jpg")
 					figcaption.inline-media--pic__caption Caption goes here
 					btn.inline-media--pic__open-gallery OPEN GALLERY					
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
 				//timeline mixin
-				+timeline([{'date': '2001-2003','description': 'Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales.'},{'date': '2003-2005', 'description': 'Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. '}]) 
+				+timeline([{'date': '2001-2003','description': 'Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales.'},{'date': '2003-2005', 'description': 'Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. '}])
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
 
-				.article__chapter-title
-					.article__chapter-title__text Chapter title
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p Aliquam eu enim eget dolor placerat dignissim. Nullam nec ligula fringilla, consectetur diam at, posuere neque. Phasellus porttitor quam at metus luctus, eu eleifend nisl elementum. Donec malesuada, lectus ac ultricies dapibus, leo turpis ultricies sem, sit amet euismod mi magna ut lorem.
+
+				p Etiam dapibus, turpis quis ullamcorper scelerisque, urna augue egestas urna, vel pellentesque velit risus in tortor. Vivamus felis ex, eleifend volutpat tortor volutpat, consequat laoreet mauris. Donec laoreet felis consequat, faucibus dolor ac, interdum orci. Nulla molestie elementum finibus. Proin arcu eros, feugiat pretium felis vitae, aliquet posuere purus.
+
+				p Proin porta ut neque vitae ornare. Aenean maximus libero id turpis imperdiet porttitor. Vivamus ac erat egestas mauris fringilla accumsan. Etiam sit amet justo vitae lorem posuere egestas sed ut tellus. Donec a urna nec leo gravida pretium. Praesent viverra, magna id lobortis ultricies, dolor urna finibus arcu, ac fermentum odio nulla ac dolor.
+
+				p Praesent pretium suscipit mi et viverra. Praesent vehicula arcu arcu, sed pulvinar diam sagittis eget. Mauris nec odio in sapien porttitor efficitur. Donec diam lectus, vestibulum maximus sem quis, blandit gravida nisl. Quisque a porttitor enim. Donec scelerisque erat bibendum sapien auctor faucibus.
+
+				p Nullam ac quam porta, pellentesque libero in, mollis odio. Sed semper ac elit sit amet tempus. Donec venenatis euismod metus non consequat. Mauris lobortis felis quis rutrum elementum.
+
+		.article__chapter-title
+			.article__chapter-title__text Chapter title
+
+		p.chapterIntro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 		//full-width interactive
 		//- include includes/interactives/example.html
@@ -159,11 +235,17 @@ block content
 			.article
 
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 				figure.inline-media.inline-media--video.inline-media--big(data-sr)
 					iframe(src="https://player.vimeo.com/video/142890066?color=ffffff")
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
 
 		//full-width video or photo grid
 		//- include includes/interactives/video-grid.pug
@@ -175,15 +257,30 @@ block content
 
 				//small link to photo gallery in sidebar
 				figure.inline-media.inline-media--pic.inline-media--small(data-sr)
-					img(src="images/vertical-example.jpg")
+					img(src="images/placeholder/ph-4.jpg")
 					figcaption.inline-media--pic__caption Caption goes here
 					.inline-media--pic__open-gallery OPEN GALLERY
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
+
+				p Aliquam eu enim eget dolor placerat dignissim. Nullam nec ligula fringilla, consectetur diam at, posuere neque. Phasellus porttitor quam at metus luctus, eu eleifend nisl elementum. Donec malesuada, lectus ac ultricies dapibus, leo turpis ultricies sem, sit amet euismod mi magna ut lorem.
+
+				p Etiam dapibus, turpis quis ullamcorper scelerisque, urna augue egestas urna, vel pellentesque velit risus in tortor. Vivamus felis ex, eleifend volutpat tortor volutpat, consequat laoreet mauris. Donec laoreet felis consequat, faucibus dolor ac, interdum orci. Nulla molestie elementum finibus. Proin arcu eros, feugiat pretium felis vitae, aliquet posuere purus.
+
+				p Proin porta ut neque vitae ornare. Aenean maximus libero id turpis imperdiet porttitor. Vivamus ac erat egestas mauris fringilla accumsan. Etiam sit amet justo vitae lorem posuere egestas sed ut tellus. Donec a urna nec leo gravida pretium. Praesent viverra, magna id lobortis ultricies, dolor urna finibus arcu, ac fermentum odio nulla ac dolor.
+
+				p Praesent pretium suscipit mi et viverra. Praesent vehicula arcu arcu, sed pulvinar diam sagittis eget. Mauris nec odio in sapien porttitor efficitur. Donec diam lectus, vestibulum maximus sem quis, blandit gravida nisl. Quisque a porttitor enim. Donec scelerisque erat bibendum sapien auctor faucibus.
+
+				p Nullam ac quam porta, pellentesque libero in, mollis odio. Sed semper ac elit sit amet tempus. Donec venenatis euismod metus non consequat. Mauris lobortis felis quis rutrum elementum.
+
+
 				
 				p.reporter-email Contact reporter reporter at 
 					a(href="mailto:#" target="_blank") reporter email

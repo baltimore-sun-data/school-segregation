@@ -75,77 +75,79 @@
 		// 		display: none
 
 	&__chapter-title
-		margin: 100px 0 20px 0
+		margin: 4em auto 1em auto
 		max-width: 590px
-		text-align: center		
-		@media (max-width: $no-rail)
-			margin: 100px auto 20px auto
+		text-align: center
+		// @media (max-width: $no-rail)
+			// margin: 100px auto 20px auto
 
 		&__text
+			position: relative
 			display: inline-block
 			padding: 10px 30px
-			border-top: 1px solid $blue
+			border-top: 4px solid
+			border-image: url('../images/border.png') 1 stretch repeat
+			color: #333
 			font:
 				family: $headFont-0
-				size: 30px
-			color: #333
-			position: relative
-			&:before
-				content: ''
-				position: absolute
-				top: -3px
-				left: 50%
-				+size(100px 5px)
-				background-color: $blue
-				transform: translateX(-50%)
-
-.chapterTitleImage
-	position: relative
-	width: 100%
-	height: 66vh
-	// max-height: 100vh
-	margin-bottom: 1em
-	// margin: 100px 0 20px 0
-	// max-width: 590px
-	// text-align: center		
-	// @media (max-width: $no-rail)
-	// 	margin: 100px auto 20px auto
-	// box-shadow: 0 0 24px rgba(0,0,0,0.3)
-	background-image: url('http://data.baltimoresun.com/news/unsettled-journeys/part-1/images/inline/patterson.jpg')
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: center center
-	// border-bottom: 7px solid $blue
-
-	&__text
-		position: absolute
-		left: 0
-		right: 0
-		bottom: 0
-		width: 1000px
-		// margin: 0 auto
-		margin: 1.5em auto
-		color: #fff
-		font:
-			family: $headFont-0
-			size: 36px
-		h2
-			display: inline-block
-			margin: 0
-			border-left: 3px solid $blue
-			padding-left: .5em
-			// position: relative
-			// background-color: $blue
-			// z-index: 1
+				size: 36px
 			// &:before
-			// 	content: ""
+			// 	content: ''
 			// 	position: absolute
-			// 	top: 0
-			// 	left: -99%
-			// 	width: 100%
-			// 	height: 100%
+			// 	top: -3px
+			// 	left: 50%
+			// 	+size(100px 5px)
 			// 	background-color: $blue
-			// 	z-index: -1
+			// 	transform: translateX(-50%)
+
+
+// .chapterTitleImage
+// 	position: relative
+// 	width: 100%
+// 	height: 66vh
+// 	// max-height: 100vh
+// 	margin-bottom: 1em
+// 	// margin: 100px 0 20px 0
+// 	// max-width: 590px
+// 	// text-align: center		
+// 	// @media (max-width: $no-rail)
+// 	// 	margin: 100px auto 20px auto
+// 	// box-shadow: 0 0 24px rgba(0,0,0,0.3)
+// 	background-image: url('http://data.baltimoresun.com/news/unsettled-journeys/part-1/images/inline/patterson.jpg')
+// 	background-size: cover
+// 	background-repeat: no-repeat
+// 	background-position: center center
+// 	// border-bottom: 7px solid $blue
+
+// 	&__text
+// 		position: absolute
+// 		left: 0
+// 		right: 0
+// 		bottom: 0
+// 		width: 1000px
+// 		// margin: 0 auto
+// 		margin: 1.5em auto
+// 		color: #fff
+// 		font:
+// 			family: $headFont-0
+// 			size: 36px
+// 		h2
+// 			display: inline-block
+// 			margin: 0
+// 			border-left: 3px solid $blue
+// 			padding-left: .5em
+// 			// position: relative
+// 			// background-color: $blue
+// 			// z-index: 1
+// 			// &:before
+// 			// 	content: ""
+// 			// 	position: absolute
+// 			// 	top: 0
+// 			// 	left: -99%
+// 			// 	width: 100%
+// 			// 	height: 100%
+// 			// 	background-color: $blue
+// 			// 	z-index: -1
 
 	img
 		position: relative
@@ -170,6 +172,20 @@
 		background: linear-gradient(to bottom, rgba(0,0,0,.3) 30%,rgba(0,0,0,.8) 80%) /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ) /* IE6-9 */
 
+.chapterIntro
+	margin: 0 auto
+	max-width: 700px
+	font:
+		family: $bodyFont
+		size: 20px
+	color: #555
+	line-height: 1.6
+	margin-bottom: 2em
+	+links($blue, underline)
+	@media (max-width: $no-rail)
+		// margin: 0 auto 25px auto
+		padding: 0 1em
+
 .inline-media
 	float: right
 	background-color: white
@@ -179,7 +195,8 @@
 	position: relative
 	box-shadow: 0 3px 6px rgba($dkBlue,0.1)
 	padding: .5em
-	border-top: 3px solid $blue
+	border-top: 4px solid
+	border-image: url('../images/border.png') 1 stretch repeat
 
 	&__title
 		// position: absolute
@@ -241,7 +258,7 @@
 	&--pullquote
 		// padding: 15px 0
 		font:
-			family: $headFont-0
+			family: $bodyFont
 			size: 30px
 		text-align: center
 
@@ -275,18 +292,18 @@
 			text-transform: uppercase
 
 		&__open-gallery
+			// background-color: $blue
+			display: block
+			width: 100%
+			margin: 5px 0
+			padding: 5px 0 5px 0
+			cursor: pointer
+			color: $blue
 			font:
 				family: $accentFont-0
 				size: 14px
 				weight: 700
-			color: $blue
-			// background-color: $blue
-			display: block
-			width: 100%
 			text-align: center
-			margin: 5px 0
-			padding: 5px 0 5px 0
-			cursor: pointer
 			+links(#999, none)
 			&:hover, a:hover
 				color: #555
@@ -332,35 +349,14 @@
 		float: right
 		position: relative
 
-.container--article	
-	.inline-media
-		// box-shadow: 0 3px 6px rgba($blue,0.1)
-		&__title
-		&__source
-		&--big
-		&--small
-		&--has-title
-		&--full
-		&--pullquote
-		&--pic
-			img
-			&__caption
-			&__source
-			&__open-gallery
-				&:hover, a:hover
-		&--external-link
-			&__title
-			&__content
-			&__link
-		&--video
-			// @media (max-width: 730px)
-			iframe
-		&--timeline
+	&--tables
+		text-align: center
 
 .media-package
 	+clearfix
 	width: 100%
-	margin: 0
+	max-width: 1300px
+	margin: 0 auto
 	padding: 1em
 	background-color: white	
 	box-shadow: 0 0 18px rgba($dkBlue,0.1)
@@ -395,6 +391,39 @@
 		cursor: pointer
 		&:hover
 			color: #555		
+	&--tables
+		text-align: center
+		padding: 0
+
+.racialComp
+	// display: inline-block
+	width: 44%
+	// padding: 1em
+	margin: 3%
+	float: left
+	color: #888
+	caption
+		padding: .5em
+		text-transform: uppercase
+		font-weight: bold
+	tr
+		&:last-child
+			text-transform: uppercase
+			font-weight: bold
+	td, th
+		padding: .5em
+	&--white
+		caption
+			border-bottom: 2px solid $yellow
+	&--black
+		caption
+			border-bottom: 2px solid $red
+	&--latino
+		caption
+			border-bottom: 2px solid $blue
+	&--asian
+		caption
+			border-bottom: 2px solid $green
 
 //Timeline
 .timeline-container

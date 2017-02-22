@@ -22,7 +22,7 @@ var app = app || {
 			var title = "Unsettled Journeys: Torn between two worlds"; //Post title
 			var description = "A new wave of refugees, often from far-flung countries, are landing at Patterson High School. Read their stories."; //Post description
 			var url = "http://data.baltimoresun.com/news/unsettled-journeys/part-1/"; //Interactive URL
-	    	var facebook_url = "https://www.facebook.com/dialog/feed?display=popup&app_id=310302989040998&link="+url+"&picture="+picture+"&name="+title+"&description="+description+"&redirect_uri=http://www.facebook.com";    		
+			var facebook_url = "https://www.facebook.com/dialog/feed?display=popup&app_id=310302989040998&link="+url+"&picture="+picture+"&name="+title+"&description="+description+"&redirect_uri=http://www.facebook.com";    		
 			window.open(facebook_url, 'mywin','left=200,top=200,width=500,height=300,toolbar=1,resizable=0'); return false;
 		});
 	},
@@ -36,11 +36,11 @@ var app = app || {
 		var scrollPosition = $(window).height() + $(window).scrollTop();
 		$(window).scroll(function() {
 			scrollPosition = $(window).height() + $(window).scrollTop();
-			newWidth = (1 - ((scrollHeight - scrollPosition) / scrollHeight)) * 100;
-			$('.progressbar').width(newWidth + '%');
+			newWidth = 100 - ((1 - ((scrollHeight - scrollPosition) / scrollHeight)) * 100);
+			$('.colors').width(newWidth + '%');
 		});
 	}
-}
+};
 
 
 var video_grid = video_grid || {
@@ -133,7 +133,7 @@ var video_grid = video_grid || {
 
 				
 			}
-		
+
 
 		});
 
@@ -189,8 +189,8 @@ var video_grid = video_grid || {
 
 		//Retrieve info based on the kid's id
 		var info = $.grep(video_grid.kids, function(e){
-				return (e.id === id)
-			});
+			return (e.id === id)
+		});
 
 		//Update name, age, language and country
 		$(".vg__spotlight__name").text(info[0].name);
@@ -215,29 +215,29 @@ var video_grid = video_grid || {
 	},
 
 	kids: [
-		{"id":"exel-estrada","name":"Exel Estrada","age":17,"country":"Guatemala","language":"Spanish","video_other":138646014,"video_english":138646258},
-		{"id":"carlotta","name":"Carlotta","age":17,"country":"Italy","language":"Italian","video_other":138655153,"video_english":138655552},
-		{"id":"faraz-nadeem","name":"Faraz Nadeem","age":17,"country":"Pakistan","language":"Urdu","video_other":138648674,"video_english":138648868},
-		{"id":"fayza-al-halabi","name":"Fayza Al Halabi","age":17,"country":"Syria","language":"Arabic","video_other":138642374,"video_english":138642747},
-		{"id":"franck-kibinda","name":"Franck Kibinda","age":15,"country":"Democratic Republic of the Congo","language":"French","video_other":138659837,"video_english":138659838},
-		{"id":"franklin-aguilar","name":"Franklin Aguilar","age":20,"country":"El Salvador","language":"Spanish","video_other":138659101,"video_english":138659971},
-		{"id":"karen-abuel","name":"Karen Abuel","age":15,"country":"Philippines","language":"Tagalog","video_other":138658693,"video_english":138658824},
-		{"id":"kibra-buluts","name":"Kibra Buluts","age":16,"country":"Ethiopia","language":"Tigrignya","video_other":138647285,"video_english":138647465},
-		{"id":"maria-lourenco","name":"Maria Lourenco","age":"Unknown","country":"Angola","language":"Portuguese","video_other":138655835,"video_english":138656760},
-		{"id":"mona-al-halabi","name":"Mona Al Halabi","age":16,"country":"Syria","language":"Arabic","video_other":138646783,"video_english":138647080},
-		{"id":"monique-ngomba","name":"Monique Ngomba","age":16,"country":"Central African Republic","language":"Sango","video_other":138658990,"video_english":138641808},
-		{"id":"mussa-alenga","name":"Mussa Alenga","age":17,"country":"Tanzania","language":"Swahili","video_other":138657396,"video_english":138657935},
-		{"id":"nan-wang","name":"Nan Wang","age":18,"country":"China","language":"Mandarin, Shangai dialect","video_other":138653563,"video_english":138653857},
-		{"id":"nar-bahadur-darjee","name":"Nar Bahadur Darjee","age":18,"country":"Nepal","language":"Nepali","video_other":138647646,"video_english":138647777},
-		{"id":"narmin-aleethawi","name":"Narmin Al Eethawi","age":19,"country":"Iraq","language":"Arabic","video_other":138659575,"video_english":138659574},
-		{"id":"norma-argueta","name":"Norma Argueta","age":18,"country":"El Salvador","language":"Spanish","video_other":138653022,"video_english":138653173},
-		{"id":"reema-alfaheed","name":"Reema Alfaheed","age":17,"country":"Palestine, Iraq","language":"Arabic","video_other":138645548,"video_english":138645763},
-		{"id":"tina-lin","name":"Tina Lin","age":17,"country":"China","language":"Mandarin","video_other":138649227,"video_english":138652895},
-		{"id":"vigueur-kibinda","name":"Vigueur Kibinda","age":17,"country":"Democratic Republic of the Congo","language":"French","video_other":138646443,"video_english":138646585},
-		{"id":"yonas-fishaye","name":"Yonas Fishaye","age":17,"country":"Ethiopia","language":"Tigrignya/Amharic","video_other":138648195,"video_english":138648460}
+	{"id":"exel-estrada","name":"Exel Estrada","age":17,"country":"Guatemala","language":"Spanish","video_other":138646014,"video_english":138646258},
+	{"id":"carlotta","name":"Carlotta","age":17,"country":"Italy","language":"Italian","video_other":138655153,"video_english":138655552},
+	{"id":"faraz-nadeem","name":"Faraz Nadeem","age":17,"country":"Pakistan","language":"Urdu","video_other":138648674,"video_english":138648868},
+	{"id":"fayza-al-halabi","name":"Fayza Al Halabi","age":17,"country":"Syria","language":"Arabic","video_other":138642374,"video_english":138642747},
+	{"id":"franck-kibinda","name":"Franck Kibinda","age":15,"country":"Democratic Republic of the Congo","language":"French","video_other":138659837,"video_english":138659838},
+	{"id":"franklin-aguilar","name":"Franklin Aguilar","age":20,"country":"El Salvador","language":"Spanish","video_other":138659101,"video_english":138659971},
+	{"id":"karen-abuel","name":"Karen Abuel","age":15,"country":"Philippines","language":"Tagalog","video_other":138658693,"video_english":138658824},
+	{"id":"kibra-buluts","name":"Kibra Buluts","age":16,"country":"Ethiopia","language":"Tigrignya","video_other":138647285,"video_english":138647465},
+	{"id":"maria-lourenco","name":"Maria Lourenco","age":"Unknown","country":"Angola","language":"Portuguese","video_other":138655835,"video_english":138656760},
+	{"id":"mona-al-halabi","name":"Mona Al Halabi","age":16,"country":"Syria","language":"Arabic","video_other":138646783,"video_english":138647080},
+	{"id":"monique-ngomba","name":"Monique Ngomba","age":16,"country":"Central African Republic","language":"Sango","video_other":138658990,"video_english":138641808},
+	{"id":"mussa-alenga","name":"Mussa Alenga","age":17,"country":"Tanzania","language":"Swahili","video_other":138657396,"video_english":138657935},
+	{"id":"nan-wang","name":"Nan Wang","age":18,"country":"China","language":"Mandarin, Shangai dialect","video_other":138653563,"video_english":138653857},
+	{"id":"nar-bahadur-darjee","name":"Nar Bahadur Darjee","age":18,"country":"Nepal","language":"Nepali","video_other":138647646,"video_english":138647777},
+	{"id":"narmin-aleethawi","name":"Narmin Al Eethawi","age":19,"country":"Iraq","language":"Arabic","video_other":138659575,"video_english":138659574},
+	{"id":"norma-argueta","name":"Norma Argueta","age":18,"country":"El Salvador","language":"Spanish","video_other":138653022,"video_english":138653173},
+	{"id":"reema-alfaheed","name":"Reema Alfaheed","age":17,"country":"Palestine, Iraq","language":"Arabic","video_other":138645548,"video_english":138645763},
+	{"id":"tina-lin","name":"Tina Lin","age":17,"country":"China","language":"Mandarin","video_other":138649227,"video_english":138652895},
+	{"id":"vigueur-kibinda","name":"Vigueur Kibinda","age":17,"country":"Democratic Republic of the Congo","language":"French","video_other":138646443,"video_english":138646585},
+	{"id":"yonas-fishaye","name":"Yonas Fishaye","age":17,"country":"Ethiopia","language":"Tigrignya/Amharic","video_other":138648195,"video_english":138648460}
 	]
 
-}
+};
 
 
 var gallery_app = gallery_app || {
@@ -337,7 +337,7 @@ var gallery_app = gallery_app || {
 
 	captions: ["Narmin thought sometimes that Reema acted like a little girl, as though she was making up for her lost childhood. Reema had endured a lot. Through a translator, her parents explained that they were targeted in Iraq because her father was Palestinian.","Narmin thought sometimes that Reema acted like a little girl, as though she was making up for her lost childhood. Reema had endured a lot. Through a translator, her parents explained that they were targeted in Iraq because her father was Palestinian.","Narmin thought sometimes that Reema acted like a little girl, as though she was making up for her lost childhood. Reema had endured a lot. Through a translator, her parents explained that they were targeted in Iraq because her father was Palestinian."]
 
-}
+};
 
 $(document).ready(function(){
 	app.init();

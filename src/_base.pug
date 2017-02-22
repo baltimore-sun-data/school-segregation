@@ -12,13 +12,14 @@ html(class="no-js", lang="en")
 	head
 		//Basic page needs
 		meta(charset="utf-8")
-		title 
+		title Bridging the Divide: Title Text | The Baltimore Sun
 		meta(name="description", content="")
 		meta(name="author", content="")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 
 		link(rel="stylesheet", type="text/css", href="stylesheets/style.css")
-		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Lato|Montserrat|Old+Standard+TT|PT+Sans|PT+Serif|Prata|Roboto+Condensed:400,700")
+		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Montserrat")
+		//- link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Lato|Montserrat|Old+Standard+TT|PT+Sans|PT+Serif|Prata|Roboto+Condensed:400,700")
 
 		//Facebook OpenGraph
 		meta(property="og:title", content="")
@@ -51,6 +52,7 @@ html(class="no-js", lang="en")
 		script(src="http://www.baltimoresun.com/thirdpartyservice?disablessor=true")
 		div(data-trb-thirdpartynav style='position: fixed;')
 		.progressbar
+			.colors
 
 		//block for story layout
 		block content
@@ -64,12 +66,17 @@ html(class="no-js", lang="en")
 					li John Doe
 					li.label Reporter
 					li Jane Doe
-			section.footer__comments
-				include includes/comments.html
 			section.footer__logo
 				img(src="images/baltimore-sun-logo-white.png" width="300")
+			section.footer__comments
+				include includes/comments.html
 
 		//Javascript
+		script(src="https://use.typekit.net/nta3eyd.js")
+		script.
+			try{Typekit.load({ async: true });}catch(e){}
+			var map;
+			var markers;
 		//Load jQuery CDN, fall back to local version if necessary		
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
 		script.
