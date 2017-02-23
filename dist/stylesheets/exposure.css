@@ -1,0 +1,333 @@
+.exposure {
+  font-family: "franklin-gothic-urw", sans-serif;
+  /* COLOR RAMP STYLES */
+  /* NEW DROPDOWN STYLES */
+  /* MAIN GRAPHIC STYLES */
+  /* RACE GRAPHIC STYLES */
+  /* RACE CIRCLE STYLES*/
+  /* POVERTY GRAPHIC STYLES */
+  /* POVERTY CIRCLE STYLES*/ }
+  .exposure #container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center; }
+  .exposure #poverty-container {
+    display: none; }
+  .exposure h1 {
+    font-size: 1.75em;
+    font-weight: bold; }
+  .exposure h2 {
+    font-size: 1.25em;
+    font-weight: normal; }
+  .exposure h3 {
+    font-size: 1.75em;
+    font-weight: normal; }
+  .exposure #nav-container {
+    width: 300px;
+    margin: 0 auto; }
+  .exposure .nav-race {
+    font-size: 1.25em;
+    padding-top: 5px;
+    color: #fff;
+    width: 150px;
+    float: left;
+    height: 35px;
+    background: #35baa6;
+    position: relative;
+    cursor: pointer; }
+  .exposure .nav-race:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(53, 186, 166, 0);
+    border-top-color: #35baa6;
+    border-width: 30px;
+    margin-left: -30px; }
+  .exposure .nav-race.changed:after {
+    display: none; }
+  .exposure .nav-poverty.changed {
+    font-size: 1.25em;
+    padding-top: 5px;
+    color: #fff;
+    width: 150px;
+    float: left;
+    height: 35px;
+    background: #0f4453;
+    position: relative;
+    cursor: pointer; }
+  .exposure .nav-poverty.changed:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(53, 186, 166, 0);
+    border-top-color: #35baa6;
+    border-width: 30px;
+    margin-left: -30px; }
+  .exposure .nav-poverty {
+    font-size: 1.25em;
+    padding-top: 5px;
+    color: #fff;
+    width: 150px;
+    float: left;
+    height: 35px;
+    background: #0f4453;
+    position: relative;
+    cursor: pointer; }
+  .exposure #district-menu {
+    width: 100%;
+    background: #ededed;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.25em; }
+  .exposure #small-print {
+    font-style: italic;
+    font-style: .75em;
+    color: #999;
+    margin-top: 50px;
+    clear: both; }
+  .exposure #color-ramp {
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 50px; }
+  .exposure .color-ramp-block {
+    float: left;
+    height: 30px;
+    width: 18%;
+    margin-left: 1px;
+    font-size: 1.25em;
+    font-weight: bold; }
+  @media (max-width: 500px) {
+    .exposure .color-ramp-block {
+      font-size: 1em; } }
+  .exposure .color-ramp-block p {
+    padding-top: 15px; }
+  .exposure .poverty-key {
+    width: 40%; }
+  .exposure .select {
+    font-size: 1em;
+    position: relative;
+    display: inline-block; }
+  .exposure .select select {
+    outline: none;
+    -webkit-appearance: none;
+    display: block;
+    padding: 1.2em 3em 1.3em 1.5em;
+    margin: 0;
+    transition: border-color 0.2s;
+    border: 5px solid #35baa6;
+    border-radius: 5px;
+    background: #fff;
+    color: #555;
+    line-height: normal;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit; }
+  .exposure .select .arr {
+    background: #fff;
+    bottom: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 30px;
+    pointer-events: none; }
+  .exposure .select .arr:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    margin-top: -5px;
+    pointer-events: none;
+    border-top: 10px solid #35baa6;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; }
+  .exposure .select .arr:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    margin-top: -5px;
+    pointer-events: none;
+    border-top: 6px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent; }
+  .exposure .small {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important; }
+  .exposure .grey {
+    fill: #B7B7B7; }
+  .exposure .red {
+    fill: #df2228;
+    background: #df2228; }
+  .exposure .yellow {
+    fill: #f99d1d;
+    background: #f99d1d; }
+  .exposure .blue {
+    fill: #00acc8;
+    background: #00acc8; }
+  .exposure .green {
+    fill: #35baa6;
+    background: #35baa6; }
+  .exposure .darkblue {
+    fill: #0f4453;
+    background: #0f4453; }
+  .exposure .green-text {
+    color: #35baa6; }
+  .exposure .graphic-text {
+    font-family: "franklin-gothic-urw", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center; }
+  .exposure .dif {
+    color: #999;
+    font-size: 1em;
+    font-weight: normal; }
+  .exposure #black-text {
+    color: #df2228; }
+  .exposure #white-text {
+    color: #f99d1d; }
+  .exposure #hispanic-text {
+    color: #00acc8; }
+  .exposure #asian-text {
+    color: #35baa6;
+    text-align: left; }
+  @media (max-width: 500px) {
+    .exposure #asian-text {
+      text-align: center; } }
+  .exposure #other-text {
+    color: #0f4453;
+    text-align: center; }
+  .exposure #black-circle-col {
+    width: 40%;
+    float: left;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 50px; }
+  .exposure #hispanic-circle-col {
+    width: 30%;
+    float: left;
+    text-align: center;
+    margin-top: 30px; }
+  .exposure #white-circle-col {
+    width: 30%;
+    float: left;
+    margin-left: 15px;
+    margin-top: 20px;
+    text-align: center; }
+  .exposure #chair-col {
+    width: 30%;
+    float: left;
+    text-align: center; }
+  .exposure #asian-circle-col {
+    width: 33%;
+    float: left;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 10px; }
+  .exposure #other-circle-col {
+    width: 100%;
+    text-align: center;
+    padding-left: 5px;
+    padding-top: 15px; }
+  .exposure #circle {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 75px;
+    background: #00acc8; }
+  .exposure #white-circle {
+    width: 35px;
+    height: 35px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 75px;
+    background: #f99d1d;
+    margin: 0 auto; }
+  .exposure #black-circle {
+    width: 35px;
+    height: 35px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 75px;
+    background: #df2228;
+    margin: 0 auto; }
+  .exposure #hispanic-circle {
+    width: 5px;
+    height: 5px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 75px;
+    background: #00acc8;
+    margin: 0 auto; }
+  .exposure #asian-circle {
+    width: 2px;
+    height: 2px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 75px;
+    background: #35baa6;
+    margin-left: 10px; }
+  @media (max-width: 500px) {
+    .exposure #asian-circle {
+      margin: 0 auto; } }
+  .exposure #other-circle {
+    width: 3px;
+    height: 3px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 75px;
+    background: #0f4453;
+    margin: 0 auto; }
+  .exposure #reduced-circle-col {
+    width: 33%;
+    float: left;
+    padding-top: 50px;
+    text-align: right; }
+  .exposure #poverty-chair-col {
+    width: 33%;
+    float: left; }
+  .exposure #non-reduced-circle-col {
+    width: 33%;
+    float: left;
+    padding-top: 50px;
+    text-align: left; }
+  @media (max-width: 500px) {
+    .exposure #non-reduced-circle-col, .exposure #reduced-circle-col {
+      padding-top: 30px; } }
+  .exposure #reduced-text {
+    color: #df2228;
+    text-align: right; }
+  .exposure #non-reduced-text {
+    color: #00acc8;
+    text-align: left; }
+  .exposure #reduced-circle {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 75px;
+    background: #df2228;
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px; }
+  .exposure #non-reduced-circle {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 75px;
+    background: #00acc8;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px; }

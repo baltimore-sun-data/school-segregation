@@ -7,7 +7,7 @@
     "pug": "pug  -P -p src/index.pug < src/index.pug > dist/index.html",
     "sass": "node-sass -o dist/stylesheets src/sass",
     "uglify": "mkdir -p dist/scripts && uglifyjs src/scripts/*.js -b -o dist/scripts/app.js && uglifyjs src/scripts/*.js -m -c -o dist/scripts/app.min.js",
-    "imagemin": "imagemin src/images dist/images -p",
+    "imagemin": "imagemin src/images/* -o dist/images -p=mozjpeg",
     "serve": "browser-sync start --server dist 'dist/stylesheets/*.css, dist/scripts/*.js'",
     "reload": "browser-sync reload --files='dist/*'",
     "build:html": "npm run pug",
