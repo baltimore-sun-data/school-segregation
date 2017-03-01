@@ -10,8 +10,8 @@ body
 	// border-bottom: 5px solid
 	z-index: 9
 	border-bottom: 5px solid
-	border-image: url('../images/border-h.svg') 1 stretch
-	
+	border-image: url($datalink + 'images/border-h.svg') 1 stretch
+
 	.colors
 		position: absolute
 		width: 90%
@@ -28,6 +28,23 @@ body
 		// 	border-bottom: 5px solid
 		// 	border-image: url('../images/border.svg') 1 stretch repeat
 		// 	z-index: 8
+
+.socialButtons
+	position: fixed
+	top: 55px
+	right: 0
+	padding: .5em
+	font-size: 22px
+	z-index: 11
+	i
+		margin: 0 0 0 0.5em
+		color: $blue
+		opacity: .3
+		cursor: pointer
+		// @include transition(all .5s ease)
+		&:hover
+			opacity: 1
+			// font-size: 26px
 
 .container
 	width: 1000px

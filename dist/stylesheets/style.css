@@ -421,7 +421,7 @@ body {
   max-width: 100%;
   z-index: 9;
   border-bottom: 5px solid;
-  border-image: url("../images/border-h.svg") 1 stretch; }
+  border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
   .progressbar .colors {
     position: absolute;
     width: 90%;
@@ -430,6 +430,21 @@ body {
     right: 0;
     border-bottom: 5px solid white;
     z-index: 9; }
+
+.socialButtons {
+  position: fixed;
+  top: 55px;
+  right: 0;
+  padding: .5em;
+  font-size: 22px;
+  z-index: 11; }
+  .socialButtons i {
+    margin: 0 0 0 0.5em;
+    color: #00acc8;
+    opacity: .3;
+    cursor: pointer; }
+    .socialButtons i:hover {
+      opacity: 1; }
 
 .container {
   width: 1000px;
@@ -929,7 +944,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url("../images/placeholder/ph-0.jpg");
+  background-image: url("http://data.baltimoresun.com/news/bridging-the-divide//images/placeholder/ph-0.jpg");
   background-position: center center;
   background-size: cover;
   cursor: pointer;
@@ -981,9 +996,6 @@ body {
     .article p a:link, .article p a:visited, .article p a:hover, .article p a:active {
       color: #00acc8;
       text-decoration: underline; }
-    @media (max-width: 730px) {
-      .article p {
-        margin: 0 auto 25px auto; } }
     .article p.reporter-email {
       font-family: "franklin-gothic-urw", sans-serif;
       color: #999;
@@ -1031,7 +1043,7 @@ body {
       display: inline-block;
       padding: 10px 30px;
       border-top: 5px solid;
-      border-image: url("../images/border-h.svg") 1 stretch;
+      border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch;
       color: #333;
       font-family: "franklin-gothic-urw", sans-serif;
       font-size: 36px; }
@@ -1069,10 +1081,10 @@ body {
   padding: .5em; }
   .inline-media--borderTop {
     border-top: 3px solid;
-    border-image: url("../images/border-h.svg") 1 stretch; }
+    border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
   .inline-media--borderLeft {
     border-left: 3px solid;
-    border-image: url("../images/border-v.svg") 1 stretch; }
+    border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-v.svg") 1 stretch; }
   .inline-media__title {
     width: 100%;
     padding: 10px 0 15px 0;
@@ -1110,13 +1122,17 @@ body {
   .inline-media--has-title {
     padding-top: 0; }
   .inline-media--full {
-    float: none; }
+    width: 95%;
+    float: none;
+    margin: 0 auto; }
   @media (max-width: 600px) {
     .inline-media--not-mobile {
       display: none; } }
-  @media (min-width: 601px) {
-    .inline-media--mobile {
-      display: none; } }
+  .inline-media--mobile {
+    margin: 1em auto; }
+    @media (min-width: 601px) {
+      .inline-media--mobile {
+        display: none; } }
   .inline-media--pullquote {
     font-family: Georgia, Times New Roman, Times, serif;
     font-size: 30px;
@@ -1234,46 +1250,51 @@ body {
     cursor: pointer; }
     .media-package__open-gallery:hover {
       color: #555; }
-  .media-package--tables {
+  .media-package--multTables {
     text-align: center;
-    padding: 1em 0;
-    color: #555;
-    font-family: "franklin-gothic-urw", sans-serif; }
-    .media-package--tables h3 {
+    color: #555; }
+    .media-package--multTables h3 {
       font-size: 20px; }
+    .media-package--multTables table {
+      width: 44%;
+      margin: 0 3% 3% 3%;
+      float: left; }
+      @media (max-width: 800px) {
+        .media-package--multTables table {
+          width: 100%;
+          max-width: 600px;
+          margin: 3% auto;
+          float: none; } }
 
-.racialComp {
-  width: 44%;
-  margin: 0 3% 3% 3%;
+.statTable {
+  width: 100%;
+  padding: 1em 0;
+  text-align: center;
   font-size: 14px;
-  color: #888;
-  float: left; }
-  @media (max-width: 800px) {
-    .racialComp {
-      width: 100%;
-      max-width: 600px;
-      margin: 3% auto;
-      text-align: center;
-      float: none; } }
-  .racialComp caption {
+  font-family: "franklin-gothic-urw", sans-serif;
+  color: #888; }
+  .statTable caption {
     color: #555;
     padding: .5em;
+    margin-bottom: .5em;
     text-transform: uppercase;
     font-weight: bold; }
-  .racialComp tr:last-child {
+  .statTable tr:last-child {
     text-transform: uppercase;
     font-weight: bold; }
-  .racialComp td, .racialComp th {
+  .statTable td, .statTable th {
     padding: .5em .7em; }
-  .racialComp .shade {
-    background-color: #f9f9f9; }
-  .racialComp--white caption {
+  .statTable .shade {
+    background-color: #c8f7ff; }
+  .statTable--mix caption {
+    border-bottom: 1px solid #ddd; }
+  .statTable--yellow caption {
     border-bottom: 2px solid #f99d1d; }
-  .racialComp--black caption {
+  .statTable--red caption {
     border-bottom: 2px solid #df2228; }
-  .racialComp--latino caption {
+  .statTable--blue caption {
     border-bottom: 2px solid #00acc8; }
-  .racialComp--asian caption {
+  .statTable--green caption {
     border-bottom: 2px solid #35baa6; }
 
 .timeline-container {
