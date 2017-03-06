@@ -44,9 +44,6 @@ block content
 		.container.container--article
 			.article
 
-				//ad
-				include includes/ads/ad-for-body--cube.html
-
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque sed massa ac commodo. Etiam finibus posuere iaculis. Integer pharetra scelerisque suscipit. Etiam in ullamcorper justo, non ultricies quam. Cras feugiat mollis consectetur. Etiam vel tempor neque. Suspendisse sit amet facilisis arcu. Vivamus dignissim turpis risus, in lobortis erat laoreet eu.
 
 				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
@@ -65,6 +62,8 @@ block content
 				p Praesent pretium suscipit mi et viverra. Praesent vehicula arcu arcu, sed pulvinar diam sagittis eget. Mauris nec odio in sapien porttitor efficitur. Donec diam lectus, vestibulum maximus sem quis, blandit gravida nisl. Quisque a porttitor enim. Donec scelerisque erat bibendum sapien auctor faucibus.
 
 				p Nullam ac quam porta, pellentesque libero in, mollis odio. Sed semper ac elit sit amet tempus. Donec venenatis euismod metus non consequat. Mauris lobortis felis quis rutrum elementum.
+
+		include includes/ads/ad-for-body--leaderboard2.html
 
 		.article__chapter-title
 			.article__chapter-title__text Chapter title
@@ -114,8 +113,13 @@ block content
 
 				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
 
-
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		figure.media-package.media-package--iframe
+			iframe(width="100%" frameborder="0" src="https://baltsun.carto.com/builder/9615e5dc-fa0e-11e6-b116-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen)
+
+		.container.container--article
+			.article
 
 				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
 
@@ -149,17 +153,19 @@ block content
 				figure.inline-media.inline-media--borderTop.inline-media--big.inline-media--table(data-sr)
 					table.statTable(class="statTable--mix")
 						caption Racially isolated schools, 2014
+							p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at.
+						tr
+							th.blank
+							th >90% white
+							th 50-90% non-white
+							th >90% non-white
+						each area in compRacial2014
 							tr
-								th.blank
-								th >90% white
-								th 50-90% non-white
-								th >90% non-white
-							each area in compRacial2014
-								tr
-									td #{area.area}
-									td #{area.white90}%
-									td #{area.mixed}%
-									td #{area.nonwhite90}%
+								td #{area.area}
+								td #{area.white90}%
+								td #{area.mixed}%
+								td #{area.nonwhite90}%
+
 				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
 
 				p Aliquam eu enim eget dolor placerat dignissim. Nullam nec ligula fringilla, consectetur diam at, posuere neque. Phasellus porttitor quam at metus luctus, eu eleifend nisl elementum. Donec malesuada, lectus ac ultricies dapibus, leo turpis ultricies sem, sit amet euismod mi magna ut lorem.
@@ -169,56 +175,57 @@ block content
 				figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
 					table.statTable(class="statTable--mix")
 						caption Percentage of schools that are >90% white
+							p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at.
+						tr
+							th.blank
+							th 1990
+							th.mobile 2000
+							th.mobile 2010
+							th.shade 2014
+						each area in compRacialWhite
 							tr
-								th.blank
-								th 1990
-								th 2000
-								th 2010
-								th.shade 2014
-							each area in compRacialWhite
-								tr
-									td #{area.area}
-									td #{area.y1990}%
-									td #{area.y2000}%
-									td #{area.y2010}%
-									td.shade #{area.y2014}%
+								td #{area.area}
+								td #{area.y1990}%
+								td.mobile #{area.y2000}%
+								td.mobile #{area.y2010}%
+								td.shade #{area.y2014}%
 
 				p Proin porta ut neque vitae ornare. Aenean maximus libero id turpis imperdiet porttitor. Vivamus ac erat egestas mauris fringilla accumsan. Etiam sit amet justo vitae lorem posuere egestas sed ut tellus. Donec a urna nec leo gravida pretium. Praesent viverra, magna id lobortis ultricies, dolor urna finibus arcu, ac fermentum odio nulla ac dolor.
 
 				figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
 					table.statTable(class="statTable--mix")
 						caption Percentage of schools that are >90% racial minority
+						tr
+							th.blank
+							th 1990
+							th.mobile 2000
+							th.mobile 2010
+							th.shade 2014
+						each area in compRacialMin
 							tr
-								th.blank
-								th 1990
-								th 2000
-								th 2010
-								th.shade 2014
-							each area in compRacialMin
-								tr
-									td #{area.area}
-									td #{area.y1990}%
-									td #{area.y2000}%
-									td #{area.y2010}%
-									td.shade #{area.y2014}%
+								td #{area.area}
+								td #{area.y1990}%
+								td.mobile #{area.y2000}%
+								td.mobile #{area.y2010}%
+								td.shade #{area.y2014}%
 
 				p Praesent pretium suscipit mi et viverra. Praesent vehicula arcu arcu, sed pulvinar diam sagittis eget. Mauris nec odio in sapien porttitor efficitur. Donec diam lectus, vestibulum maximus sem quis, blandit gravida nisl. Quisque a porttitor enim. Donec scelerisque erat bibendum sapien auctor faucibus.
 
 				figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
 					table.statTable(class="statTable--mix")
 						caption Percentage of schools that are 50-90% racial minority
+						tr
+							th.blank
+							th 1990
+							th.mobile 2000
+							th.mobile 2010
+							th.shade 2014
+						each area in compRacialMix
 							tr
-								th.blank
-								th 1990
-								th 2000
-								th 2010
-								th.shade 2014
-							each area in compRacialMix
-								tr
-									td #{area.area}
-									td #{area.y1990}%
-									td #{area.y2000}%
-									td #{area.y2010}%
+								td #{area.area}
+								td #{area.y1990}%
+								td.mobile #{area.y2000}%
+								td.mobile #{area.y2010}%
 									td.shade #{area.y2014}%
 
 				p Nullam ac quam porta, pellentesque libero in, mollis odio. Sed semper ac elit sit amet tempus. Donec venenatis euismod metus non consequat. Mauris lobortis felis quis rutrum elementum.
@@ -227,21 +234,23 @@ block content
 
 				figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
 					table.statTable(class="statTable--mix")
-						caption Percentage of school of schools with >75% low-income students 
+						caption Percentage of school of schools with >75% low-income students
+						tr
+							th.blank
+							th 1990
+							th.mobile 2000
+							th.mobile 2010
+							th.shade 2014
+						each area in compPov
 							tr
-								th.blank
-								th 1990
-								th 2000
-								th 2010
-								th.shade 2014
-							each area in compPov
-								tr
-									td #{area.name}
-									each stat in area.dataObj
-										if stat.year == 2014
-											td.shade #{stat.p100}
-										else
-											td #{stat.p100}
+								td #{area.name}
+								each stat in area.dataObj
+									if stat.year == 2014
+										td.shade #{stat.p100}
+									else if stat.year == 1990
+										td #{stat.p100}
+									else
+										td.mobile #{stat.p100}
 
 				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
 

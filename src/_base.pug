@@ -1,6 +1,6 @@
 include includes/_mixins.pug
 
-- var datalink = "http://data.baltimoresun.com/news/bridging-the-divide/"
+//- // - var datalink = "http://data.baltimoresun.com/news/bridging-the-divide/"
 - var datalink = ""
 
 
@@ -21,14 +21,14 @@ html(class="no-js", lang="en")
 		meta(name="author", content="")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 
-		link(rel="stylesheet", type="text/css", href=datalink + "stylesheets/style.css?3117")
+		link(rel="stylesheet", type="text/css", href=datalink + "stylesheets/style.css?1522")
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Montserrat")
 		//- link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Lato|Montserrat|Old+Standard+TT|PT+Sans|PT+Serif|Prata|Roboto+Condensed:400,700")
 
 		//Facebook OpenGraph
-		meta(property="og:title", content="")
-		meta(property="og:url", content="")
-		meta(property="og:image", content="")
+		meta(property="og:title", content="Bridging the Divide")
+		meta(property="og:url", content="http://data.baltimoresun.com/news/bridging-the-divide/")
+		meta(property="og:image", content="http://data.baltimoresun.com/news/bridging-the-divide/images/thumb.jpg")
 		meta(property="og:site_name", content="The Baltimore Sun")
 		meta(property="og:description", content="")
 		meta(property="fb:app_id", content="310302989040998")
@@ -37,9 +37,9 @@ html(class="no-js", lang="en")
 		meta(name="twitter:card", content="summary")
 		meta(name="twitter:site", content="@baltimoresun")
 		meta(name="twitter:creator", content="@baltimoresun")
-		meta(name="twitter:title", content="")
+		meta(name="twitter:title", content="Bridging the Divide")
 		meta(name="twitter:description", content="")
-		meta(name="twitter:image", content="")
+		meta(name="twitter:image", content="http://data.baltimoresun.com/news/bridging-the-divide/images/thumb.jpg")
 		meta(name="twitter:domain", content="baltimoresun.com")
 
 		//Omniture Code
@@ -54,10 +54,10 @@ html(class="no-js", lang="en")
 
 	body
 		script(src="http://www.baltimoresun.com/thirdpartyservice?disablessor=true")
-		div(data-trb-thirdpartynav style='position: fixed;')
-		.progressbar
+		.hideForIntro(data-trb-thirdpartynav style='position: fixed;')
+		.progressbar.hideForIntro
 			.colors
-		.socialButtons
+		.socialButtons.hideForIntro
 			i.icon-twitter
 			i.icon-facebook
 		//block for story layout
@@ -88,7 +88,7 @@ html(class="no-js", lang="en")
 		script.
 			window.jQuery || document.write('<script src="' + datalink + 'scripts/jquery-1.10.2.min.js">\x3C/script>')
 		//Load the rest
-		script(src=datalink + "scripts/app.js?3117")
+		script(src=datalink + "scripts/app.js?1522")
 		//Configuration for scrollReveal.js
 		script.
 			var config = {
