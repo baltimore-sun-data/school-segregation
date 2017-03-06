@@ -1420,7 +1420,7 @@ body {
     font-size: 1.75em;
     font-weight: bold; }
   .exposure h2 {
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: normal; }
   .exposure h3 {
     font-size: 1.75em;
@@ -1517,6 +1517,10 @@ body {
     padding-top: 15px; }
   .exposure .poverty-key {
     width: 40%; }
+  .exposure .displaynone {
+    display: none; }
+  .exposure .displayall {
+    display: inline; }
   .exposure .select {
     font-size: 1em;
     position: relative;
@@ -1594,7 +1598,8 @@ body {
   .exposure .dif {
     color: #999;
     font-size: 1em;
-    font-weight: normal; }
+    font-weight: normal;
+    display: none; }
   .exposure #black-text {
     color: #df2228; }
   .exposure #white-text {
@@ -1630,13 +1635,20 @@ body {
   .exposure #chair-col {
     width: 30%;
     float: left;
-    text-align: center; }
+    text-align: center;
+    height: 200px; }
+  @media (max-width: 500px) {
+    .exposure #chair-col {
+      height: auto; } }
   .exposure #asian-circle-col {
     width: 33%;
     float: left;
     text-align: left;
     margin-top: 50px;
     margin-left: 10px; }
+  @media (max-width: 500px) {
+    .exposure #asian-circle-col {
+      margin-left: 0px; } }
   .exposure #other-circle-col {
     width: 100%;
     text-align: center;
@@ -1684,6 +1696,10 @@ body {
   @media (max-width: 500px) {
     .exposure #asian-circle {
       margin: 0 auto; } }
+  .exposure .circleTransition {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
   .exposure #other-circle {
     width: 3px;
     height: 3px;
@@ -1699,7 +1715,11 @@ body {
     text-align: right; }
   .exposure #poverty-chair-col {
     width: 33%;
-    float: left; }
+    float: left;
+    height: 200px; }
+  @media (max-width: 500px) {
+    .exposure #poverty-chair-col {
+      height: auto; } }
   .exposure #non-reduced-circle-col {
     width: 33%;
     float: left;

@@ -206,23 +206,24 @@
       <div class="article">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p>Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.</p>
-        <figure class="inline-media inline-media--borderTop inline-media--full inline-media--interactive">
-<div class='exposure'>
-	<div id="container">
+        <figure class="inline-media inline-media--borderTop inline-media--full inline-media--interactive"><div class="exposure" >
+<div id="container">
 
-		<h1>How integrated is your school district?</h1>
+	<h1>How integrated is your school district?</h1>
 
-		<div id="nav-container">
-			<div id="nav" class="nav-race" onClick="swapTabs('nav-race');">Race</div>
-			<div id="nav" class="nav-poverty" onClick="swapTabs('nav-poverty');">Poverty</div>
-		</div>
+	<div id="nav-container">
+		<div id="nav" class="nav-race" onClick="swapTabs('nav-race');">Race</div>
+		<div id="nav" class="nav-poverty" onClick="swapTabs('nav-poverty');">Poverty</div>
+	</div>
 
-		<div style="clear: both;"></div><br>
+	<div style="clear: both;"></div><br>
 
 
-		<!-- RACE CONTAINER -->
-		<div id="race-container">
-			<h2>Select a school district to see the racial makeup of that district. Select a race to see that race's exposure to other races in the district. <span class="green-text">In highly-integrated schools, exposure rate will closely match the district's racial makeup.</span></h2>
+	<!-- RACE CONTAINER -->
+	<div id="race-container">
+		<h2>Minority students in Maryland are more likely to attend school with minority students. White students are more likely to attend schools with white students. If schools were integrated, as research has shown benefits all students, the demographics of the schools would match the demographics of people living in the school district. <br><br>
+
+			<span class="green-text"><strong>Select a school district to see how segregated your district is.</strong></span></h2>
 
 			SELECT DISTRICT<br>
 			<div class="select">
@@ -239,15 +240,20 @@
 			</div>
 
 
+			<div style="clear:both;"></div><br>
 
-			<h3>This is the <span id="text-exposure">exposure rate</span> of <strong><span id="text-race">a black student</span></strong> in <strong><span id="text-district">Maryland.</span></strong></h3>
+			<h3 id="student-text">If you are <strong><span id="text-race">a black student</span></strong> in <strong><span id="text-district">Maryland</span></strong> this is <span id="text-exposure">exposure rate</span></strong>.</h3>
+
+			<h3 id="district-text">This is the racial makeup of an average school in <strong><span id="text-district2">Maryland</span></strong>.</h3>
+
+			<div style="clear:both;"></div><br>
 
 			SELECT RACE<br>
 			<div id="md-menu" class="select">
 				<span class="arr"></span>
 				<select class="small" onchange="load_exposure_data_eval(this.value)">
 					<option value="mdAllData">All</option>
-					<option value="mdWhiteData">White</option>
+					<option value="mdWhiteData">White</a></option>
 					<option value="mdBlackData">Black</option>
 					<option value="mdHispanicData">Hispanic</option>
 					<option value="mdAsianData">Asian</option>
@@ -258,7 +264,7 @@
 				<span class="arr"></span>
 				<select class="small" onchange="load_exposure_data_eval(this.value)">
 					<option value="aaAllData">All</option>
-					<option value="aaWhiteData">White</option>
+					<option value="aaWhiteData">White</a></option>
 					<option value="aaBlackData">Black</option>
 					<option value="aaHispanicData">Hispanic</option>
 					<option value="aaAsianData">Asian</option>
@@ -269,7 +275,7 @@
 				<span class="arr"></span>
 				<select class="small" onchange="load_exposure_data_eval(this.value)">
 					<option value="baltimoreAllData">All</option>
-					<option value="baltimoreWhiteData">White</option>
+					<option value="baltimoreWhiteData">White</a></option>
 					<option value="baltimoreBlackData">Black</option>
 					<option value="baltimoreHispanicData">Hispanic</option>
 					<option value="baltimoreAsianData">Asian</option>
@@ -282,7 +288,7 @@
 				<span class="arr"></span>
 				<select class="small" onchange="load_exposure_data_eval(this.value)">
 					<option value="cityAllData">All</option>
-					<option value="cityWhiteData">White</option>
+					<option value="cityWhiteData">White</a></option>
 					<option value="cityBlackData">Black</option>
 					<option value="cityHispanicData">Hispanic</option>
 					<option value="cityAsianData">Asian</option>
@@ -293,7 +299,7 @@
 				<span class="arr"></span>
 				<select class="small" onchange="load_exposure_data_eval(this.value)">
 					<option value="carrollAllData">All</option>
-					<option value="carrollWhiteData">White</option>
+					<option value="carrollWhiteData">White</a></option>
 					<option value="carrollBlackData">Black</option>
 					<option value="carrollHispanicData">Hispanic</option>
 					<option value="carrollAsianData">Asian</option>
@@ -304,7 +310,7 @@
 				<span class="arr"></span>
 				<select class="small" onchange="load_exposure_data_eval(this.value)">
 					<option value="harfordAllData">All</option>
-					<option value="harfordWhiteData">White</option>
+					<option value="harfordWhiteData">White</a></option>
 					<option value="harfordBlackData">Black</option>
 					<option value="harfordHispanicData">Hispanic</option>
 					<option value="harfordAsianData">Asian</option>
@@ -315,7 +321,7 @@
 				<span class="arr"></span>
 				<select class="small" onchange="load_exposure_data_eval(this.value)">
 					<option value="howardAllData">All</option>
-					<option value="howardWhiteData">White</option>
+					<option value="howardWhiteData">White</a></option>
 					<option value="howardBlackData">Black</option>
 					<option value="howardHispanicData">Hispanic</option>
 					<option value="howardAsianData">Asian</option>
@@ -331,14 +337,14 @@
 				<div id="black-circle-col">
 
 					<div id="black-text" class="graphic-text"> </div><span id="black-dif" class="dif"> </span>
-					<div id="black-circle"></div>
+					<div id="black-circle" class="circleTransition"></div>
 
 				</div>
 
 
 				<div id="hispanic-circle-col">
 					<div id="hispanic-text" class="graphic-text"> </div><span id="hispanic-dif" class="dif"> </span>
-					<div id="hispanic-circle"></div>
+					<div id="hispanic-circle" class="circleTransition"></div>
 				</div>
 
 
@@ -347,7 +353,7 @@
 
 				<div id="white-circle-col">
 
-					<div id="white-circle"></div>
+					<div id="white-circle" class="circleTransition"></div>
 					<div id="white-text" class="graphic-text"> </div><span id="white-dif" class="dif"> </span>
 
 				</div>
@@ -379,13 +385,17 @@
 						</g>
 					</g>
 				</svg>
+
+
+
+
 			</div>
 
 			
 			<div id="asian-circle-col">
-				<div id="asian-circle"></div>
+				<div id="asian-circle" class="circleTransition"></div>
 				<div id="asian-text" class="graphic-text">7% </div><span id="asian-dif" class="dif">(-2%)</span>
-
+				
 
 			</div>
 
@@ -394,7 +404,7 @@
 
 
 			<div id="other-circle-col">
-				<div id="other-circle"></div>
+				<div id="other-circle" class="circleTransition"></div>
 				<div id="other-text" class="graphic-text">1% </div><span id="other-dif" class="dif">(-2%)</span>
 			</div>
 
@@ -425,147 +435,169 @@
 
 	<!-- POVERTY CONTAINER -->
 	<div id="poverty-container">
-		<h2>Select a school district to see the poverty makeup of that district. Select reduced or non-reduced meal plan to see that group's exposure to other economic groups in the district. <span class="green-text">In highly-integrated schools, exposure rate will closely match the district's makeup.</span></h2>
-		
-		SELECT DISTRICT<br>
-		<div class="select">
-			<span class="arr"></span>
-			<select onchange="swapPovertyDropdown(this.value)">
-				<option value="md-poverty-menu">Maryland</option>
-				<option value="aa-poverty-menu">Anne Aundel</option>
-				<option value="city-poverty-menu">Baltimore City</option>
-				<option value="baltimore-poverty-menu">Baltimore County</option>
-				<option value="carroll-poverty-menu">Carroll</option>
-				<option value="harford-poverty-menu">Harford</option>
-				<option value="howard-poverty-menu">Howard</option>
-			</select>
-		</div>
+		<h2>Poor students in Maryland are more likely to attend school with other poor students, just as middle-income and affluent students are more likely to be in schools with others of that socioeconomic background. If schools were integrated by income, as research shows helps all students, the demographics of the schools would match the demographics of the people living in that school district. <br><br>
 
+			<span class="green-text"><strong>Select a school district to see how segregated your district is.</strong></span></h2>
 
-
-
-		<h3>This is the <span id="text-poverty-exposure"> </span> of <strong><span id="text-poverty-rate"> </span></strong> in <strong><span id="text-poverty-district"></span>.</strong></h3>
-
-		SELECT MEAL PLAN<br>
-		<div id="md-poverty-menu" class="select">
-			<span class="arr"></span>
-			<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
-				<option value="mdAllPovertyData">All</option>
-				<option value="mdReducedPovertyData">Reduced</option>
-				<option value="mdNonReducedPovertyData">Non-Reduced</option>
-			</select>
-		</div>
-
-
-		<div id="aa-poverty-menu" style="display:none;" class="select">
-			<span class="arr"></span>
-			<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
-				<option value="aaAllPovertyData">All</option>
-				<option value="aaReducedPovertyData">Reduced</option>
-				<option value="aaNonReducedPovertyData">Non-Reduced</option>
-			</select>
-		</div>
-
-		<div id="baltimore-poverty-menu" style="display:none;" class="select">
-			<span class="arr"></span>
-			<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
-				<option value="baltimoreAllPovertyData">All</option>
-				<option value="baltimoreReducedPovertyData">Reduced</option>
-				<option value="baltimoreNonReducedPovertyData">Non-Reduced</option>
-			</select>
-		</div>
-
-		<div id="city-poverty-menu" style="display:none;" class="select">
-			<span class="arr"></span>
-			<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
-				<option value="cityAllPovertyData">All</option>
-				<option value="cityReducedPovertyData">Reduced</option>
-				<option value="cityNonReducedPovertyData">Non-Reduced</option>
-			</select>
-		</div>
-
-		<div id="carroll-poverty-menu" style="display:none;" class="select">
-			<span class="arr"></span>
-			<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
-				<option value="carrollAllPovertyData">All</option>
-				<option value="carrollReducedPovertyData">Reduced</option>
-				<option value="carrollNonReducedPovertyData">Non-Reduced</option>
-			</select>
-		</div>
-
-		<div id="harford-poverty-menu" style="display:none;" class="select">
-			<span class="arr"></span>
-			<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
-				<option value="harfordAllPovertyData">All</option>
-				<option value="harfordReducedPovertyData">Reduced</option>
-				<option value="harfordNonReducedPovertyData">Non-Reduced</option>
-			</select>
-		</div>
-
-		<div id="howard-poverty-menu" style="display:none;" class="select">
-			<span class="arr"></span>
-			<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
-				<option value="howardAllPovertyData">All</option>
-				<option value="howardReducedPovertyData">Reduced</option>
-				<option value="howardNonReducedPovertyData">Non-Reduced</option>
-			</select>
-		</div>
-
-
-		<div id="graphic-container">
-
-			
-			<div id="reduced-circle-col">
-				<div id="reduced-circle"></div>
-				<div id="reduced-text" class="graphic-text"> </div><span id="reduced-dif" class="dif"> </span>
+			SELECT DISTRICT<br>
+			<div class="select">
+				<span class="arr"></span>
+				<select onchange="swapPovertyDropdown(this.value)">
+					<option value="md-poverty-menu">Maryland</option>
+					<option value="aa-poverty-menu">Anne Aundel</option>
+					<option value="city-poverty-menu">Baltimore City</option>
+					<option value="baltimore-poverty-menu">Baltimore County</option>
+					<option value="carroll-poverty-menu">Carroll</option>
+					<option value="harford-poverty-menu">Harford</option>
+					<option value="howard-poverty-menu">Howard</option>
+				</select>
 			</div>
 
-			<div id="poverty-chair-col">
-				
 
-				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				viewBox="0 0 126.7 119.5" style="enable-background:new 0 0 126.7 119.5;" xml:space="preserve">
-				<style type="text/css">
-					.st0{fill:none;stroke:#BCBEC0;stroke-width:0.75;stroke-miterlimit:10;}
-					.st1{fill:#B7B7B7;}
-				</style>
-				<line class="st0" x1="4.4" y1="59.2" x2="27.8" y2="59.2"/>
-				<line class="st0" x1="101.4" y1="59.2" x2="124.7" y2="59.2"/>
-				<g>
-					<path id="chair-svg-poverty" d="M78.8,32.9c0-1.2-0.8-2.2-1.9-2.2H57.4c-1,0-1.9,1-1.9,2.2l-0.3,10.6h24L78.8,32.9z"/>
-					<g>
-						<path id="chair-svg-poverty-bottom" d="M86.4,46.1H45.2c-0.7,0-1.3,0.6-1.3,1.3v2c0,0.7,0.6,1.3,1.3,1.3h0.9c-0.2,3.6,1.1,9.2,5.1,11.4
-						c0.1,1.3,1.1,2.4,2.2,2.4c0.1,0,0.3,0,0.4,0l-4.4,16c-0.2,0.7,0.2,1.5,1,1.7s1.5-0.3,1.7-1l2.3-8.3h25.4l2.3,8.3
-						c0.2,0.8,0.9,1.1,1.7,1c0.7-0.2,1.2-1,1-1.7l-4.4-16c0.2,0,0.5,0,0.7,0c1.2,0,2.3-1.2,2.3-2.6c0-0.6,0-0.4,0-1.1
-						c0-1.4-0.9-2.5-2.1-2.5c-4.6,0.1-9.4,0.3-14,0.3s-9.3-0.2-14-0.3c-0.6,0-1.2,0.3-1.6,0.8c-2.9-2.6-2.9-6.4-2.9-8.4h6.1l-0.2,4.9
-						c4.2,0.2,8.4,0.3,12.5,0.3c4,0,8.1-0.1,12.2-0.3l-0.2-4.9h7.1c0.7,0,1.3-0.6,1.3-1.3v-2C87.7,46.7,87.1,46.1,86.4,46.1z
-						M56.7,64.4c6.9,0,13.9,0,20.8,0l1.5,5.7H55.2L56.7,64.4z"/>
-					</g>
-				</g>
-			</svg>
+			<div style="clear:both;"></div><br>
+
+			<h3 id="student-text-poverty">If you're a <strong><span id="text-poverty-rate"> </span></strong> in <strong><span id="text-poverty-district"></span></strong>, this is socioeconomic makeup of the average school.
+
+				<h3 id="district-text-poverty">This is the socioeconomic makeup of the average school in <strong><span id="text-poverty-district2"></span></strong>.</h3>
+
+				<div style="clear:both;"></div><br>
+
+				SELECT SOCIOECONOMIC BACKGROUND<br>
+				<div id="md-poverty-menu" class="select">
+					<span class="arr"></span>
+					<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
+						<option value="mdAllPovertyData">All</option>
+						<option value="mdReducedPovertyData">Qualify for free/reduced lunch</a></option>
+						<option value="mdNonReducedPovertyData">Not qualified for free/reduced lunch</option>
+					</select>
+				</div>
+
+
+				<div id="aa-poverty-menu" style="display:none;" class="select">
+					<span class="arr"></span>
+					<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
+						<option value="aaAllPovertyData">All</option>
+						<option value="aaReducedPovertyData">Reduced</a></option>
+						<option value="aaNonReducedPovertyData">Non-Reduced</option>
+					</select>
+				</div>
+
+				<div id="baltimore-poverty-menu" style="display:none;" class="select">
+					<span class="arr"></span>
+					<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
+						<option value="baltimoreAllPovertyData">All</option>
+						<option value="baltimoreReducedPovertyData">Reduced</a></option>
+						<option value="baltimoreNonReducedPovertyData">Non-Reduced</option>
+					</select>
+				</div>
+
+				<div id="city-poverty-menu" style="display:none;" class="select">
+					<span class="arr"></span>
+					<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
+						<option value="cityAllPovertyData">All</option>
+						<option value="cityReducedPovertyData">Reduced</a></option>
+						<option value="cityNonReducedPovertyData">Non-Reduced</option>
+					</select>
+				</div>
+
+				<div id="carroll-poverty-menu" style="display:none;" class="select">
+					<span class="arr"></span>
+					<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
+						<option value="carrollAllPovertyData">All</option>
+						<option value="carrollReducedPovertyData">Reduced</a></option>
+						<option value="carrollNonReducedPovertyData">Non-Reduced</option>
+					</select>
+				</div>
+
+				<div id="harford-poverty-menu" style="display:none;" class="select">
+					<span class="arr"></span>
+					<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
+						<option value="harfordAllPovertyData">All</option>
+						<option value="harfordReducedPovertyData">Reduced</a></option>
+						<option value="harfordNonReducedPovertyData">Non-Reduced</option>
+					</select>
+				</div>
+
+				<div id="howard-poverty-menu" style="display:none;" class="select">
+					<span class="arr"></span>
+					<select class="small" onchange="load_poverty_exposure_data_eval(this.value)">
+						<option value="howardAllPovertyData">All</option>
+						<option value="howardReducedPovertyData">Reduced</a></option>
+						<option value="howardNonReducedPovertyData">Non-Reduced</option>
+					</select>
+				</div>
+
+
+
+
+				<div id="graphic-container">
+
+
+					<div id="reduced-circle-col">
+						<div id="reduced-circle" class="circleTransition"></div>
+						<div id="reduced-text" class="graphic-text"> 44%</div><span id="reduced-dif" class="dif"> </span>
+					</div>
+
+					<div id="poverty-chair-col">
+
+
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 126.7 119.5" style="enable-background:new 0 0 126.7 119.5;" xml:space="preserve">
+						<style type="text/css">
+							.st0{fill:none;stroke:#BCBEC0;stroke-width:0.75;stroke-miterlimit:10;}
+							.st1{fill:#B7B7B7;}
+						</style>
+						<line class="st0" x1="4.4" y1="59.2" x2="27.8" y2="59.2"/>
+						<line class="st0" x1="101.4" y1="59.2" x2="124.7" y2="59.2"/>
+						<g>
+							<path id="chair-svg-poverty" d="M78.8,32.9c0-1.2-0.8-2.2-1.9-2.2H57.4c-1,0-1.9,1-1.9,2.2l-0.3,10.6h24L78.8,32.9z"/>
+							<g>
+								<path id="chair-svg-poverty-bottom" d="M86.4,46.1H45.2c-0.7,0-1.3,0.6-1.3,1.3v2c0,0.7,0.6,1.3,1.3,1.3h0.9c-0.2,3.6,1.1,9.2,5.1,11.4
+								c0.1,1.3,1.1,2.4,2.2,2.4c0.1,0,0.3,0,0.4,0l-4.4,16c-0.2,0.7,0.2,1.5,1,1.7s1.5-0.3,1.7-1l2.3-8.3h25.4l2.3,8.3
+								c0.2,0.8,0.9,1.1,1.7,1c0.7-0.2,1.2-1,1-1.7l-4.4-16c0.2,0,0.5,0,0.7,0c1.2,0,2.3-1.2,2.3-2.6c0-0.6,0-0.4,0-1.1
+								c0-1.4-0.9-2.5-2.1-2.5c-4.6,0.1-9.4,0.3-14,0.3s-9.3-0.2-14-0.3c-0.6,0-1.2,0.3-1.6,0.8c-2.9-2.6-2.9-6.4-2.9-8.4h6.1l-0.2,4.9
+								c4.2,0.2,8.4,0.3,12.5,0.3c4,0,8.1-0.1,12.2-0.3l-0.2-4.9h7.1c0.7,0,1.3-0.6,1.3-1.3v-2C87.7,46.7,87.1,46.1,86.4,46.1z
+								M56.7,64.4c6.9,0,13.9,0,20.8,0l1.5,5.7H55.2L56.7,64.4z"/>
+							</g>
+						</g>
+					</svg>
+
+
+				</div>
+
+				<div id="non-reduced-circle-col">
+					<div id="non-reduced-circle" class="circleTransition"></div>
+					<div id="non-reduced-text" class="graphic-text"> 56%</div><span id="non-reduced-dif" class="dif"> </span>
+				</div>
+
+
+			</div>
+
+			<div style="clear:both;"></div>
+
+			<div id="color-ramp">
+				<div class="color-ramp-block red poverty-key"><p>Reduced</p></div>
+				<div class="color-ramp-block blue poverty-key"><p>Non-Reduced</p></div>
+			</div>
+
+
+			<div style="clear:both;"></div>
+
+			<div id="small-print">* Exposure rate measures the liklihood that a student will attend school with
+				a particular group.
+			</div>
+
 		</div>
-		<div id="non-reduced-circle-col">
-			<div id="non-reduced-circle"></div>
-			<div id="non-reduced-text" class="graphic-text"> </div><span id="non-reduced-dif" class="dif"> </span>
-		</div>
+		<!-- END POVERTY CONTAINER -->
+
+
+
+
+
+
+
 	</div>
-
-	<div style="clear:both;"></div>
-
-	<div id="color-ramp">
-		<div class="color-ramp-block red poverty-key"><p>Reduced</p></div>
-		<div class="color-ramp-block blue poverty-key"><p>Non-Reduced</p></div>
 	</div>
-
-
-	<div style="clear:both;"></div>
-
-	<div id="small-print">* Exposure rate measures the liklihood that a student will attend school with
-		a particular group.
-	</div>
-</div>
-<!-- END POVERTY CONTAINER -->
-</div>
         </figure>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p>Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.</p>
