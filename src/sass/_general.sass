@@ -1,0 +1,94 @@
+/* General Styles */
+.hideForIntro
+	display: none
+body
+	background-color: #fefffe
+.progressbar
+	position: fixed
+	top: 50px
+	width: 100%
+	border-bottom: 5px solid
+	border-image: url($datalink + 'images/border-h.svg') 1 stretch
+	z-index: 9
+
+	.colors
+		position: absolute
+		right: 0
+		width: 90%
+		max-width: 90%
+		margin: 0 0 0 auto
+		border-bottom: 5px solid white
+		z-index: 9
+		// &:before
+		// 	position: absolute
+		// 	top: 50px
+		// 	width: 100%
+		// 	max-width: 100%
+		// 	border-bottom: 5px solid
+		// 	border-image: url('../images/border.svg') 1 stretch repeat
+		// 	z-index: 8
+ 
+.socialButtonsd
+	position: fixed
+	top: 55px
+	right: 0
+	padding: .5em
+	font-size: 22px
+	z-index: 11
+	i
+		margin: 0 0 0 0.5em
+		color: $blue
+		opacity: .3
+		cursor: pointer
+		// @include transition(all .5s ease)
+		&:hover
+			opacity: 1
+			// font-size: 26px
+
+.container
+	width: 1000px
+	margin: 0 auto
+
+	@media (max-width: 970px)
+		width: auto
+		padding: 0 20px
+
+	//temp
+	//border: 1px solid red
+	//min-height: 1000px
+	&--header
+		position: relative
+
+	&--article
+		position: relative
+		overflow-x: hidden
+		//&:before
+		//	content: ''
+		//	position: absolute
+		//	top: 0
+		//	left: 610px
+		//	bottom: 0
+		//	width: 1px
+		//	background-color: #CCC	
+		//	z-index: 1
+		//	@media (max-width: $no-rail)
+		//		display: none
+
+
+	&--interactive
+		width: 1200px
+		@media (max-width: 1220px)
+			width: auto
+			padding: 0 10px
+
+
+/* Keyframes */
+
+
+@keyframes fade-in-up
+	from
+		opacity: 0
+		transform: translateY(30px)
+	to
+		opacity: 1
+		transform: translateY(0)

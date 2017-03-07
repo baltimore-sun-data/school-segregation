@@ -1,0 +1,366 @@
+extends _base.pug
+
+block content
+	include includes/_data.pug
+
+		.header
+			//- .header__background-video
+				video(loop="true" width="100%" height="100%" autoplay muted)
+					source(src="" type="video/mp4")
+					source(src="" type="video/webm")
+			.header__text
+				.container.container--header
+					//- .header__part-no Bridging the Divide
+					h1.header__title Bridging the Divide
+		//load photo gallery
+		include includes/_gallery.pug
+
+		.container.container--article
+			.article
+				.article__byline Byline
+				.article__dateline Date
+
+				//menu for series
+				figure.inline-media.inline-media--borderLeft.inline-media--small.inline-media--has-title.inline-media--not-mobile(data-sr)
+					.inline-media__title
+						a(href="#") More in the series
+					include includes/_parts-menu.pug
+
+				p.article__dropcap(data-dropcap="H")
+					span ere is an example of a paragraph with a dropcap. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. 
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+		#featured-video.featured-video
+			figure.fv__video
+				iframe(src="https://player.vimeo.com/video/143650587" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+			.fv__overlay
+			.fv__play-btn
+
+		.container.container--article
+			.article
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque sed massa ac commodo. Etiam finibus posuere iaculis. Integer pharetra scelerisque suscipit. Etiam in ullamcorper justo, non ultricies quam. Cras feugiat mollis consectetur. Etiam vel tempor neque. Suspendisse sit amet facilisis arcu. Vivamus dignissim turpis risus, in lobortis erat laoreet eu.
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque sed massa ac commodo. Etiam finibus posuere iaculis. Integer pharetra scelerisque suscipit. Etiam in ullamcorper justo, non ultricies quam. Cras feugiat mollis consectetur. Etiam vel tempor neque. Suspendisse sit amet facilisis arcu. Vivamus dignissim turpis risus, in lobortis erat laoreet eu.
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				//small pull quote in sidebar
+				figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--small(data-sr)
+					.inline-media--pullquote__text &ldquo;Pull quote&rdquo;
+					.inline-media--pullquote__src Quote attribution
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
+
+				p Praesent pretium suscipit mi et viverra. Praesent vehicula arcu arcu, sed pulvinar diam sagittis eget. Mauris nec odio in sapien porttitor efficitur. Donec diam lectus, vestibulum maximus sem quis, blandit gravida nisl. Quisque a porttitor enim. Donec scelerisque erat bibendum sapien auctor faucibus.
+
+				p Nullam ac quam porta, pellentesque libero in, mollis odio. Sed semper ac elit sit amet tempus. Donec venenatis euismod metus non consequat. Mauris lobortis felis quis rutrum elementum.
+
+		include includes/ads/ad-for-body--leaderboard2.html
+
+		.article__chapter-title
+			.article__chapter-title__text Chapter title
+
+		p.chapterIntro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		//- .chapterTitleImage
+		//- 	//- img.chapterTitleImage(src='http://data.baltimoresun.com/news/unsettled-journeys/part-1/images/placeholder/ph-inline/patterson.jpg')
+		//- 	.chapterTitleImage__text 
+		//- 		h2 Chapter title
+
+		.container.container--article
+			.article
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. Praesent quis pretium ipsum, eget efficitur neque. Sed et congue libero. Praesent dapibus posuere lobortis. Suspendisse pretium sed ex nec tristique.
+
+				//large photo gallery link in sidebar
+				figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--big(data-sr)
+					img(src=datalink + "images/placeholder/ph-7.jpg")
+					figcaption.inline-media--pic__caption Caption goes here
+					btn.inline-media--pic__open-gallery OPEN GALLERY
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
+
+		//multiphoto package - photos enter from left and right
+		figure.media-package
+			img.media-package__img.media-package__img--left(src=datalink + "images/placeholder/ph-1.jpg" data-sr="enter bottom")
+			img.media-package__img.media-package__img--right(src=datalink + "images/placeholder/ph-2.jpg" data-sr="enter bottom")
+			.media-package__caption Caption for multiphoto package
+
+		.container.container--article
+			.article
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				figure.inline-media.inline-media--borderTop.inline-media--full.inline-media--interactive
+					include includes/exposure/index.html
+			
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		figure.media-package.media-package--iframe
+			iframe(width="100%" frameborder="0" src="https://baltsun.carto.com/builder/9615e5dc-fa0e-11e6-b116-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen)
+
+		.container.container--article
+			.article
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+		figure.media-package.media-package--multTables
+			h3 Change in student racial demographics, 1990 - 2014
+			each race in compRacial
+				table.statTable(class="statTable--"+race.id)
+					caption #{race.caption}
+					tr
+						th.blank
+						th 1990
+						th 2014
+						th Change
+					each area in race.dataObj
+						tr
+							td #{area.area}
+							td #{area.pct1990}
+							td #{area.pct2014}
+							if area.pctDiff >= 0
+								td +#{area.pctDiff}%
+							else
+								td #{area.pctDiff}%
+
+		.container.container--article
+			.article
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+				figure.inline-media.inline-media--borderTop.inline-media--big.inline-media--table(data-sr)
+					table.statTable(class="statTable--mix")
+						caption Racially isolated schools, 2014
+							p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at.
+						tr
+							th.blank
+							th >90% white
+							th 50-90% non-white
+							th >90% non-white
+						each area in compRacial2014
+							tr
+								td #{area.area}
+								td #{area.white90}%
+								td #{area.mixed}%
+								td #{area.nonwhite90}%
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
+
+				p Aliquam eu enim eget dolor placerat dignissim. Nullam nec ligula fringilla, consectetur diam at, posuere neque. Phasellus porttitor quam at metus luctus, eu eleifend nisl elementum. Donec malesuada, lectus ac ultricies dapibus, leo turpis ultricies sem, sit amet euismod mi magna ut lorem.
+
+				p Etiam dapibus, turpis quis ullamcorper scelerisque, urna augue egestas urna, vel pellentesque velit risus in tortor. Vivamus felis ex, eleifend volutpat tortor volutpat, consequat laoreet mauris. Donec laoreet felis consequat, faucibus dolor ac, interdum orci. Nulla molestie elementum finibus. Proin arcu eros, feugiat pretium felis vitae, aliquet posuere purus.
+
+				figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+					table.statTable(class="statTable--mix")
+						caption Percentage of schools that are >90% white
+							p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at.
+						tr
+							th.blank
+							th 1990
+							th.mobile 2000
+							th.mobile 2010
+							th.shade 2014
+						each area in compRacialWhite
+							tr
+								td #{area.area}
+								td #{area.y1990}%
+								td.mobile #{area.y2000}%
+								td.mobile #{area.y2010}%
+								td.shade #{area.y2014}%
+
+				p Proin porta ut neque vitae ornare. Aenean maximus libero id turpis imperdiet porttitor. Vivamus ac erat egestas mauris fringilla accumsan. Etiam sit amet justo vitae lorem posuere egestas sed ut tellus. Donec a urna nec leo gravida pretium. Praesent viverra, magna id lobortis ultricies, dolor urna finibus arcu, ac fermentum odio nulla ac dolor.
+
+				figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+					table.statTable(class="statTable--mix")
+						caption Percentage of schools that are >90% racial minority
+						tr
+							th.blank
+							th 1990
+							th.mobile 2000
+							th.mobile 2010
+							th.shade 2014
+						each area in compRacialMin
+							tr
+								td #{area.area}
+								td #{area.y1990}%
+								td.mobile #{area.y2000}%
+								td.mobile #{area.y2010}%
+								td.shade #{area.y2014}%
+
+				p Praesent pretium suscipit mi et viverra. Praesent vehicula arcu arcu, sed pulvinar diam sagittis eget. Mauris nec odio in sapien porttitor efficitur. Donec diam lectus, vestibulum maximus sem quis, blandit gravida nisl. Quisque a porttitor enim. Donec scelerisque erat bibendum sapien auctor faucibus.
+
+				figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+					table.statTable(class="statTable--mix")
+						caption Percentage of schools that are 50-90% racial minority
+						tr
+							th.blank
+							th 1990
+							th.mobile 2000
+							th.mobile 2010
+							th.shade 2014
+						each area in compRacialMix
+							tr
+								td #{area.area}
+								td #{area.y1990}%
+								td.mobile #{area.y2000}%
+								td.mobile #{area.y2010}%
+									td.shade #{area.y2014}%
+
+				p Nullam ac quam porta, pellentesque libero in, mollis odio. Sed semper ac elit sit amet tempus. Donec venenatis euismod metus non consequat. Mauris lobortis felis quis rutrum elementum.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+				figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+					table.statTable(class="statTable--mix")
+						caption Percentage of school of schools with >75% low-income students
+						tr
+							th.blank
+							th 1990
+							th.mobile 2000
+							th.mobile 2010
+							th.shade 2014
+						each area in compPov
+							tr
+								td #{area.name}
+								each stat in area.dataObj
+									if stat.year == 2014
+										td.shade #{stat.p100}
+									else if stat.year == 1990
+										td #{stat.p100}
+									else
+										td.mobile #{stat.p100}
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
+
+				p Aliquam eu enim eget dolor placerat dignissim. Nullam nec ligula fringilla, consectetur diam at, posuere neque. Phasellus porttitor quam at metus luctus, eu eleifend nisl elementum. Donec malesuada, lectus ac ultricies dapibus, leo turpis ultricies sem, sit amet euismod mi magna ut lorem.
+
+				p Etiam dapibus, turpis quis ullamcorper scelerisque, urna augue egestas urna, vel pellentesque velit risus in tortor. Vivamus felis ex, eleifend volutpat tortor volutpat, consequat laoreet mauris. Donec laoreet felis consequat, faucibus dolor ac, interdum orci. Nulla molestie elementum finibus. Proin arcu eros, feugiat pretium felis vitae, aliquet posuere purus.
+
+				p Proin porta ut neque vitae ornare. Aenean maximus libero id turpis imperdiet porttitor. Vivamus ac erat egestas mauris fringilla accumsan. Etiam sit amet justo vitae lorem posuere egestas sed ut tellus. Donec a urna nec leo gravida pretium. Praesent viverra, magna id lobortis ultricies, dolor urna finibus arcu, ac fermentum odio nulla ac dolor.
+
+				p Praesent pretium suscipit mi et viverra. Praesent vehicula arcu arcu, sed pulvinar diam sagittis eget. Mauris nec odio in sapien porttitor efficitur. Donec diam lectus, vestibulum maximus sem quis, blandit gravida nisl. Quisque a porttitor enim. Donec scelerisque erat bibendum sapien auctor faucibus.
+
+				p Nullam ac quam porta, pellentesque libero in, mollis odio. Sed semper ac elit sit amet tempus. Donec venenatis euismod metus non consequat. Mauris lobortis felis quis rutrum elementum.
+
+		.container.container--article
+			.article
+
+				p Etiam dapibus, turpis quis ullamcorper scelerisque, urna augue egestas urna, vel pellentesque velit risus in tortor. Vivamus felis ex, eleifend volutpat tortor volutpat, consequat laoreet mauris. Donec laoreet felis consequat, faucibus dolor ac, interdum orci. Nulla molestie elementum finibus. Proin arcu eros, feugiat pretium felis vitae, aliquet posuere purus.
+
+				//large pull quote
+				figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--big(data-sr)
+					.inline-media--pullquote__text &ldquo;Pull quote&rdquo;
+					.inline-media--pullquote__src Quote attribution
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				
+				//small external link
+				figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--small(data-sr)
+					.inline-media--external-link__title External link title
+					.inline-media--external-link__content External link description
+					.inline-media--external-link__link
+						a(href="#" target="_blank") Learn more.
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				//full-width link to photo gallery
+				figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--full(data-sr="enter bottom")
+					img(src=datalink + "images/placeholder/ph-3.jpg")
+					figcaption.inline-media--pic__caption Caption goes here
+					btn.inline-media--pic__open-gallery OPEN GALLERY					
+
+				//timeline mixin
+				+timeline([{'date': '2001-2003','description': 'Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales.'},{'date': '2003-2005', 'description': 'Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. '}])
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
+
+				p Aliquam eu enim eget dolor placerat dignissim. Nullam nec ligula fringilla, consectetur diam at, posuere neque. Phasellus porttitor quam at metus luctus, eu eleifend nisl elementum. Donec malesuada, lectus ac ultricies dapibus, leo turpis ultricies sem, sit amet euismod mi magna ut lorem.
+
+				p Etiam dapibus, turpis quis ullamcorper scelerisque, urna augue egestas urna, vel pellentesque velit risus in tortor. Vivamus felis ex, eleifend volutpat tortor volutpat, consequat laoreet mauris. Donec laoreet felis consequat, faucibus dolor ac, interdum orci. Nulla molestie elementum finibus. Proin arcu eros, feugiat pretium felis vitae, aliquet posuere purus.
+
+				p Proin porta ut neque vitae ornare. Aenean maximus libero id turpis imperdiet porttitor. Vivamus ac erat egestas mauris fringilla accumsan. Etiam sit amet justo vitae lorem posuere egestas sed ut tellus. Donec a urna nec leo gravida pretium. Praesent viverra, magna id lobortis ultricies, dolor urna finibus arcu, ac fermentum odio nulla ac dolor.
+
+				p Praesent pretium suscipit mi et viverra. Praesent vehicula arcu arcu, sed pulvinar diam sagittis eget. Mauris nec odio in sapien porttitor efficitur. Donec diam lectus, vestibulum maximus sem quis, blandit gravida nisl. Quisque a porttitor enim. Donec scelerisque erat bibendum sapien auctor faucibus.
+
+				p Nullam ac quam porta, pellentesque libero in, mollis odio. Sed semper ac elit sit amet tempus. Donec venenatis euismod metus non consequat. Mauris lobortis felis quis rutrum elementum.
+
+		.article__chapter-title
+			.article__chapter-title__text Chapter title
+
+		p.chapterIntro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		//full-width interactive
+		//- include includes/interactives/example.html
+
+		.container.container--article
+			.article
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				figure.inline-media.inline-media--borderLeft.inline-media--video.inline-media--big(data-sr)
+					iframe(src="https://player.vimeo.com/video/142890066?color=ffffff")
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
+
+		//full-width video or photo grid
+		//- include includes/interactives/video-grid.pug
+
+		.container.container--article
+			.article
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				//small link to photo gallery in sidebar
+				figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--small(data-sr)
+					img(src=datalink + "images/placeholder/ph-4.jpg")
+					figcaption.inline-media--pic__caption Caption goes here
+					.inline-media--pic__open-gallery OPEN GALLERY
+
+
+				p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+				p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+				p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+				p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
+
+				p.reporter-email Contact reporter reporter at 
+					a(href="mailto:#" target="_blank") reporter email
+
+				//series menu for mobile
+				figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--full.inline-media--has-title.inline-media--mobile(data-sr)
+					.inline-media__title More in the series
+					include includes/_parts-menu.pug

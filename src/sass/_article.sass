@@ -1,0 +1,543 @@
+/* Article Styles */
+.article
+	position: relative
+	z-index: 2
+
+	p
+		max-width: 700px
+		font:
+			family: $bodyFont
+			size: 16px
+		color: #555
+		line-height: 1.6
+		margin-bottom: 25px
+		+links($blue, underline)
+		// @media (max-width: $no-rail)
+		// 	margin: 0 auto 25px auto
+
+		&.reporter-email
+			font-family: $accentFont-0
+			color: #999
+			padding-top: 10px
+			border-top: 1px solid #F0F0F0
+
+	&__byline
+		font:
+			family: $accentFont-0
+		color: #A9A9A9
+		margin-bottom: 0px
+		text-transform: uppercase
+
+		span
+			@media (min-width: $header-bp5 + 1)
+				&:before
+					content: ' | '
+			@media (max-width: $header-bp5)
+				display: block
+
+	&__dateline
+		font:
+			family: $accentFont-0
+			style: italic
+		color: #A9A9A9
+		margin-bottom: 40px
+
+	&__dropcap
+		position: relative
+
+		span
+			position: relative
+			z-index: 2
+
+		&:before
+			content: attr(data-dropcap)
+			// position: absolute
+			// z-index: 1
+			// top: 0
+			// right: 95%
+			// line-height: 90px
+			margin-top: -10px
+			font:
+				family: $headFont-0
+				// size: 90px
+				size: 70px
+			color: $blue
+			line-height: 70px
+			// @media (max-width: 4023px)
+			position: static
+			float: left
+			padding-top: 4px
+			padding-right: 8px
+			padding-left: 3px
+
+		// &__replacee
+		// 	@media (max-width: 4023px)
+		// 		display: none
+
+	&__chapter-title
+		margin: 4em auto 1em auto
+		max-width: 590px
+		text-align: center
+		// @media (max-width: $no-rail)
+			// margin: 100px auto 20px auto
+
+		&__text
+			position: relative
+			display: inline-block
+			padding: 10px 30px
+			border-top: 5px solid
+			border-image: url($datalink + 'images/border-h.svg') 1 stretch
+			color: #333
+			font:
+				family: $headFont-0
+				size: 36px
+			// &:before
+			// 	content: ''
+			// 	position: absolute
+			// 	top: -3px
+			// 	left: 50%
+			// 	+size(100px 5px)
+			// 	background-color: $blue
+			// 	transform: translateX(-50%)
+
+
+// .chapterTitleImage
+// 	position: relative
+// 	width: 100%
+// 	height: 66vh
+// 	// max-height: 100vh
+// 	margin-bottom: 1em
+// 	// margin: 100px 0 20px 0
+// 	// max-width: 590px
+// 	// text-align: center		
+// 	// @media (max-width: $no-rail)
+// 	// 	margin: 100px auto 20px auto
+// 	// box-shadow: 0 0 24px rgba(0,0,0,0.3)
+// 	background-image: url('http://data.baltimoresun.com/news/unsettled-journeys/part-1/images/inline/patterson.jpg')
+// 	background-size: cover
+// 	background-repeat: no-repeat
+// 	background-position: center center
+// 	// border-bottom: 7px solid $blue
+
+// 	&__text
+// 		position: absolute
+// 		left: 0
+// 		right: 0
+// 		bottom: 0
+// 		width: 1000px
+// 		// margin: 0 auto
+// 		margin: 1.5em auto
+// 		color: #fff
+// 		font:
+// 			family: $headFont-0
+// 			size: 36px
+// 		h2
+// 			display: inline-block
+// 			margin: 0
+// 			border-left: 3px solid $blue
+// 			padding-left: .5em
+// 			// position: relative
+// 			// background-color: $blue
+// 			// z-index: 1
+// 			// &:before
+// 			// 	content: ""
+// 			// 	position: absolute
+// 			// 	top: 0
+// 			// 	left: -99%
+// 			// 	width: 100%
+// 			// 	height: 100%
+// 			// 	background-color: $blue
+// 			// 	z-index: -1
+
+	img
+		position: relative
+		z-index: -1
+		width: 100%
+		height: auto	
+		// padding: 10px 30px
+		// border-top: 1px solid $blue
+		// position: relative
+
+	&:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		bottom: 0
+		background: -moz-linear-gradient(top, rgba(0,0,0,.3) 30%, rgba(0,0,0,.8) 80%) /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(0,0,0,.3)), color-stop(80%,rgba(0,0,0,.8))) /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,.3) 30%,rgba(0,0,0,.8) 80%) /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(0,0,0,.3) 30%,rgba(0,0,0,.8) 80%) /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(0,0,0,.3) 30%,rgba(0,0,0,.8) 80%) /* IE10+ */
+		background: linear-gradient(to bottom, rgba(0,0,0,.3) 30%,rgba(0,0,0,.8) 80%) /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ) /* IE6-9 */
+
+.chapterIntro
+	margin: 0 auto
+	max-width: 700px
+	font:
+		family: $bodyFont
+		size: 20px
+	color: #555
+	line-height: 1.6
+	margin-bottom: 2em
+	+links($blue, underline)
+	@media (max-width: $no-rail)
+		// margin: 0 auto 25px auto
+		padding: 0 20px
+		font-size: 16px
+		line-height: 1.6
+		margin-bottom: 25px
+		+links($blue, underline)
+		margin: 0 auto 25px auto
+
+.inline-media
+	float: right
+	background-color: white
+	position: relative
+	background: #fff
+	border-radius: 2px
+	position: relative
+	box-shadow: 0 3px 6px rgba($dkBlue,0.1)
+	padding: .5em
+	&--borderTop
+		border-top: 3px solid
+		border-image: url($datalink + 'images/border-h.svg') 1 stretch
+	&--borderLeft
+		border-left: 3px solid
+		border-image: url($datalink + 'images/border-v.svg') 1 stretch
+	&__title
+		// position: absolute
+		// bottom: 100%
+		// left: 0
+		width: 100%
+		padding: 10px 0 15px 0
+		margin-bottom: 2px
+		text-align: center
+		text-transform: uppercase
+		color: #999
+		background-color: white
+		font:
+			family: $accentFont-0
+			size: 18px
+		+links(#999, none)
+		a:hover
+			color: $blue
+
+	&__source
+		font:
+			family: $accentFont-0
+			size: 12px
+		color: #888
+		text-align: left
+	
+	&--big
+		width: 450px
+		@media (max-width: 730px)
+			float: none
+			width: 95%
+			margin: 40px auto
+
+	&--small
+		width: 300px
+		@media (max-width: 550px)
+			float: none
+			width: 95%
+			margin: 40px auto
+
+	&--has-title
+		// margin: 70px 0 20px 30px
+		padding-top: 0
+
+	&--full
+		width: 95%
+		float: none
+		margin: 0 auto
+		// margin-left: 0
+		// margin-right: 0
+
+	&--not-mobile
+		@media (max-width: 600px)
+			display: none
+
+	&--mobile
+		margin: 1em auto
+		@media (min-width: 601px)
+			display: none
+			
+	&--pullquote
+		// padding: 15px 0
+		font:
+			family: $bodyFont
+			size: 30px
+		text-align: center
+
+		&__src
+			display: inline-block
+			margin-top: 10px
+			border-top: 1px solid #ddd
+			font:
+				family: $accentFont-0
+				size: 14px
+			color: #888
+			text-align: right
+			text-transform: uppercase
+			// float: right
+
+	&--pic
+		img
+			display: block
+			width: 100%
+		
+		&__caption
+			padding: 10px 10px 20px 10px
+			font:
+				family: $accentFont-0
+				size: 14px
+			color: #555
+
+		&__source
+			text-align: right
+			padding: 5px 10px 0 10px
+			text-transform: uppercase
+
+		&__open-gallery
+			// background-color: $blue
+			display: block
+			width: 100%
+			margin: 5px 0
+			padding: 5px 0 5px 0
+			cursor: pointer
+			color: $blue
+			font:
+				family: $accentFont-0
+				size: 14px
+				weight: 700
+			text-align: center
+			+links(#999, none)
+			&:hover, a:hover
+				color: #555
+
+	&--external-link
+
+		&__title
+			text-align: center
+			margin-bottom: 10px
+
+		&__content
+			font:
+				family: $accentFont-0
+				size: 18px
+			color: #555
+
+		&__link
+			text-align: center
+			margin-top: 10px
+			font:
+				family: $accentFont-0
+				size: 18px
+			+links($blue, none)
+
+	&--video
+		border: 0
+		height: 0
+		padding-top: (450px * 0.5625)
+		background-color: black
+		position: relative
+
+		@media (max-width: 730px)
+			padding-top: 56.25%
+
+		iframe
+			position: absolute
+			top: 0
+			left: 0
+			+size(100%)
+			border: 0
+
+	&--timeline
+		float: right
+		position: relative
+
+	&--interactive
+		@media(max-width: 800px)
+			margin: 0
+			width: 100%
+	&--table
+		@media(max-width: 500px)
+			width: 100%
+			margin: 0 auto
+.media-package
+	+clearfix
+	width: 100%
+	max-width: 1300px
+	margin: 0 auto
+	padding: 1em
+	background-color: white	
+	box-shadow: 0 0 18px rgba($dkBlue,0.1)
+	&__img
+		//width: 49%
+		float: left
+		&--left
+			width: 35%
+			margin-right: 2%
+		&--right
+			width: 63%
+		@media (max-width: 500px)
+			&--left, &--right
+				width: 100%
+				margin: 0 0 10px 0
+
+	&__caption
+		@extend .inline-media--pic__caption
+		float: left
+		width: 60%
+		@media (max-width: 500px)
+			width: auto
+			float: none
+
+	&__open-gallery
+		font:
+			family: $accentFont-0
+			size: 14px
+			weight: 700
+		color: #999
+		margin: 10px 0 5px 0
+		cursor: pointer
+		&:hover
+			color: #555		
+	&--multTables
+		text-align: center
+		color: #555
+		h3
+			// margin-bottom: 0
+			font-size: 20px
+			text-transform: uppercase
+		table
+			width: 44%
+			margin: 0 3% 3% 3%
+			float: left
+			@media(max-width: 800px)
+				// display: block
+				width: 100%
+				max-width: 600px
+				margin: 3% auto
+				float: none
+	&--iframe
+		height: 80vh
+		iframe
+			height: 100%
+.statTable
+	// display: inline-block
+	width: 100%
+	// max-width: 600px
+	padding: 1em 0
+	text-align: center
+	font-size: 14px
+	font-family: $accentFont-0
+	color: #888
+	caption
+		color: #555
+		padding: .5em
+		margin-bottom: .5em
+		text-transform: uppercase
+		font-weight: bold
+		font-size: 16px	
+	p
+		font-size: 14px	
+		font-family: inherit
+		font-weight: normal
+		text-transform: none
+		margin-bottom: 0
+	tr
+		&:last-child
+			text-transform: uppercase
+			font-weight: bold
+	td, th
+		padding: .5em
+	.mobile
+		@media(max-width: 500px) 
+			display: none
+	.shade
+		background-color: lighten($blue, 50)
+	&--mix
+		caption
+			border-bottom: 1px solid #ddd
+	&--yellow
+		caption
+			border-bottom: 2px solid $yellow
+	&--red
+		caption
+			border-bottom: 2px solid $red
+	&--blue
+		caption
+			border-bottom: 2px solid $blue
+	&--green
+		caption
+			border-bottom: 2px solid $green
+
+//Timeline
+.timeline-container
+	display: inline-block
+	vertical-align: top
+	width: 320px
+	border-left: 2px solid #E0E0E0
+	margin: 0px
+	padding-top: 1px
+	color: #666666
+	text-align: left
+	font-family: $accentFont-0
+	@media (max-width: 1000px)
+		display: none
+
+.tl-item
+	padding: 10px 0px 10px 20px
+	position: relative
+	margin-top: 20px
+	min-height: 300px
+
+.tl-date
+	text-transform: uppercase
+	color: lighten(#A9A9A9, 5%)
+	display: inline-block
+
+.tl-name
+	color: #666666
+
+.tl-more
+	max-height: 0px
+	overflow: hidden
+	@include transition( all 0.5s )
+	&.expanded
+		max-height: 200px
+
+.toggle-more
+	cursor: pointer
+	font-size: 20px
+	display: inline-block
+	@include transition-property(transform)
+	@include transition-duration(0.8s)
+	@include transition-delay(0.5s)
+	&.flipped
+		@include transform(rotate(180deg))
+
+.arrow-right
+	position: absolute
+	top: 20px
+	left: 0px
+	margin-top: 0px
+	width: 0px
+	height: 0px
+	border-top: 10px solid transparent
+	border-bottom: 10px solid transparent
+	border-left: 10px solid #E0E0E0
+	&:before
+		content: ''
+		width: 0 
+		height: 0
+		border-top: 9px solid transparent
+		border-bottom: 9px solid transparent
+		border-left: 9px solid white
+		position: absolute
+		top: -9px
+		left: -12px
