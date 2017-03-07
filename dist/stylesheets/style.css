@@ -432,19 +432,19 @@ body {
     border-bottom: 5px solid white;
     z-index: 9; }
 
-.socialButtonsd {
+.socialButtons {
   position: fixed;
   top: 55px;
   right: 0;
   padding: .5em;
   font-size: 22px;
   z-index: 11; }
-  .socialButtonsd i {
+  .socialButtons i {
     margin: 0 0 0 0.5em;
     color: #00acc8;
     opacity: .3;
     cursor: pointer; }
-    .socialButtonsd i:hover {
+    .socialButtons i:hover {
       opacity: 1; }
 
 .container {
@@ -477,8 +477,9 @@ body {
 
 /* Header styles */
 .header {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 220vh;
   margin: 0 0 30px 0;
   border: 0;
   background-color: #222;
@@ -486,6 +487,20 @@ body {
   @media (max-width: 768px) {
     .header {
       max-height: none; } }
+  .header__bg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/placeholder/ph-0.jpg");
+    background-position: center center;
+    background-size: cover;
+    opacity: 0;
+    z-index: 5;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    transition: all 1.5s ease; }
   .header__seriesTitle {
     position: relative;
     display: table-cell;
@@ -536,13 +551,17 @@ body {
         background-color: rgba(0, 0, 0, 0.5); } }
   .header__text {
     position: absolute;
-    bottom: 70px;
+    top: 250px;
     left: 0;
     width: 100%;
     color: white;
     z-index: 5;
-    opacity: 0;
-    animation: fade-in-up 0.8s 1.5s forwards; }
+    opacity: 1;
+    text-align: center;
+    font-family: Georgia, Times New Roman, Times, serif; }
+    @media (max-width: 515px) {
+      .header__text {
+        top: 100px; } }
   .header__part-no {
     font-family: "franklin-gothic-urw", sans-serif;
     font-size: 20px;
@@ -554,26 +573,28 @@ body {
         font-size: 18px;
         padding-top: 10px; } }
   .header__title {
-    position: relative;
     display: inline-block;
-    font-family: "franklin-gothic-urw", sans-serif;
+    margin: 0 auto;
     font-size: 90px;
-    line-height: 1; }
-    .header__title:before {
-      position: absolute;
-      content: '';
-      border-bottom: 1px solid #df2228;
-      top: 0;
-      left: 0; }
+    font-weight: normal;
+    line-height: 1;
+    border-bottom: 3px solid;
+    border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
     @media (max-width: 1024px) {
       .header__title {
         font-size: 70px; } }
-    @media (max-width: 515px) {
+    @media (max-width: 768px) {
       .header__title {
         font-size: 55px; } }
+    @media (max-width: 515px) {
+      .header__title {
+        font-size: 42px; } }
     @media (max-width: 415px) {
       .header__title {
-        font-size: 40px; } }
+        font-size: 36px; } }
+  .header__chatter {
+    max-width: 600px;
+    margin: 2em auto; }
 
 /* Footer, comments styles */
 .footer {
@@ -945,7 +966,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url("http://data.baltimoresun.com/news/bridging-the-divide//images/placeholder/ph-0.jpg");
+  background-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/placeholder/ph-0.jpg");
   background-position: center center;
   background-size: cover;
   cursor: pointer;
@@ -1047,17 +1068,6 @@ body {
       color: #333;
       font-family: "franklin-gothic-urw", sans-serif;
       font-size: 36px; }
-  .article img {
-    position: relative;
-    z-index: -1;
-    width: 100%;
-    height: auto; }
-  .article:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 0; }
 
 .chapterIntro {
   margin: 0 auto;
@@ -1299,8 +1309,7 @@ body {
     padding: .5em;
     margin-bottom: .5em;
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: 16px; }
+    font-weight: bold; }
   .statTable p {
     font-size: 14px;
     font-family: inherit;

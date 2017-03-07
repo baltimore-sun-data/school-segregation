@@ -7,16 +7,41 @@ $header-bp4: 515px //Adjust title size
 $header-bp5: 415px //Adjust title size again
 
 .header
+	position: relative
 	width: 100%
-	height: 100vh
+	height: 220vh
 	margin: 0 0 30px 0
 	border: 0
 	background-color: #222 //temp?
 	overflow: hidden
-	// @media (max-width: $header-bp1)
-	// 	height: auto
 	@media (max-width: $header-bp3)
 		max-height: none
+
+	// &:after
+	// 	content: ""
+	// 	position: fixed
+	// 	top: 0
+	// 	left: 0
+	// 	+size(100%)
+	// 	background-image: url($datalink + "images/placeholder/ph-0.jpg")
+	// 	background-position: center center
+	// 	background-size: cover
+	// 	opacity: 0.1
+	// 	z-index: 0
+
+	&__bg
+		position: fixed
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100vh
+		// +size(100%)
+		background-image: url($datalink + "images/placeholder/ph-0.jpg")
+		background-position: center center
+		background-size: cover
+		opacity: 0
+		z-index: 5
+		@include transition(all 1.5s ease)
 
 	&__seriesTitle
 		position: relative
@@ -75,17 +100,25 @@ $header-bp5: 415px //Adjust title size again
 	&__text
 		// @media (min-width: $header-bp3+1)
 		position: absolute
-		bottom: 70px
+		top: 250px
+		// bottom: 70px
 		left: 0
 		width: 100%
 		color: white
 		z-index: 5
-		opacity: 0
-		animation: fade-in-up 0.8s 1.5s forwards
+		opacity: 1
+		text-align: center
+		// opacity: 0
+		// animation: fade-in-up 0.8s 1.5s forwards
 
 		// @media (max-width: $header-bp3)
 			// background-color: white
 
+		font:
+			family: $bodyFont
+
+		@media (max-width: $header-bp4)
+			top: 100px
 
 	&__part-no
 		// display: inline-block
@@ -104,28 +137,35 @@ $header-bp5: 415px //Adjust title size again
 
 
 	&__title
-		position: relative
+		// position: relative
 		display: inline-block
-		font:
-			family: $headFont-0
-			size: 90px
+		margin: 0 auto
+		font-size: 90px
+		font-weight: normal
 		line-height: 1
+		border-bottom: 3px solid
+		border-image: url($datalink + 'images/border-h.svg') 1 stretch
 		&:before
-			position: absolute
-			content: ''
-			border-bottom: 1px solid $red
-			top: 0
-			left: 0
+			// position: absolute
+			// content: ''
+			// border-bottom: 1px solid $red
+			// top: 0
+			// left: 0
 		@media (max-width: $header-bp2)
 			font-size: 70px	
 
-		@media (max-width: $header-bp4)
+		@media (max-width: $header-bp3)
 			font-size: 55px
 
+		@media (max-width: $header-bp4)
+			font-size: 42px
+
 		@media (max-width: $header-bp5)
-			font-size: 40px
+			font-size: 36px
 
-
+	&__chatter
+		max-width: 600px
+		margin: 2em auto
 
 
 
