@@ -410,7 +410,6 @@ th {
 .icon-close:before {
   content: "\e117"; }
 
-/* General Styles */
 .hideForIntro {
   display: none; }
 
@@ -433,19 +432,19 @@ body {
     border-bottom: 5px solid white;
     z-index: 9; }
 
-.socialButtons {
+.socialButtonsd {
   position: fixed;
   top: 55px;
   right: 0;
   padding: .5em;
   font-size: 22px;
   z-index: 11; }
-  .socialButtons i {
+  .socialButtonsd i {
     margin: 0 0 0 0.5em;
     color: #00acc8;
     opacity: .3;
     cursor: pointer; }
-    .socialButtons i:hover {
+    .socialButtonsd i:hover {
       opacity: 1; }
 
 .container {
@@ -984,7 +983,6 @@ body {
     opacity: 0;
     visibility: hidden; }
 
-/* Article Styles */
 .article {
   position: relative;
   z-index: 2; }
@@ -1049,6 +1047,17 @@ body {
       color: #333;
       font-family: "franklin-gothic-urw", sans-serif;
       font-size: 36px; }
+  .article img {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: auto; }
+  .article:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0; }
 
 .chapterIntro {
   margin: 0 auto;

@@ -10,7 +10,7 @@ var app = app || {
 			$(".fv__overlay, .fv__play-btn").addClass("is-hidden");
 		});
 	},
-	share: function(){ 
+	share: function(){
 		$(".icon-twitter").on("click", function(){
 			var tweet = ""; //Tweet text
 			var url = "http://data.baltimoresun.com/news/bridging-the-divide/"; //Interactive URL
@@ -192,7 +192,7 @@ var video_grid = video_grid || {
 
 		//Retrieve info based on the kid's id
 		var info = $.grep(video_grid.kids, function(e){
-			return (e.id === id)
+			return (e.id === id);
 		});
 
 		//Update name, age, language and country

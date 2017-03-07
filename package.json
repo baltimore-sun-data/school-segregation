@@ -27,14 +27,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baltimore-sun-data/template-longform.git"
+    "url": "git+https://github.com/baltimore-sun-data/school-segregation.git"
   },
   "author": "The Baltimore Sun",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/baltimore-sun-data/template-longform/issues"
+    "url": "https://github.com/baltimore-sun-data/school-segregation/issues"
   },
-  "homepage": "https://github.com/baltimore-sun-data/template-longform#readme",
+  "homepage": "https://github.com/baltimore-sun-data/school-segregation#readme",
   "devDependencies": {
     "node-sass": "^3.8.0",
     "onchange": "^2.5.0",
