@@ -1,0 +1,869 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"windo",
+				"windowHeight"
+			],
+			[
+				"scroll",
+				"scrollPosition"
+			],
+			[
+				"scr",
+				"scrollHeight"
+			],
+			[
+				"c",
+				"compAsian"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"fo",
+				"fontello.css"
+			],
+			[
+				"cr",
+				"cursor"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"bootsrap",
+				"bootstrap.css"
+			],
+			[
+				"orig",
+				"originalData"
+			],
+			[
+				"race",
+				"racetype"
+			],
+			[
+				"ug",
+				"uglify-js"
+			],
+			[
+				"svg",
+				"svg-sprite-generator"
+			],
+			[
+				"cm",
+				"compileSass"
+			],
+			[
+				"compil",
+				"compileJade"
+			],
+			[
+				"comp",
+				"compileSass"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/_base.pug",
+			"settings":
+			{
+				"buffer_size": 3413,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/index.pug",
+			"settings":
+			{
+				"buffer_size": 30245,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/_variables.sass",
+			"settings":
+			{
+				"buffer_size": 1086,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 1993,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/sass/_article.sass",
+			"settings":
+			{
+				"buffer_size": 10393,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/_general.sass",
+			"settings":
+			{
+				"buffer_size": 1531,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/style.sass",
+			"settings":
+			{
+				"buffer_size": 525,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"last_filter": "git show",
+		"selected_items":
+		[
+			[
+				"git show",
+				"Git: Show Current File"
+			],
+			[
+				"git ignore",
+				"Git: Update Project Ignored Files"
+			],
+			[
+				"pug",
+				"Build With: Pug"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package control ",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Enable Package"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass"
+	],
+	"file_history":
+	[
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/_exposure.scss",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/_exposure.scss",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/index.pug",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/index.html",
+		"/Users/jikim/Documents/bsun/docs/soundoff/soundoff/stories.tsv",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/scripts/scrollReveal.min.js",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/includes/comments.html",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/includes/ads/ad-for-header.html",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/includes/ads/ad-for-body--leaderboard2.html",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/includes/ads/ad-for-body--leaderboard.html",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/includes/ads/ad-for-body--cube-2.html",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/style.css",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/includes/exposure/index.html",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/exposure.css",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/package.json",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/_featured-video.sass",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/_footer.sass",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/includes/exposure/javascript.js",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/includes/exposure/style.scss",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/_article.sass",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/includes/omniture.html",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/_parts-menu.sass",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/_header.sass",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/scripts/app.js",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/_charts.bars.sass",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/includes/_mixins.pug",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/_mixins.sass",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/_interactives.video-grid.sass",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/_gallery.sass",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/_tophat-ad.sass",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/sass/bourbon/addons/_font-stacks.scss",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/.sass-cache/09f8a387282983563f14bba5351c10768780ece7/_variables.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/.sass-cache/09f8a387282983563f14bba5351c10768780ece7/_parts-menu.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/.sass-cache/09f8a387282983563f14bba5351c10768780ece7/_interactives.video-grid.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/.sass-cache/09f8a387282983563f14bba5351c10768780ece7/_header.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/.sass-cache/09f8a387282983563f14bba5351c10768780ece7/_gallery.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/.sass-cache/09f8a387282983563f14bba5351c10768780ece7/_footer.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/.sass-cache/09f8a387282983563f14bba5351c10768780ece7/_article.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/.sass-cache/09f8a387282983563f14bba5351c10768780ece7/_charts.bars.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/.sass-cache/a143a8a5455e92d03ee55bad2efdedf6a532ff6e/_variables.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/.sass-cache/a143a8a5455e92d03ee55bad2efdedf6a532ff6e/_parts-menu.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/.sass-cache/a143a8a5455e92d03ee55bad2efdedf6a532ff6e/_interactives.video-grid.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/.sass-cache/a143a8a5455e92d03ee55bad2efdedf6a532ff6e/_header.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/.sass-cache/a143a8a5455e92d03ee55bad2efdedf6a532ff6e/_gallery.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/.sass-cache/a143a8a5455e92d03ee55bad2efdedf6a532ff6e/_footer.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/.sass-cache/a143a8a5455e92d03ee55bad2efdedf6a532ff6e/_charts.bars.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/.sass-cache/a143a8a5455e92d03ee55bad2efdedf6a532ff6e/_article.sassc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/.sass-cache/09f8a387282983563f14bba5351c10768780ece7/_interactives.map.scssc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/.sass-cache/a143a8a5455e92d03ee55bad2efdedf6a532ff6e/_interactives.map.scssc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/.sass-cache/c60308f195e7539aab8ce12bd94b256e8cd0bc30/_font-stacks.scssc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/dist/stylesheets/.sass-cache/b21f7039eb1c2a06b1479b3b65f77e31697f5ea7/_font-stacks.scssc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/.sass-cache/62a2e06d4a12cff4714c34d879374c4b0c7b732d/_font-stacks.scssc",
+		"/Users/jikim/Documents/bsun/online/org/2017/02/school-segregation/src/scripts/javascript.js",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/includes/interactives/video-grid.pug",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/includes/omniture.html",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/dist/scripts/app.min.js",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/scss/_header.sass",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/scss/_general.sass",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/scss/style.sass",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/scripts/javascript.js",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/scss/_interactives.video-grid.sass",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/js/chart.js",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/includes/_gallery.pug",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/dist/js/app.js",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/sass/_interactives.map.scss",
+		"/Users/jikim/Documents/bsun/online/tb/template-general/package.json",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/_base.pug",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/includes/_featured-video.pug",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/includes/_mixins.pug",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/includes/_parts-menu.pug",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/src/includes/comments.html",
+		"/Users/jikim/Documents/bsun/online/tb/template-longform/index 14-44-04-247.html",
+		"/Users/jikim/Documents/bsun/online/org/2017/01/homicides/templates/chart.tpl",
+		"/private/var/folders/by/2wnsp1w10wg42rhs8k_sjmk5grbkq6/T/fz3temp-2/index.html",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/worst-landlords/src/scss/fontello.css",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/worst-landlords/src/scss/style.scss",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/worst-landlords/index.html",
+		"/opt/X11/include/GL/glext.h",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/worst-landlords/worst-landlords.sublime-project",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/worst-landlords/src/scss/css/fontello.css",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/worst-landlords/src/includes/data",
+		"/Applications/MAMP/bin/phpMyAdmin/config.inc.php",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/voter-guide-2016-live/results/baltimore-results.html",
+		"/private/var/folders/by/2wnsp1w10wg42rhs8k_sjmk5grbkq6/T/fz3temp-2/results-w-winner.js",
+		"/private/var/folders/by/2wnsp1w10wg42rhs8k_sjmk5grbkq6/T/fz3temp-2/national-results.html",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/voter-guide-2016-live/scripts/results.js",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/voter-guide-2016-live/scripts/results-w-winner-pres.js",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/voter-guide-2016-live/scripts/results-w-winner.js",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/korryn-gaines/src/scss/style-ie.scss",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/korryn-gaines/src/images/phone.svg",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/korryn-gaines/src/includes/load-doc.html",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/korryn-gaines/src/includes/doc-test.html",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/korryn-gaines/dist/index.html",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/korryn-gaines/src/scss/bootstrap/bootstrap.css",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/korryn-gaines/dist/css/style.css",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/korryn-gaines/src/scss/css/bootstrap.css",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/korryn-gaines/src/scss/fontello/css/fontello.css",
+		"/Users/jikim/Documents/bsun/online/org/2016/11/korryn-gaines/src/scss/_fonts.scss",
+		"/Users/jikim/Documents/bsun/online/org/2016/<04/oldMac/tased/index.jade",
+		"/private/var/folders/by/2wnsp1w10wg42rhs8k_sjmk5grbkq6/T/fz3temp-2/index 2.html",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/all-tests/src/includes/ad-for-body.html",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/middle/src/includes/tophat.pug",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/high/dist/index.html",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/parcc-2016-ranks/src/high/index.pug",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/parcc-2016-ranks/src/mid/index.pug",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/parcc-2016-ranks/src/elem/index.pug",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/parcc-2016-ranks/src/js/javascript.js",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/parcc-2016-ranks/src/includes/data.pug",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/parcc-2016-ranks/src/includes/dataHigh.pug",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/parcc-2016-ranks/src/includes/dataMid.pug",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/parcc-2016-ranks/src/includes/dataElem.pug",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/parcc-2016-ranks/dist/index.html",
+		"/Users/jikim/Documents/bsun/online/org/2016/10/parcc-2016-ranks/.gitignore",
+		"/Users/jikim/elex/elexNatl.sh",
+		"/Users/jikim/.bash_profile",
+		"/Users/jikim/generalResults.json",
+		"/Users/jikim/results.json",
+		"/Users/jikim/elex/cron.txt",
+		"/Users/jikim/elex/emergency.py",
+		"/Users/jikim/elex/elex.pyc",
+		"/Users/jikim/1461599581results.json",
+		"/Users/jikim/elex/elex-national.py",
+		"/Users/jikim/elex/elex-national.sh",
+		"/Users/jikim/1461599401results.json",
+		"/Users/jikim/1461264181toParse.json",
+		"/Users/jikim/elex/results.json",
+		"/Users/jikim/jsonPrecincts.json",
+		"/Users/jikim/elex/jsonPrecincts.json"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".topperHide",
+			"data",
+			";",
+			"Unsettled Journeys: Torn between two worlds",
+			"A new wave of refugees, often from far-flung countries, are landing at Patterson High School. Read their storie",
+			"3117",
+			"round",
+			"trans",
+			"circle",
+			"tl-more",
+			"trans",
+			"borderTop.inline-media--full.inline-media--table",
+			"f9f9f9",
+			":\"pov",
+			"area",
+			"povBC",
+			"area\":\"\"",
+			"\n\n\n\n\n",
+			"id\":\"pov",
+			"data",
+			"\": ",
+			"comp\":",
+			"data",
+			"pov",
+			"\n\t\t\t\t\t\t\t\t\t\tbr\n\t\t\t\t\t\t\t\t\t\t| ",
+			"-100",
+			"caption\n\t\t\tborder-bottom",
+			"District",
+			"http://data.baltimoresun.com/jin/school-seg/",
+			"link",
+			"exa",
+			"\n\t\t\t\t",
+			"\t\t\t\t",
+			"('../images",
+			".svg",
+			"fdfffd",
+			"inline",
+			"border-top: 4px solid\n\tborder",
+			"stretch repeat",
+			"border.svg",
+			"border.png",
+			"shade",
+			"media",
+			"\n\t\t",
+			"/ background-color: lighten",
+			"background-color: lighten",
+			"border-bottom: 2px solid",
+			"background-color: lighten",
+			"ackground-color: lighten",
+			"background-color: lighten",
+			"caption\n\t\t\tborder-bottom",
+			"caption\n\t\t\tborder-top: 4px",
+			"caption\n\t\t\tbackground",
+			"\"id\":\"",
+			"e\n\t\t\teach race in compRacial\n\t\t\t\ttable.racialComp(class=\"racialComp--\"+race.id)\n\t\t\t\t\ttr\n\t\t\t\t\t\tth.blank\n\t\t\t\t\t\tth 1990\n\t\t\t\t\t\tth 2014\n\t\t\t\t\t\tth Change\n\t\t\t\t\teach area in race.comp\n\t\t\t\t\t\ttr\n\t\t\t\t\t\t\ttd #{area.area}\n\t\t\t\t\t\t\ttd #{area.pct1990}\n\t\t\t\t\t\t\ttd #{area.pct2014}\n\t\t\t\t\t\t\ttd #{ar",
+			", ",
+			"id:",
+			"load_exposure_data_eval(",
+			"small-pr",
+			"color-ram",
+			"Reduced</a>",
+			"White</a>",
+			"function ",
+			"images/",
+			"before",
+			"__Text",
+			"0,.2) 3",
+			"ba(0,0,0,.8) 8",
+			"0,0,.5) 0%,",
+			"ba(0,0,0,.8) 80%)",
+			"0,0,0,.8",
+			"0,.2) 3",
+			".8) 10",
+			"rgba(0,0,0,0) 3",
+			"rgba(0,0,0,0",
+			"box-shadow",
+			"black,0.1",
+			",.",
+			"rgba(0,0,0,1) 1",
+			"reporter",
+			"$red",
+			"border-width",
+			"before",
+			"maroon",
+			"onClick",
+			"onClick()",
+			"66vh",
+			"container--article--",
+			"red",
+			"$teal",
+			"$red",
+			".container--article",
+			"maroon",
+			"rgba(0,0,0,0) 0%",
+			"rgba(0,0,0,1",
+			"rgba(0,0,0,0)",
+			"\"",
+			"bottom, black 50",
+			"FAC815",
+			"FFD51A",
+			"header__colorBlock.header__colorBlock",
+			"color: #F44336",
+			"rgba(0,0,0,0.1)",
+			"\n\tbox-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1)",
+			"media-pack",
+			"rgba(0,0,0,1) 100",
+			"66%",
+			".65",
+			".\n",
+			"is-hidden",
+			"hidden",
+			"parts-menu",
+			"parts_menu",
+			"accentText",
+			"bodyText",
+			"headText",
+			"$accent-0",
+			"black",
+			"maroon",
+			"accent-0",
+			"white",
+			"deserunt",
+			"accentText",
+			"bodyText",
+			"headText",
+			"$e0e0e0",
+			"$555",
+			"555"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"accentFont",
+			"bodyFont",
+			"headFont",
+			"$teal",
+			"teal",
+			"accentFont",
+			"bodyFont",
+			"headFont",
+			"$headText-0",
+			"$accentText-0",
+			"$accentText",
+			"$bodyText",
+			"precinctsReporting"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/_base.pug",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3413,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/index.pug",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 30245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								62,
+								62
+							]
+						],
+						"settings":
+						{
+							"git_gutter_enabled": true,
+							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/sass/_variables.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1086,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1993,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								653,
+								653
+							]
+						],
+						"settings":
+						{
+							"git_gutter_enabled": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "src/sass/_article.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_enabled": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/sass/_general.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1531,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/sass/style.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_enabled": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "school-segregation.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 293.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
