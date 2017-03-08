@@ -108,14 +108,13 @@ $header-bp5: 415px //Adjust title size again
 		z-index: 5
 		opacity: 1
 		text-align: center
+		font-family: $prata
 		// opacity: 0
 		// animation: fade-in-up 0.8s 1.5s forwards
 
 		// @media (max-width: $header-bp3)
 			// background-color: white
 
-		font:
-			family: $bodyFont
 
 		@media (max-width: $header-bp4)
 			top: 100px
@@ -142,33 +141,37 @@ $header-bp5: 415px //Adjust title size again
 		margin: 0 auto
 		font-size: 90px
 		font-weight: normal
-		line-height: 1
+		line-height: 0.9
 		border-bottom: 3px solid
 		border-image: url($datalink + 'images/border-h.svg') 1 stretch
-		&:before
-			// position: absolute
-			// content: ''
-			// border-bottom: 1px solid $red
-			// top: 0
-			// left: 0
+		span
+			color: $blue
 		@media (max-width: $header-bp2)
 			font-size: 70px	
 
 		@media (max-width: $header-bp3)
 			font-size: 55px
 
-		@media (max-width: $header-bp4)
-			font-size: 42px
+		@media (max-width: 600px)
+			font-size: 36px
 
 		@media (max-width: $header-bp5)
-			font-size: 36px
+			font-size: 28px
 
 	&__chatter
 		max-width: 600px
 		margin: 2em auto
+		font-size: 24px
+		span
+			color: $yellow
+		@media (max-width: $header-bp2)
+			font-size: 20px	
 
+		@media (max-width: $header-bp3)
+			font-size: 18px	
 
+		@media (max-width: $header-bp4)
+			font-size: 14px	
 
-
-
-
+		// @media (max-width: $header-bp5)
+			// font-size: 14px	

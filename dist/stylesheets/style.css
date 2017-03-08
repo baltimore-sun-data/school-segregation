@@ -558,7 +558,7 @@ body {
     z-index: 5;
     opacity: 1;
     text-align: center;
-    font-family: Georgia, Times New Roman, Times, serif; }
+    font-family: "Prata", "Old Standard TT", "Georgia", "Times", serif; }
     @media (max-width: 515px) {
       .header__text {
         top: 100px; } }
@@ -577,24 +577,38 @@ body {
     margin: 0 auto;
     font-size: 90px;
     font-weight: normal;
-    line-height: 1;
+    line-height: 0.9;
     border-bottom: 3px solid;
     border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
+    .header__title span {
+      color: #00acc8; }
     @media (max-width: 1024px) {
       .header__title {
         font-size: 70px; } }
     @media (max-width: 768px) {
       .header__title {
         font-size: 55px; } }
-    @media (max-width: 515px) {
-      .header__title {
-        font-size: 42px; } }
-    @media (max-width: 415px) {
+    @media (max-width: 600px) {
       .header__title {
         font-size: 36px; } }
+    @media (max-width: 415px) {
+      .header__title {
+        font-size: 28px; } }
   .header__chatter {
     max-width: 600px;
-    margin: 2em auto; }
+    margin: 2em auto;
+    font-size: 24px; }
+    .header__chatter span {
+      color: #f99d1d; }
+    @media (max-width: 1024px) {
+      .header__chatter {
+        font-size: 20px; } }
+    @media (max-width: 768px) {
+      .header__chatter {
+        font-size: 18px; } }
+    @media (max-width: 515px) {
+      .header__chatter {
+        font-size: 14px; } }
 
 /* Footer, comments styles */
 .footer {
@@ -1022,6 +1036,11 @@ body {
       color: #999;
       padding-top: 10px;
       border-top: 1px solid #F0F0F0; }
+  .article a {
+    color: #00acc8;
+    text-decoration: none; }
+    .article a:hover {
+      color: #155757; }
   .article__byline {
     font-family: "franklin-gothic-urw", sans-serif;
     color: #A9A9A9;
@@ -1293,9 +1312,24 @@ body {
           margin: 3% auto;
           float: none; } }
   .media-package--iframe {
-    height: 80vh; }
+    text-align: center; }
+    .media-package--iframe h2, .media-package--iframe p {
+      font-family: "franklin-gothic-urw", sans-serif; }
+    .media-package--iframe h2 {
+      font-size: 1.75em; }
+    .media-package--iframe p {
+      max-width: 600px;
+      margin: 0 auto 1.5em auto; }
+      .media-package--iframe p.linkOut {
+        margin: .4em 0;
+        text-align: left; }
+    .media-package--iframe a {
+      color: #00acc8;
+      text-decoration: none; }
+      .media-package--iframe a:hover {
+        color: #155757; }
     .media-package--iframe iframe {
-      height: 100%; }
+      height: 70vh; }
 
 .statTable {
   width: 100%;
