@@ -10,7 +10,7 @@
 		color: #555
 		line-height: 1.6
 		margin-bottom: 25px
-		+links($blue, underline)
+		+links($blue, $teal, none)
 
 		&.reporter-email
 			font-family: $accentFont-0
@@ -75,6 +75,7 @@
 			position: relative
 			display: inline-block
 			padding: 10px 30px
+			border: 0
 			border-top: 5px solid
 			border-image: url($datalink + 'images/border-h.svg') 1 stretch
 			color: #333
@@ -92,26 +93,29 @@
 	color: #555
 	line-height: 1.6
 	margin-bottom: 2em
-	+links($blue, underline)
+	+links($blue, $teal, none)
 	@media (max-width: $no-rail)
 		padding: 0 20px
 		font-size: 16px
 		line-height: 1.6
 		margin-bottom: 25px
-		+links($blue, underline)
+		+links($blue, $teal, none)
 		margin: 0 auto 25px auto
 
 .inline-media
 	float: right
-	background-color: white
 	position: relative
-	background: #fff
 	border-radius: 2px
-	position: relative
 	box-shadow: 0 3px 6px rgba($dkBlue,0.1)
+	background-color: white
 	padding: .5em
+	border: 0
 	&--borderTop
 		border-top: 3px solid
+		border-image: url($datalink + 'images/border-h.svg') 1 stretch
+	&--borderTopBottom
+		border-top: 3px solid
+		border-bottom: 3px solid
 		border-image: url($datalink + 'images/border-h.svg') 1 stretch
 	&--borderLeft
 		border-left: 3px solid
@@ -127,9 +131,7 @@
 		font:
 			family: $accentFont-0
 			size: 18px
-		+links(#999, none)
-		a:hover
-			color: $blue
+		+links($blue, $teal, none)
 
 	&__source
 		font:
@@ -175,6 +177,7 @@
 			size: 30px
 		text-align: center
 
+		// background-color: white
 		&__src
 			display: inline-block
 			margin-top: 10px
@@ -215,9 +218,7 @@
 				size: 14px
 				weight: 700
 			text-align: center
-			+links(#999, none)
-			&:hover, a:hover
-				color: #555
+			+links($blue, $teal, none)
 
 	&--external-link
 
@@ -237,7 +238,7 @@
 			font:
 				family: $accentFont-0
 				size: 18px
-			+links($blue, none)
+			+links($blue, $teal, none)
 
 	&--video
 		border: 0
@@ -268,6 +269,32 @@
 		@media(max-width: 500px)
 			width: 100%
 			margin: 0 auto
+	&--about
+		// text-align: center
+		color: #555
+		h2
+			text-align: center
+			text-transform: uppercase
+		p
+			max-width: none
+		&__sponsors
+			text-align: center
+			p
+				max-width: 500px
+				margin: 0 auto
+				padding: 10px 0
+				border-top: 1px solid #ddd
+				color: #555
+				font-size: .8em
+			img
+				width: 150px
+				padding: 0 20px
+				&.first
+					border-right: 1px solid #555
+	&--teaser
+		text-align: center
+		h2
+			text-transform: uppercase
 .media-package
 	+clearfix
 	width: 100%
@@ -451,7 +478,7 @@
 		height: 0
 		border-top: 9px solid transparent
 		border-bottom: 9px solid transparent
-		border-left: 9px solid white
+		border-left: 9px solid #fefffe
 		position: absolute
 		top: -9px
 		left: -12px

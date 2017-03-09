@@ -21,7 +21,7 @@ html(class="no-js", lang="en")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 
 		link(rel="stylesheet", type="text/css", href=datalink + "stylesheets/style.css?381253")
-		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Montserrat|Prata")
+		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Montserrat|Prata|Roboto+Condensed")
 		//- link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Lato|Montserrat|Old+Standard+TT|PT+Sans|PT+Serif|Prata|Roboto+Condensed:400,700")
 
 		//Facebook OpenGraph
@@ -74,7 +74,8 @@ html(class="no-js", lang="en")
 			section.footer__logo
 				img(src=datalink + "images/baltimore-sun-logo-white.png" width="300")
 			section.footer__comments
-				include includes/comments.html
+				.commentsWrapper
+					include includes/comments.html
 
 		//Javascript
 		script(src="https://use.typekit.net/nta3eyd.js")

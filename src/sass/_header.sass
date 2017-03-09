@@ -128,17 +128,20 @@ $header-bp5: 415px //Adjust title size again
 		margin: 0 auto
 		font-size: 90px
 		font-weight: normal
-		line-height: 0.9
+		line-height: 1
 		z-index: 5
 		span 
 			opacity: 0
 		&--0
-			animation: fade-in 0.8s 1.5s forwards
+			&.animation
+				animation: fade-in 0.8s 1.5s forwards
 		&--1
-			animation: fade-in 1.5s 2.2s forwards
+			&.animation
+				animation: fade-in 1.5s 2.2s forwards
 		&--2
 			color: $blue
-			animation: fade-in 2.2s 2.9s forwards
+			&.animation
+				animation: fade-in 2.2s 2.9s forwards
 		&:before
 			content: ""
 			position: absolute
@@ -147,8 +150,11 @@ $header-bp5: 415px //Adjust title size again
 			width: 100%
 			height: 50%
 			z-index: 0
+			border: 0
 			border-bottom: 3px solid #222
-			animation: grow-width 2.5s 3.3s forwards
+		&.animation
+			&:before
+				animation: grow-width 2.5s 3.3s forwards
 		&:after
 			content: ""
 			position: absolute
@@ -156,6 +162,7 @@ $header-bp5: 415px //Adjust title size again
 			left: 0
 			width: 100%
 			height: 50%
+			border: 0
 			border-bottom: 3px solid
 			border-image: url($datalink + 'images/border-h.svg') 1 stretch
 			z-index: -1
@@ -164,9 +171,9 @@ $header-bp5: 415px //Adjust title size again
 			font-size: 70px	
 
 		@media (max-width: $header-bp3)
-			font-size: 55px
+			font-size: 48px
 
-		@media (max-width: 600px)
+		@media (max-width: $header-bp4)
 			font-size: 36px
 
 		@media (max-width: $header-bp5)
@@ -177,7 +184,8 @@ $header-bp5: 415px //Adjust title size again
 		margin: 2em auto
 		font-size: 24px
 		opacity: 0
-		animation: fade-in 3.3s 4s forwards
+		&.animation
+			animation: fade-in 3.3s 4s forwards
 		span
 			color: $yellow
 		@media (max-width: $header-bp2)

@@ -420,6 +420,7 @@ body {
   position: fixed;
   top: 50px;
   width: 100%;
+  border: 0;
   border-bottom: 5px solid;
   border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch;
   z-index: 9; }
@@ -453,7 +454,7 @@ body {
   @media (max-width: 970px) {
     .container {
       width: auto;
-      padding: 0 20px; } }
+      padding: 0 15px; } }
   .container--header {
     position: relative; }
   .container--article {
@@ -589,17 +590,18 @@ body {
     margin: 0 auto;
     font-size: 90px;
     font-weight: normal;
-    line-height: 0.9;
+    line-height: 1;
     z-index: 5; }
     .header__title span {
       opacity: 0; }
-    .header__title--0 {
+    .header__title--0.animation {
       animation: fade-in 0.8s 1.5s forwards; }
-    .header__title--1 {
+    .header__title--1.animation {
       animation: fade-in 1.5s 2.2s forwards; }
     .header__title--2 {
-      color: #00acc8;
-      animation: fade-in 2.2s 2.9s forwards; }
+      color: #00acc8; }
+      .header__title--2.animation {
+        animation: fade-in 2.2s 2.9s forwards; }
     .header__title:before {
       content: "";
       position: absolute;
@@ -608,7 +610,9 @@ body {
       width: 100%;
       height: 50%;
       z-index: 0;
-      border-bottom: 3px solid #222;
+      border: 0;
+      border-bottom: 3px solid #222; }
+    .header__title.animation:before {
       animation: grow-width 2.5s 3.3s forwards; }
     .header__title:after {
       content: "";
@@ -617,6 +621,7 @@ body {
       left: 0;
       width: 100%;
       height: 50%;
+      border: 0;
       border-bottom: 3px solid;
       border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch;
       z-index: -1; }
@@ -625,8 +630,8 @@ body {
         font-size: 70px; } }
     @media (max-width: 768px) {
       .header__title {
-        font-size: 55px; } }
-    @media (max-width: 600px) {
+        font-size: 48px; } }
+    @media (max-width: 515px) {
       .header__title {
         font-size: 36px; } }
     @media (max-width: 415px) {
@@ -636,8 +641,9 @@ body {
     max-width: 600px;
     margin: 2em auto;
     font-size: 24px;
-    opacity: 0;
-    animation: fade-in 3.3s 4s forwards; }
+    opacity: 0; }
+    .header__chatter.animation {
+      animation: fade-in 3.3s 4s forwards; }
     .header__chatter span {
       color: #f99d1d; }
     @media (max-width: 1024px) {
@@ -715,9 +721,11 @@ body {
     padding: 30px 0; }
   .footer__comments {
     text-align: center;
-    margin: 0;
     padding: 30px 0;
     background-color: white; }
+    .footer__comments .commentsWrapper {
+      max-width: 800px;
+      margin: 0 auto; }
     .footer__comments h1 {
       text-align: center;
       margin: 0 0 10px 0;
@@ -818,16 +826,24 @@ body {
       margin: 0; }
     .parts-menu__item a {
       display: block; }
-    .parts-menu__item a:link, .parts-menu__item a:visited, .parts-menu__item a:hover, .parts-menu__item a:active {
-      color: black;
+    .parts-menu__item a:link, .parts-menu__item a:visited, .parts-menu__item a:active {
+      color: #00acc8;
       text-decoration: none; }
+    .parts-menu__item a:hover {
+      color: #155757; }
     .parts-menu__item:hover {
       transform: translateX(5px);
       transform: translate3d(5px, 0, 0); }
     .parts-menu__item--inactive {
-      opacity: 0.4; }
+      opacity: 0.4;
+      cursor: default; }
       .parts-menu__item--inactive:hover {
         transform: none; }
+      .parts-menu__item--inactive a:link, .parts-menu__item--inactive a:visited, .parts-menu__item--inactive a:active {
+        color: #333;
+        text-decoration: none; }
+      .parts-menu__item--inactive a:hover {
+        color: #333; }
       .parts-menu__item--inactive a {
         cursor: default; }
   .parts-menu__thumbnail {
@@ -1068,9 +1084,11 @@ body {
     color: #555;
     line-height: 1.6;
     margin-bottom: 25px; }
-    .article p a:link, .article p a:visited, .article p a:hover, .article p a:active {
+    .article p a:link, .article p a:visited, .article p a:active {
       color: #00acc8;
-      text-decoration: underline; }
+      text-decoration: none; }
+    .article p a:hover {
+      color: #155757; }
     .article p.reporter-email {
       font-family: "franklin-gothic-urw", sans-serif;
       color: #999;
@@ -1122,6 +1140,7 @@ body {
       position: relative;
       display: inline-block;
       padding: 10px 30px;
+      border: 0;
       border-top: 5px solid;
       border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch;
       color: #333;
@@ -1136,9 +1155,11 @@ body {
   color: #555;
   line-height: 1.6;
   margin-bottom: 2em; }
-  .chapterIntro a:link, .chapterIntro a:visited, .chapterIntro a:hover, .chapterIntro a:active {
+  .chapterIntro a:link, .chapterIntro a:visited, .chapterIntro a:active {
     color: #00acc8;
-    text-decoration: underline; }
+    text-decoration: none; }
+  .chapterIntro a:hover {
+    color: #155757; }
   @media (max-width: 730px) {
     .chapterIntro {
       padding: 0 20px;
@@ -1146,21 +1167,26 @@ body {
       line-height: 1.6;
       margin-bottom: 25px;
       margin: 0 auto 25px auto; }
-      .chapterIntro a:link, .chapterIntro a:visited, .chapterIntro a:hover, .chapterIntro a:active {
+      .chapterIntro a:link, .chapterIntro a:visited, .chapterIntro a:active {
         color: #00acc8;
-        text-decoration: underline; } }
+        text-decoration: none; }
+      .chapterIntro a:hover {
+        color: #155757; } }
 
 .inline-media {
   float: right;
-  background-color: white;
   position: relative;
-  background: #fff;
   border-radius: 2px;
-  position: relative;
   box-shadow: 0 3px 6px rgba(15, 68, 83, 0.1);
-  padding: .5em; }
+  background-color: white;
+  padding: .5em;
+  border: 0; }
   .inline-media--borderTop {
     border-top: 3px solid;
+    border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
+  .inline-media--borderTopBottom {
+    border-top: 3px solid;
+    border-bottom: 3px solid;
     border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
   .inline-media--borderLeft {
     border-left: 3px solid;
@@ -1175,11 +1201,11 @@ body {
     background-color: white;
     font-family: "franklin-gothic-urw", sans-serif;
     font-size: 18px; }
-    .inline-media__title a:link, .inline-media__title a:visited, .inline-media__title a:hover, .inline-media__title a:active {
-      color: #999;
+    .inline-media__title a:link, .inline-media__title a:visited, .inline-media__title a:active {
+      color: #00acc8;
       text-decoration: none; }
     .inline-media__title a:hover {
-      color: #00acc8; }
+      color: #155757; }
   .inline-media__source {
     font-family: "franklin-gothic-urw", sans-serif;
     font-size: 12px;
@@ -1249,11 +1275,11 @@ body {
     font-size: 14px;
     font-weight: 700;
     text-align: center; }
-    .inline-media--pic__open-gallery a:link, .inline-media--pic__open-gallery a:visited, .inline-media--pic__open-gallery a:hover, .inline-media--pic__open-gallery a:active {
-      color: #999;
+    .inline-media--pic__open-gallery a:link, .inline-media--pic__open-gallery a:visited, .inline-media--pic__open-gallery a:active {
+      color: #00acc8;
       text-decoration: none; }
-    .inline-media--pic__open-gallery:hover, .inline-media--pic__open-gallery a:hover {
-      color: #555; }
+    .inline-media--pic__open-gallery a:hover {
+      color: #155757; }
   .inline-media--external-link__title {
     text-align: center;
     margin-bottom: 10px; }
@@ -1266,9 +1292,11 @@ body {
     margin-top: 10px;
     font-family: "franklin-gothic-urw", sans-serif;
     font-size: 18px; }
-    .inline-media--external-link__link a:link, .inline-media--external-link__link a:visited, .inline-media--external-link__link a:hover, .inline-media--external-link__link a:active {
+    .inline-media--external-link__link a:link, .inline-media--external-link__link a:visited, .inline-media--external-link__link a:active {
       color: #00acc8;
       text-decoration: none; }
+    .inline-media--external-link__link a:hover {
+      color: #155757; }
   .inline-media--video {
     border: 0;
     height: 0;
@@ -1296,6 +1324,31 @@ body {
     .inline-media--table {
       width: 100%;
       margin: 0 auto; } }
+  .inline-media--about {
+    color: #555; }
+    .inline-media--about h2 {
+      text-align: center;
+      text-transform: uppercase; }
+    .inline-media--about p {
+      max-width: none; }
+    .inline-media--about__sponsors {
+      text-align: center; }
+      .inline-media--about__sponsors p {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+        color: #555;
+        font-size: .8em; }
+      .inline-media--about__sponsors img {
+        width: 150px;
+        padding: 0 20px; }
+        .inline-media--about__sponsors img.first {
+          border-right: 1px solid #555; }
+  .inline-media--teaser {
+    text-align: center; }
+    .inline-media--teaser h2 {
+      text-transform: uppercase; }
 
 .media-package {
   width: 100%;
@@ -1484,7 +1537,7 @@ body {
     height: 0;
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;
-    border-left: 9px solid white;
+    border-left: 9px solid #fefffe;
     position: absolute;
     top: -9px;
     left: -12px; }

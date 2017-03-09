@@ -1,8 +1,10 @@
 
-=links($color, $text-decoration)
-	a:link, a:visited, a:hover, a:active
+=links($color, $hoverColor, $text-decoration)
+	a:link, a:visited, a:active
 		color: $color
 		text-decoration: $text-decoration
+	a:hover
+		color: $hoverColor
 
 
 =circle-w-centering($size, $border)

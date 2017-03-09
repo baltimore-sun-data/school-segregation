@@ -10,14 +10,14 @@ block content
 				source(src="" type="video/mp4")
 				source(src="" type="video/webm")
 		.header__bg
-		.header__text
+		.header__text.animationToggle
 			.container.container--header
 				//- .header__part-no Bridging the Divide
-				h1.header__title 
-					span.header__title--0 Bridging 
-					span.header__title--1 the 
-					span.header__title--2 Divide
-				p.header__chatter The struggle to move past 
+				h1.header__title.animationToggle
+					span.header__title--0.animationToggle Bridging 
+					span.header__title--1.animationToggle the 
+					span.header__title--2.animationToggle Divide
+				p.header__chatter.animationToggle The struggle to move past 
 					span segregated schools
 
 	//load photo gallery
@@ -30,8 +30,7 @@ block content
 
 			//menu for series
 			figure.inline-media.inline-media--borderLeft.inline-media--small.inline-media--has-title.inline-media--not-mobile(data-sr)
-				.inline-media__title
-					a(href="#") More in the series
+				.inline-media__title More in the series
 				include includes/_parts-menu.pug
 
 			p.article__dropcap(data-dropcap="H")
@@ -52,9 +51,18 @@ block content
 
 			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque sed massa ac commodo. Etiam finibus posuere iaculis. Integer pharetra scelerisque suscipit. Etiam in ullamcorper justo, non ultricies quam. Cras feugiat mollis consectetur. Etiam vel tempor neque. Suspendisse sit amet facilisis arcu. Vivamus dignissim turpis risus, in lobortis erat laoreet eu.
 
+			figure.inline-media.inline-media--borderTopBottom.inline-media--full.inline-media--about
+				h2 About this series
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque sed massa ac commodo. Etiam finibus posuere iaculis. Integer pharetra scelerisque suscipit. Etiam in ullamcorper justo, non ultricies quam. Cras feugiat mollis consectetur. Etiam vel tempor neque. Suspendisse sit amet facilisis arcu. Vivamus dignissim turpis risus, in lobortis erat laoreet eu.
+				.inline-media--about__sponsors
+					p Produced with support from:
+					img.first(src="images/example.jpg")
+					img(src="images/example.jpg")
+
 			p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
 
 			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque sed massa ac commodo. Etiam finibus posuere iaculis. Integer pharetra scelerisque suscipit. Etiam in ullamcorper justo, non ultricies quam. Cras feugiat mollis consectetur. Etiam vel tempor neque. Suspendisse sit amet facilisis arcu. Vivamus dignissim turpis risus, in lobortis erat laoreet eu.
+
 
 			p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
 
@@ -68,8 +76,6 @@ block content
 			p Praesent pretium suscipit mi et viverra. Praesent vehicula arcu arcu, sed pulvinar diam sagittis eget. Mauris nec odio in sapien porttitor efficitur. Donec diam lectus, vestibulum maximus sem quis, blandit gravida nisl. Quisque a porttitor enim. Donec scelerisque erat bibendum sapien auctor faucibus.
 
 			p Nullam ac quam porta, pellentesque libero in, mollis odio. Sed semper ac elit sit amet tempus. Donec venenatis euismod metus non consequat. Mauris lobortis felis quis rutrum elementum.
-
-	include includes/ads/ad-for-body--leaderboard2.html
 
 	.article__chapter-title
 		.article__chapter-title__text Chapter title
@@ -92,6 +98,24 @@ block content
 				btn.inline-media--pic__open-gallery OPEN GALLERY
 
 			p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+			p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
+
+			p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
+
+			p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
+
+	include includes/ads/ad-for-body--leaderboard2.html
+
+	.container.container--article
+		.article
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. Praesent quis pretium ipsum, eget efficitur neque. Sed et congue libero. Praesent dapibus posuere lobortis. Suspendisse pretium sed ex nec tristique.
+
+			p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+			figure.inline-media.inline-media--borderTopBottom.inline-media--big
+				h2 Community forum teaser
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque sed massa ac commodo. Etiam finibus posuere iaculis. Integer pharetra scelerisque suscipit. Etiam in ullamcorper justo, non ultricies quam. Cras feugiat mollis consectetur. Etiam vel tempor neque. Suspendisse sit amet facilisis arcu. Vivamus dignissim turpis risus, in lobortis erat laoreet eu.
 
 			p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
 

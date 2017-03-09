@@ -36,6 +36,7 @@ var app = app || {
 
 		var headerBg = $('.header__bg');
 		var headerToggle = $('.header').height();
+		var headerToggleBool = false;
 
 		$(window).scroll(function() {
 			scrollPosition = $(window).height() + $(window).scrollTop();
@@ -46,12 +47,19 @@ var app = app || {
 			newWidth = 100 - ((1 - ((scrollHeight - scrollPosition) / scrollHeight)) * 100);
 			$('.colors').width(newWidth + '%');
 
-			if (scrollPosition > headerToggle) {
-				headerBg.css('position', 'absolute');
-				headerBg.css('opacity', (scrollPosition/headerToggle));
+			if (!headerToggleBool && scrollPosition > headerToggle) {
+				if (!headerToggleBool) {
+					headerBg.css('position', 'absolute');
+					headerBg.css('opacity', '1');
+					headerToggleBool = true;
+				}
 			} else {
-				headerBg.css('opacity', (scrollPosition/headerToggle) - 0.3);
-				headerBg.css('position', 'fixed');
+				if (!headerToggleBool) {
+					headerBg.css('opacity', (scrollPosition/headerToggle) - 0.3);
+					headerBg.css('position', 'fixed');
+				} else {
+					headerToggleBool = false;
+				}
 			}
 
 			// console.log('scrollPosition: ' + scrollPosition);
@@ -363,4 +371,5 @@ $(document).ready(function(){
 	app.init();
 	// video_grid.init();
 	gallery_app.init();
+	$('.animationToggle').addClass('animation');
 });
