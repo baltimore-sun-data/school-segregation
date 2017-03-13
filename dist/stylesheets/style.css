@@ -1088,7 +1088,7 @@ body {
       color: #00acc8;
       text-decoration: none; }
     .article p a:hover {
-      color: #155757; }
+      color: #35baa6; }
     .article p.reporter-email {
       font-family: "franklin-gothic-urw", sans-serif;
       color: #999;
@@ -1098,7 +1098,7 @@ body {
     color: #00acc8;
     text-decoration: none; }
     .article a:hover {
-      color: #155757; }
+      color: #35baa6; }
   .article__byline {
     font-family: "franklin-gothic-urw", sans-serif;
     color: #A9A9A9;
@@ -1159,7 +1159,7 @@ body {
     color: #00acc8;
     text-decoration: none; }
   .chapterIntro a:hover {
-    color: #155757; }
+    color: #35baa6; }
   @media (max-width: 730px) {
     .chapterIntro {
       padding: 0 20px;
@@ -1171,7 +1171,7 @@ body {
         color: #00acc8;
         text-decoration: none; }
       .chapterIntro a:hover {
-        color: #155757; } }
+        color: #35baa6; } }
 
 .inline-media {
   float: right;
@@ -1179,13 +1179,18 @@ body {
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(15, 68, 83, 0.1);
   background-color: white;
-  padding: .5em;
+  padding: 1em;
   border: 0; }
+  .inline-media .source {
+    max-width: none;
+    margin: 1em auto 0 auto;
+    text-align: left;
+    font-family: "franklin-gothic-urw", sans-serif;
+    color: #888; }
   .inline-media--borderTop {
     border-top: 3px solid;
     border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
-  .inline-media--borderTopBottom {
-    border-top: 3px solid;
+  .inline-media--borderBottom {
     border-bottom: 3px solid;
     border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
   .inline-media--borderLeft {
@@ -1205,7 +1210,7 @@ body {
       color: #00acc8;
       text-decoration: none; }
     .inline-media__title a:hover {
-      color: #155757; }
+      color: #35baa6; }
   .inline-media__source {
     font-family: "franklin-gothic-urw", sans-serif;
     font-size: 12px;
@@ -1241,7 +1246,7 @@ body {
         display: none; } }
   .inline-media--pullquote {
     font-family: Georgia, Times New Roman, Times, serif;
-    font-size: 30px;
+    font-size: 24px;
     text-align: center; }
     .inline-media--pullquote__src {
       display: inline-block;
@@ -1250,7 +1255,7 @@ body {
       font-family: "franklin-gothic-urw", sans-serif;
       font-size: 14px;
       color: #888;
-      text-align: right;
+      text-align: center;
       text-transform: uppercase; }
   .inline-media--pic img {
     display: block;
@@ -1275,11 +1280,13 @@ body {
     font-size: 14px;
     font-weight: 700;
     text-align: center; }
+    .inline-media--pic__open-gallery:hover {
+      color: #35baa6; }
     .inline-media--pic__open-gallery a:link, .inline-media--pic__open-gallery a:visited, .inline-media--pic__open-gallery a:active {
       color: #00acc8;
       text-decoration: none; }
     .inline-media--pic__open-gallery a:hover {
-      color: #155757; }
+      color: #35baa6; }
   .inline-media--external-link__title {
     text-align: center;
     margin-bottom: 10px; }
@@ -1296,7 +1303,7 @@ body {
       color: #00acc8;
       text-decoration: none; }
     .inline-media--external-link__link a:hover {
-      color: #155757; }
+      color: #35baa6; }
   .inline-media--video {
     border: 0;
     height: 0;
@@ -1325,7 +1332,9 @@ body {
       width: 100%;
       margin: 0 auto; } }
   .inline-media--about {
-    color: #555; }
+    padding-top: 0;
+    color: #555;
+    background-color: #ecfcff; }
     .inline-media--about h2 {
       text-align: center;
       text-transform: uppercase; }
@@ -1345,6 +1354,12 @@ body {
         padding: 0 20px; }
         .inline-media--about__sponsors img.first {
           border-right: 1px solid #555; }
+        @media (max-width: 415px) {
+          .inline-media--about__sponsors img {
+            display: block;
+            margin: 1em auto; }
+            .inline-media--about__sponsors img.first {
+              border-right: 0; } }
   .inline-media--teaser {
     text-align: center; }
     .inline-media--teaser h2 {
@@ -1357,11 +1372,18 @@ body {
   padding: 1em;
   background-color: white;
   box-shadow: 0 0 18px rgba(15, 68, 83, 0.1);
-  color: #555; }
+  color: #555;
+  border: 0; }
   .media-package::after {
     clear: both;
     content: "";
     display: block; }
+  .media-package .source {
+    max-width: none;
+    margin: 1em auto 0 auto;
+    text-align: left;
+    font-family: "franklin-gothic-urw", sans-serif;
+    color: #888; }
   .media-package__img {
     float: left; }
     .media-package__img--left {
@@ -1388,9 +1410,11 @@ body {
     margin: 10px 0 5px 0;
     cursor: pointer; }
     .media-package__open-gallery:hover {
-      color: #555; }
+      color: #555green; }
   .media-package--multTables {
-    text-align: center; }
+    text-align: center;
+    border-top: 3px solid;
+    border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
     .media-package--multTables h3 {
       font-size: 20px;
       text-transform: uppercase; }
@@ -1405,7 +1429,9 @@ body {
           margin: 3% auto;
           float: none; } }
   .media-package--iframe {
-    text-align: center; }
+    text-align: center;
+    border-top: 3px solid;
+    border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
     .media-package--iframe h2, .media-package--iframe p {
       font-family: "franklin-gothic-urw", sans-serif; }
     .media-package--iframe h2 {
@@ -1414,13 +1440,17 @@ body {
       max-width: 600px;
       margin: 0 auto 1.5em auto; }
       .media-package--iframe p.linkOut {
-        margin: .4em 0;
+        margin: 1em 0 0 0;
+        text-align: left;
+        color: #888; }
+      .media-package--iframe p.source {
+        max-width: none;
         text-align: left; }
     .media-package--iframe a {
       color: #00acc8;
       text-decoration: none; }
       .media-package--iframe a:hover {
-        color: #155757; }
+        color: #35baa6; }
     .media-package--iframe iframe {
       height: 70vh; }
 
@@ -1647,10 +1677,9 @@ body {
     clear: both; }
   .exposure #color-ramp {
     width: 100%;
-    margin-left: 10px;
-    margin-top: 50px; }
+    margin: 0 auto; }
   .exposure .color-ramp-block {
-    float: left;
+    display: inline-block;
     height: 30px;
     width: 18%;
     margin-left: 1px;

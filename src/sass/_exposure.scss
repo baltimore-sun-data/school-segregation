@@ -143,13 +143,13 @@
 
 #color-ramp {
 	width:100%;
-	margin-left:10px;
-	margin-top:50px;
+	margin: 0 auto
 
 }
 
 .color-ramp-block {
-	float:left;
+	// float:left;
+	display: inline-block;
 	height:30px;
 	width:18%;
 	margin-left:1px;

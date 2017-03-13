@@ -1040,7 +1040,7 @@ var app = app || {
             return false;
         });
         $(".icon-facebook").on("click", function() {
-            var picture = "http://data.baltimoresun.com/news/bridging-the-divide/images/thumb.jpg";
+            var picture = "http://data.baltimoresun.com/news/bridging-the-divide/images/thumb-fb.png";
             var title = "Bridging the Divide";
             var description = "";
             var url = "http://data.baltimoresun.com/news/bridging-the-divide/";
@@ -1056,8 +1056,12 @@ var app = app || {
         var scrollHeight = $(document).height();
         var scrollPosition = $(window).height() + $(window).scrollTop();
         var headerBg = $(".header__bg");
-        var headerToggle = $(".header").height();
-        var headerToggleBool = false;
+        var headerHeight = $(".header").height();
+        var headerToggle = false;
+        $(window).resize(function() {
+            scrollHeight = $(document).height();
+            headerHeight = $(".header").height();
+        });
         $(window).scroll(function() {
             scrollPosition = $(window).height() + $(window).scrollTop();
             if (!navToggleBool && scrollPosition > navToggle) {
@@ -1066,18 +1070,18 @@ var app = app || {
             }
             newWidth = 100 - (1 - (scrollHeight - scrollPosition) / scrollHeight) * 100;
             $(".colors").width(newWidth + "%");
-            if (!headerToggleBool && scrollPosition > headerToggle) {
-                if (!headerToggleBool) {
+            if (!headerToggle && scrollPosition > headerHeight) {
+                if (!headerToggle) {
                     headerBg.css("position", "absolute");
                     headerBg.css("opacity", "1");
-                    headerToggleBool = true;
+                    headerToggle = true;
                 }
             } else {
-                if (!headerToggleBool) {
-                    headerBg.css("opacity", scrollPosition / headerToggle - .3);
+                if (!headerToggle) {
+                    headerBg.css("opacity", scrollPosition / headerHeight - .3);
                     headerBg.css("position", "fixed");
                 } else {
-                    headerToggleBool = false;
+                    headerToggle = false;
                 }
             }
         });

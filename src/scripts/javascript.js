@@ -18,7 +18,7 @@ var app = app || {
 			window.open(twitter_url, 'mywin','left=200,top=200,width=500,height=300,toolbar=1,resizable=0'); return false;
 		});
 		$(".icon-facebook").on("click", function(){
-			var picture = "http://data.baltimoresun.com/news/bridging-the-divide/images/thumb.jpg"; //Picture URL
+			var picture = "http://data.baltimoresun.com/news/bridging-the-divide/images/thumb-fb.png"; //Picture URL
 			var title = "Bridging the Divide"; //Post title
 			var description = ""; //Post description
 			var url = "http://data.baltimoresun.com/news/bridging-the-divide/"; //Interactive URL
@@ -35,8 +35,13 @@ var app = app || {
 		var scrollPosition = $(window).height() + $(window).scrollTop();
 
 		var headerBg = $('.header__bg');
-		var headerToggle = $('.header').height();
-		var headerToggleBool = false;
+		var headerHeight = $('.header').height();
+		var headerToggle = false;
+		
+		$(window).resize(function() {
+			scrollHeight = $(document).height();
+			headerHeight = $('.header').height();
+		});
 
 		$(window).scroll(function() {
 			scrollPosition = $(window).height() + $(window).scrollTop();
@@ -47,18 +52,18 @@ var app = app || {
 			newWidth = 100 - ((1 - ((scrollHeight - scrollPosition) / scrollHeight)) * 100);
 			$('.colors').width(newWidth + '%');
 
-			if (!headerToggleBool && scrollPosition > headerToggle) {
-				if (!headerToggleBool) {
+			if (!headerToggle && scrollPosition > headerHeight) {
+				if (!headerToggle) {
 					headerBg.css('position', 'absolute');
 					headerBg.css('opacity', '1');
-					headerToggleBool = true;
+					headerToggle = true;
 				}
 			} else {
-				if (!headerToggleBool) {
-					headerBg.css('opacity', (scrollPosition/headerToggle) - 0.3);
+				if (!headerToggle) {
+					headerBg.css('opacity', (scrollPosition/headerHeight) - 0.3);
 					headerBg.css('position', 'fixed');
 				} else {
-					headerToggleBool = false;
+					headerToggle = false;
 				}
 			}
 

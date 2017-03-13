@@ -10,7 +10,7 @@
 		color: #555
 		line-height: 1.6
 		margin-bottom: 25px
-		+links($blue, $teal, none)
+		+links($blue, $green, none)
 
 		&.reporter-email
 			font-family: $accentFont-0
@@ -22,7 +22,7 @@
 		color: $blue
 		text-decoration: none
 		&:hover
-			color: $teal
+			color: $green
 	&__byline
 		font:
 			family: $accentFont-0
@@ -93,13 +93,13 @@
 	color: #555
 	line-height: 1.6
 	margin-bottom: 2em
-	+links($blue, $teal, none)
+	+links($blue, $green, none)
 	@media (max-width: $no-rail)
 		padding: 0 20px
 		font-size: 16px
 		line-height: 1.6
 		margin-bottom: 25px
-		+links($blue, $teal, none)
+		+links($blue, $green, none)
 		margin: 0 auto 25px auto
 
 .inline-media
@@ -108,13 +108,18 @@
 	border-radius: 2px
 	box-shadow: 0 3px 6px rgba($dkBlue,0.1)
 	background-color: white
-	padding: .5em
+	padding: 1em
 	border: 0
+	.source
+		max-width: none
+		margin: 1em auto 0 auto
+		text-align: left
+		font-family: $accentFont-0
+		color: #888
 	&--borderTop
 		border-top: 3px solid
 		border-image: url($datalink + 'images/border-h.svg') 1 stretch
-	&--borderTopBottom
-		border-top: 3px solid
+	&--borderBottom
 		border-bottom: 3px solid
 		border-image: url($datalink + 'images/border-h.svg') 1 stretch
 	&--borderLeft
@@ -131,7 +136,7 @@
 		font:
 			family: $accentFont-0
 			size: 18px
-		+links($blue, $teal, none)
+		+links($blue, $green, none)
 
 	&__source
 		font:
@@ -174,7 +179,7 @@
 	&--pullquote
 		font:
 			family: $bodyFont
-			size: 30px
+			size: 24px
 		text-align: center
 
 		// background-color: white
@@ -186,7 +191,7 @@
 				family: $accentFont-0
 				size: 14px
 			color: #888
-			text-align: right
+			text-align: center
 			text-transform: uppercase
 
 	&--pic
@@ -218,7 +223,9 @@
 				size: 14px
 				weight: 700
 			text-align: center
-			+links($blue, $teal, none)
+			&:hover
+				color: $green
+			+links($blue, $green, none)
 
 	&--external-link
 
@@ -238,7 +245,7 @@
 			font:
 				family: $accentFont-0
 				size: 18px
-			+links($blue, $teal, none)
+			+links($blue, $green, none)
 
 	&--video
 		border: 0
@@ -271,7 +278,9 @@
 			margin: 0 auto
 	&--about
 		// text-align: center
+		padding-top: 0
 		color: #555
+		background-color: lighten($blue, 57)
 		h2
 			text-align: center
 			text-transform: uppercase
@@ -291,6 +300,11 @@
 				padding: 0 20px
 				&.first
 					border-right: 1px solid #555
+				@media(max-width: $header-bp5)
+					display: block
+					margin: 1em auto
+					&.first
+						border-right: 0
 	&--teaser
 		text-align: center
 		h2
@@ -303,7 +317,14 @@
 	padding: 1em
 	background-color: white	
 	box-shadow: 0 0 18px rgba($dkBlue,0.1)
-	color: #555;
+	color: #555
+	border: 0
+	.source
+		max-width: none
+		margin: 1em auto 0 auto
+		text-align: left
+		font-family: $accentFont-0
+		color: #888
 	&__img
 		//width: 49%
 		float: left
@@ -334,10 +355,12 @@
 		margin: 10px 0 5px 0
 		cursor: pointer
 		&:hover
-			color: #555		
+			color: #555green
 	&--multTables
 		text-align: center
 		// color: #555
+		border-top: 3px solid
+		border-image: url($datalink + 'images/border-h.svg') 1 stretch
 		h3
 			font-size: 20px
 			text-transform: uppercase
@@ -350,9 +373,12 @@
 				max-width: 600px
 				margin: 3% auto
 				float: none
+
 	&--iframe
 		// height: auto
 		text-align: center
+		border-top: 3px solid
+		border-image: url($datalink + 'images/border-h.svg') 1 stretch
 		h2, p
 			font-family: "franklin-gothic-urw", sans-serif
 		h2
@@ -361,16 +387,20 @@
 			max-width: 600px
 			margin: 0 auto 1.5em auto
 			&.linkOut
-				margin: .4em 0
+				margin: 1em 0 0 0
 				text-align: left
-
+				color: #888
+			&.source
+				max-width: none
+				text-align: left
 		a
 			color: $blue
 			text-decoration: none
 			&:hover
-				color: $teal
+				color: $green
 		iframe
 			height: 70vh
+
 .statTable
 	width: 100%
 	padding: 1em 0
