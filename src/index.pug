@@ -181,23 +181,24 @@ block content
 			p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
 	figure.media-package.media-package--multTables
 		h3 Change in student racial demographics, 1990 - 2014
-		each race in compRacial
+		each race,index in compRacial
 			table.statTable(class="statTable--"+race.id)
 				caption #{race.caption}
 				tr
 					th.blank
 					th 1990
 					th 2014
-					th Change
+					th % CHANGE
 				each area in race.dataObj
 					tr
 						td #{area.area}
 						td #{area.pct1990}
 						td #{area.pct2014}
-						if area.pctDiff >= 0
-							td +#{area.pctDiff}%
+						if (index > 0)
+							td +#{area.pctDiff}
 						else
-							td #{area.pctDiff}%
+							td #{area.pctDiff}
+
 		p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data.	
 
 	.container.container--article
@@ -205,21 +206,21 @@ block content
 
 			p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
 
-			figure.inline-media.inline-media--borderTop.inline-media--big.inline-media--table(data-sr)
-				table.statTable(class="statTable--mix")
-					caption Racially isolated schools, 2014
-					tr
-						th.blank
-						th >90% white
-						th 50-90% non-white
-						th >90% non-white
-					each area in compRacial2014
-						tr
-							td #{area.area}
-							td #{area.white90}%
-							td #{area.mixed}%
-							td #{area.nonwhite90}%
-				p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data.
+			//- figure.inline-media.inline-media--borderTop.inline-media--big.inline-media--table(data-sr)
+			//- 	table.statTable(class="statTable--mix")
+			//- 		caption Racially isolated schools, 2014
+			//- 		tr
+			//- 			th.blank
+			//- 			th >90% white
+			//- 			th 50-90% non-white
+			//- 			th >90% non-white
+			//- 		each area in compRacial2014
+			//- 			tr
+			//- 				td #{area.area}
+			//- 				td #{area.white90}%
+			//- 				td #{area.mixed}%
+			//- 				td #{area.nonwhite90}%
+			//- 	p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data.
 
 			p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
 
@@ -346,9 +347,6 @@ block content
 			p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
 
 			p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.				
-
-			//timeline mixin
-			+timeline([{'date': '2001-2003','description': 'Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales.'},{'date': '2003-2005', 'description': 'Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. '}])
 
 			p Sed tristique porttitor consectetur. Praesent facilisis elit velit, ut venenatis sem suscipit et. Praesent mollis ullamcorper tortor, nec elementum nisl hendrerit at. Nulla facilisi. Etiam mattis cursus magna, id auctor sapien cursus non. Sed quam orci, rutrum quis libero non, feugiat tincidunt eros. Sed ac diam leo.
 

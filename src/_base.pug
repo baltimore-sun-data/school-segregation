@@ -1,7 +1,7 @@
 include includes/_mixins.pug
 
 - var datalink = "http://data.baltimoresun.com/news/bridging-the-divide/"
-//- - var datalink = ""
+- var datalink = ""
 
 doctype html
 //if lt IE 7
@@ -16,11 +16,11 @@ html(class="no-js", lang="en")
 		//Basic page needs
 		meta(charset="utf-8")
 		title Bridging the Divide | The Baltimore Sun
-		meta(name="description", content="")
-		meta(name="author", content="")
+		meta(name="description", content="The struggle to move past segregated schools.")
+		meta(name="author", content="The Baltimore Sun")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 
-		link(rel="stylesheet", type="text/css", href=datalink + "stylesheets/style.css?3141040")
+		link(rel="stylesheet", type="text/css", href=datalink + "stylesheets/style.css?3141125")
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Montserrat|Prata|Roboto+Condensed")
 		//- link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Lato|Montserrat|Old+Standard+TT|PT+Sans|PT+Serif|Prata|Roboto+Condensed:400,700")
 
@@ -29,7 +29,7 @@ html(class="no-js", lang="en")
 		meta(property="og:url", content="http://data.baltimoresun.com/news/bridging-the-divide/")
 		meta(property="og:image", content="http://data.baltimoresun.com/news/bridging-the-divide/images/thumb-fb.png")
 		meta(property="og:site_name", content="The Baltimore Sun")
-		meta(property="og:description", content="")
+		meta(property="og:description", content="The struggle to move past segregated schools.")
 		meta(property="fb:app_id", content="310302989040998")
 
 		//Twitter 
@@ -37,7 +37,7 @@ html(class="no-js", lang="en")
 		meta(name="twitter:site", content="@baltimoresun")
 		meta(name="twitter:creator", content="@baltimoresun")
 		meta(name="twitter:title", content="Bridging the Divide")
-		meta(name="twitter:description", content="")
+		meta(name="twitter:description", content="The struggle to move past segregated schools.")
 		meta(name="twitter:image", content="http://data.baltimoresun.com/news/bridging-the-divide/images/thumb-twitter.png")
 		meta(name="twitter:domain", content="baltimoresun.com")
 
@@ -67,10 +67,23 @@ html(class="no-js", lang="en")
 		footer.footer
 			section.footer__credits
 				ul
-					li.label Reporter
-					li John Doe
-					li.label Reporter
-					li Jane Doe
+					li.label Reporters
+					li Erica L. Green
+					li Liz Bowie
+				ul
+					li.label Visuals
+					li Emma Patti Harris
+					li Lloyd Fox
+				ul
+					li.label Editor
+					li Diana K. Sugg
+				ul
+					li.label Design / Development / Graphics
+					li Adam Marton
+					li Jin Bae Kim
+					li Caroline Pate
+
+
 			section.footer__logo
 				img(src=datalink + "images/baltimore-sun-logo-white.png" width="300")
 			section.footer__comments
@@ -88,7 +101,7 @@ html(class="no-js", lang="en")
 		script.
 			window.jQuery || document.write('<script src="' + datalink + 'scripts/jquery-1.10.2.min.js">\x3C/script>')
 		//Load the rest
-		script(src=datalink + "scripts/app.js?3141040")
+		script(src=datalink + "scripts/app.js?3141125")
 		//Configuration for scrollReveal.js
 		script.
 			var config = {
