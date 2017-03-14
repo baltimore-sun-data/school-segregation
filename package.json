@@ -1,7 +1,7 @@
 {
   "name": "school-segregation",
   "version": "1.0.0",
-  "description": "",
+  "description": "The struggle to move past segregated schools.",
   "main": "index.js",
   "scripts": {
     "pug": "pug  -P -p src/index.pug < src/index.pug > dist/index.html",
