@@ -177,11 +177,12 @@
 			display: none
 			
 	&--pullquote
-		font:
-			family: $bodyFont
-			size: 24px
 		text-align: center
-
+		&__text
+			font:
+				family: $bodyFont
+				size: 24px
+			line-height: 1.3em
 		// background-color: white
 		&__src
 			display: inline-block
@@ -191,7 +192,6 @@
 				family: $accentFont-0
 				size: 14px
 			color: #888
-			text-align: center
 			text-transform: uppercase
 
 	&--pic

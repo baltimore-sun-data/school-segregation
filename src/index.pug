@@ -5,11 +5,7 @@ block content
 	include includes/_data.pug
 
 	.header
-		//- .header__background-video
-			video(loop="true" width="100%" height="100%" autoplay muted)
-				source(src="" type="video/mp4")
-				source(src="" type="video/webm")
-		.header__bg
+		//- .header__bg
 		.header__text.animationToggle
 			.container.container--header
 				//- .header__part-no Bridging the Divide
@@ -19,9 +15,10 @@ block content
 					span.header__title--2.animationToggle Divide
 				p.header__chatter.animationToggle The struggle to move past 
 					span segregated schools
-
-	//load photo gallery
-	include includes/_gallery.pug
+		.header__bg
+			video(loop="true" width="100%" height="100%" autoplay muted)
+				source(src=datalink + "videos/opener.mp4" type="video/mp4")
+				source(src="" type="video/webm")
 
 	.container.container--article.container--first
 		.article
@@ -91,13 +88,14 @@ block content
 		.article
 			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. Praesent quis pretium ipsum, eget efficitur neque. Sed et congue libero. Praesent dapibus posuere lobortis. Suspendisse pretium sed ex nec tristique.
 
-			//large photo gallery link in sidebar
-			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--big(data-sr)
-				img(src=datalink + "images/placeholder/ph-7.jpg")
-				figcaption.inline-media--pic__caption Caption goes here
-				btn.inline-media--pic__open-gallery OPEN GALLERY
 
 			p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
+
+			//full-width link to photo gallery
+			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--full(data-sr="enter bottom")
+				img(src=datalink + "images/placeholder/ph-3.jpg")
+				figcaption.inline-media--pic__caption Caption goes here
+				btn.inline-media--pic__open-gallery OPEN GALLERY
 
 			p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
 
@@ -347,13 +345,7 @@ block content
 
 			p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
 
-			p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.
-
-			//full-width link to photo gallery
-			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--full(data-sr="enter bottom")
-				img(src=datalink + "images/placeholder/ph-3.jpg")
-				figcaption.inline-media--pic__caption Caption goes here
-				btn.inline-media--pic__open-gallery OPEN GALLERY					
+			p Morbi consectetur sapien nunc, sed suscipit lacus vulputate vel. Fusce mollis rhoncus euismod. Nulla a lectus ut felis fermentum pellentesque venenatis vitae magna. Aenean ultricies venenatis tempus. In tristique nunc nec ante ornare efficitur. Pellentesque nulla mi, dictum vel condimentum nec, faucibus luctus eros. Fusce sed pretium arcu, vitae aliquam purus. Aliquam efficitur velit et tincidunt commodo.				
 
 			//timeline mixin
 			+timeline([{'date': '2001-2003','description': 'Mauris dapibus lectus ut imperdiet lobortis. Aenean tempus sapien ac augue malesuada, at posuere arcu sodales.'},{'date': '2003-2005', 'description': 'Suspendisse vitae molestie enim. Nam est quam, pulvinar vitae ipsum non, rutrum tincidunt sapien. Suspendisse orci est, rhoncus eget auctor ut, elementum a sapien. '}])
@@ -403,13 +395,6 @@ block content
 		.article
 
 			p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-			//small link to photo gallery in sidebar
-			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--small(data-sr)
-				img(src=datalink + "images/placeholder/ph-4.jpg")
-				figcaption.inline-media--pic__caption Caption goes here
-				.inline-media--pic__open-gallery OPEN GALLERY
-
 
 			p Vestibulum sollicitudin justo a orci mollis, non dignissim erat feugiat. Praesent eros dui, egestas et ipsum maximus, finibus feugiat enim. Vivamus imperdiet enim sit amet dolor venenatis, sit amet venenatis est consectetur. Sed maximus ligula vitae orci dictum convallis. Donec tempus urna id nunc cursus vehicula. Mauris vel consectetur lacus.
 

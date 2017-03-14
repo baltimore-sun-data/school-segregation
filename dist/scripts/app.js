@@ -1078,7 +1078,7 @@ var app = app || {
                 }
             } else {
                 if (!headerToggle) {
-                    headerBg.css("opacity", scrollPosition / headerHeight - .3);
+                    headerBg.css("opacity", scrollPosition / headerHeight);
                     headerBg.css("position", "fixed");
                 } else {
                     headerToggle = false;
