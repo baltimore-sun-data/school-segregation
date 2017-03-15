@@ -468,7 +468,6 @@ body {
         width: auto;
         padding: 0 10px; } }
 
-/* Keyframes */
 @keyframes fade-in-up {
   from {
     opacity: 0;

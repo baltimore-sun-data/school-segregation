@@ -1389,9 +1389,12 @@ var gallery_app = gallery_app || {
 };
 
 $(document).ready(function() {
-    $(".animationToggle").addClass("animation");
     app.init();
     gallery_app.init();
+});
+
+$(window).load(function() {
+    $(".animationToggle").addClass("animation");
 });
 
 (function(e, t) {
