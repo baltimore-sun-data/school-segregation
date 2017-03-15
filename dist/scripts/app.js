@@ -1029,14 +1029,25 @@ load_poverty_exposure_data(mdAllPovertyData);
 
 var app = app || {
     init: function() {
+        app.readHash();
         app.mouseEvents();
         app.share();
         app.show_video();
     },
-    show_video: function() {
-        $("#featured-video").find(".fv__overlay, .fv__play-btn").on("click", function() {
-            $(".fv__overlay, .fv__play-btn").addClass("is-hidden");
-        });
+    readHash: function() {
+        var anchor = window.location.hash.substring(1);
+        switch (anchor) {
+          case "exposure":
+            $(window).scrollTop($("#exposureGraphic").offset().top - 100);
+            break;
+
+          case "map":
+            $(window).scrollTop($("#schoolsMap").offset().top - 100);
+            break;
+
+          default:
+            break;
+        }
     },
     share: function() {
         $(".icon-twitter").on("click", function() {
@@ -1054,6 +1065,11 @@ var app = app || {
             var facebook_url = "https://www.facebook.com/dialog/feed?display=popup&app_id=310302989040998&link=" + url + "&picture=" + picture + "&name=" + title + "&description=" + description + "&redirect_uri=http://www.facebook.com";
             window.open(facebook_url, "mywin", "left=200,top=200,width=500,height=300,toolbar=1,resizable=0");
             return false;
+        });
+    },
+    show_video: function() {
+        $("#featured-video").find(".fv__overlay, .fv__play-btn").on("click", function() {
+            $(".fv__overlay, .fv__play-btn").addClass("is-hidden");
         });
     },
     mouseEvents: function() {
