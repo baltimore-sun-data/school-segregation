@@ -2010,10 +2010,8 @@ $(document).ready(function() {
                     return G.test(e || "") || at.error("unsupported lang: " + e), e = e.replace(rt, it).toLowerCase(), 
                     function(t) {
                         var n;
-                        do {
-                            if (n = h ? t.lang : t.getAttribute("xml:lang") || t.getAttribute("lang")) return n = n.toLowerCase(), 
-                            n === e || 0 === n.indexOf(e + "-");
-                        } while ((t = t.parentNode) && 1 === t.nodeType);
+                        do if (n = h ? t.lang : t.getAttribute("xml:lang") || t.getAttribute("lang")) return n = n.toLowerCase(), 
+                        n === e || 0 === n.indexOf(e + "-"); while ((t = t.parentNode) && 1 === t.nodeType);
                         return !1;
                     };
                 }),
@@ -2706,8 +2704,8 @@ $(document).ready(function() {
             }
         },
         propFix: {
-            for: "htmlFor",
-            class: "className"
+            "for": "htmlFor",
+            "class": "className"
         },
         prop: function(e, n, r) {
             var i, o, a, s = e.nodeType;
@@ -3154,9 +3152,7 @@ $(document).ready(function() {
         }
     });
     function pt(e, t) {
-        do {
-            e = e[t];
-        } while (e && 1 !== e.nodeType);
+        do e = e[t]; while (e && 1 !== e.nodeType);
         return e;
     }
     x.each({
@@ -3460,7 +3456,7 @@ $(document).ready(function() {
                 dataType: "script",
                 async: !1,
                 global: !1,
-                throws: !0
+                "throws": !0
             });
         }
     }), x.fn.extend({
@@ -3571,7 +3567,7 @@ $(document).ready(function() {
             zoom: !0
         },
         cssProps: {
-            float: x.support.cssFloat ? "cssFloat" : "styleFloat"
+            "float": x.support.cssFloat ? "cssFloat" : "styleFloat"
         },
         style: function(e, n, r, i) {
             if (e && 3 !== e.nodeType && 8 !== e.nodeType && e.style) {
@@ -4092,9 +4088,7 @@ $(document).ready(function() {
             var n = this.createTween(e, t), r = n.cur(), i = Yn.exec(t), o = i && i[3] || (x.cssNumber[e] ? "" : "px"), a = (x.cssNumber[e] || "px" !== o && +r) && Yn.exec(x.css(n.elem, e)), s = 1, l = 20;
             if (a && a[3] !== o) {
                 o = o || a[3], i = i || [], a = +r || 1;
-                do {
-                    s = s || ".5", a /= s, x.style(n.elem, e, a + o);
-                } while (s !== (s = n.cur() / r) && 1 !== s && --l);
+                do s = s || ".5", a /= s, x.style(n.elem, e, a + o); while (s !== (s = n.cur() / r) && 1 !== s && --l);
             }
             return i && (a = n.start = +a || +r || 0, n.unit = o, n.end = i[1] ? a + (i[1] + 1) * i[2] : +i[2]), 
             n;
@@ -5244,9 +5238,7 @@ window.Modernizr = function(window, document, undefined) {
             },
             getOffset: function(e) {
                 var t = 0, i = 0;
-                do {
-                    isNaN(e.offsetTop) || (t += e.offsetTop), isNaN(e.offsetLeft) || (i += e.offsetLeft);
-                } while (e = e.offsetParent);
+                do isNaN(e.offsetTop) || (t += e.offsetTop), isNaN(e.offsetLeft) || (i += e.offsetLeft); while (e = e.offsetParent);
                 return {
                     top: t,
                     left: i
