@@ -396,10 +396,18 @@ function load_poverty_exposure_data(frmp) {
 
 	var exposurePovertyNonReduced
 	exposurePovertyNonReduced = Math.sqrt(((7854 * (frmp["exposure-non-reduced"]/100)) / 3.1416)) * 2;
+var studentTextPoverty 
+
+	if (frmp["poverty-dropdown"] == "Reduced") {
+		studentTextPoverty = "qualify for free/reduced lunch";
+	} else {
+		studentTextPoverty = "are not qualified for free/reduced lunch";
+	};
 
 
 	$("#text-poverty-district").html(frmp["district"]);
 	$("#text-poverty-district2").html(frmp["district"]);
+	$("#text-poverty-rate").html(studentTextPoverty);
 	$("#chair-svg-poverty").removeClass();
 	$("#chair-svg-poverty").addClass( frmpChairColor );
 	$("#chair-svg-poverty-bottom").removeClass();
@@ -416,6 +424,7 @@ function load_poverty_exposure_data(frmp) {
 	$("#non-reduced-circle").css( "height", exposurePovertyNonReduced );
 
 };
+
 
 
 
