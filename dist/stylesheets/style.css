@@ -616,10 +616,13 @@ body {
       top: 0;
       left: 0;
       width: 100%;
-      height: 50%;
-      z-index: 0;
+      height: 1em;
+      z-index: -1;
       border: 0;
       border-bottom: 3px solid #222; }
+      @media (max-width: 415px) {
+        .header__title:before {
+          border-bottom: 2px solid #222; } }
     .header__title.animation:before {
       animation: grow-width 2.5s 3.3s forwards; }
     .header__title:after {
@@ -628,11 +631,14 @@ body {
       top: 0;
       left: 0;
       width: 100%;
-      height: 50%;
+      height: 1em;
       border: 0;
       border-bottom: 3px solid;
       border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch;
-      z-index: -1; }
+      z-index: -2; }
+      @media (max-width: 415px) {
+        .header__title:after {
+          border-bottom: 2px solid; } }
     @media (max-width: 1024px) {
       .header__title {
         font-size: 70px; } }
@@ -646,23 +652,25 @@ body {
       .header__title {
         font-size: 28px; } }
   .header__chatter {
-    max-width: 600px;
-    margin: 2em auto;
-    font-size: 24px;
+    margin: 1em auto;
+    font-size: 30px;
     opacity: 0; }
     .header__chatter.animation {
       animation: fade-in 3.3s 4s forwards; }
     .header__chatter span {
       color: #f99d1d; }
+      @media (max-width: 415px) {
+        .header__chatter span {
+          display: block; } }
     @media (max-width: 1024px) {
       .header__chatter {
-        font-size: 20px; } }
+        font-size: 24px; } }
     @media (max-width: 768px) {
       .header__chatter {
         font-size: 18px; } }
     @media (max-width: 515px) {
       .header__chatter {
-        font-size: 14px; } }
+        font-size: 16px; } }
 
 /* Footer, comments styles */
 .footer {
@@ -1045,6 +1053,9 @@ body {
     text-align: left;
     font-family: "franklin-gothic-urw", sans-serif;
     color: #888; }
+  .inline-media .linkOut {
+    font-family: "franklin-gothic-urw", sans-serif;
+    margin-bottom: 0; }
   .inline-media--borderTop {
     border-top: 3px solid;
     border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
