@@ -207,6 +207,17 @@
 	line-height: inherit;
 }
 
+@media(max-width: 500px) {
+	.select select  {
+		font-size: 12px;
+	}
+
+	.color-ramp-block p {
+		font-size:12px;
+	}
+
+}
+
 .select .arr {
 	background: #fff;
 	bottom: 5px;

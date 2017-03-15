@@ -1576,6 +1576,11 @@ body {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit; }
+  @media (max-width: 500px) {
+    .exposure .select select {
+      font-size: 12px; }
+    .exposure .color-ramp-block p {
+      font-size: 12px; } }
   .exposure .select .arr {
     background: #fff;
     bottom: 5px;
