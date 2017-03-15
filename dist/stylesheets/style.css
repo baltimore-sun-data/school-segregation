@@ -414,6 +414,7 @@ th {
   display: none; }
 
 body {
+  color: #333;
   background-color: #fefffe; }
 
 .progressbar {
@@ -941,7 +942,6 @@ body {
     max-width: 700px;
     font-family: Georgia, Times New Roman, Times, serif;
     font-size: 16px;
-    color: #333;
     line-height: 1.6;
     margin-bottom: 25px; }
     .article p a:link, .article p a:visited, .article p a:active {
@@ -1003,7 +1003,6 @@ body {
       border: 0;
       border-top: 5px solid;
       border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch;
-      color: #333;
       font-family: "franklin-gothic-urw", sans-serif;
       font-size: 36px; }
 
@@ -1012,7 +1011,6 @@ body {
   max-width: 700px;
   font-family: Georgia, Times New Roman, Times, serif;
   font-size: 20px;
-  color: #333;
   line-height: 1.6;
   margin-bottom: 2em; }
   .chapterIntro a:link, .chapterIntro a:visited, .chapterIntro a:active {
@@ -1124,8 +1122,7 @@ body {
   .inline-media--pic__caption, .media-package__caption {
     padding: 10px 10px 20px 10px;
     font-family: "franklin-gothic-urw", sans-serif;
-    font-size: 14px;
-    color: #333; }
+    font-size: 14px; }
   .inline-media--pic__source {
     text-align: right;
     padding: 5px 10px 0 10px;
@@ -1193,28 +1190,29 @@ body {
       width: 100%;
       margin: 0 auto; } }
   .inline-media--about {
-    padding-top: 0;
-    color: #333;
     background-color: #ecfcff; }
     .inline-media--about h2 {
+      margin-top: 0;
       text-align: center;
       text-transform: uppercase; }
     .inline-media--about p {
-      max-width: none; }
+      max-width: none;
+      margin-bottom: 0; }
     .inline-media--about__sponsors {
-      text-align: center; }
+      text-align: center;
+      margin-top: 20px; }
       .inline-media--about__sponsors p {
         max-width: 500px;
         margin: 0 auto;
         padding: 10px 0;
-        border-top: 1px solid #ddd;
+        border-top: 1px solid #888;
         color: #333;
         font-size: .8em; }
       .inline-media--about__sponsors img {
         width: 150px;
         padding: 0 20px; }
         .inline-media--about__sponsors img.first {
-          border-right: 1px solid #333; }
+          border-right: 1px solid #888; }
         @media (max-width: 415px) {
           .inline-media--about__sponsors img {
             display: block;
@@ -1233,7 +1231,6 @@ body {
   padding: 1em;
   background-color: white;
   box-shadow: 0 0 18px rgba(15, 68, 83, 0.1);
-  color: #333;
   border: 0; }
   .media-package::after {
     clear: both;
@@ -1271,7 +1268,7 @@ body {
     margin: 10px 0 5px 0;
     cursor: pointer; }
     .media-package__open-gallery:hover {
-      color: #333green; }
+      color: #35baa6; }
   .media-package--multTables {
     text-align: center;
     border-top: 3px solid;
@@ -1302,8 +1299,7 @@ body {
       margin: 0 auto 1.5em auto; }
       .media-package--iframe p.linkOut {
         margin: 1em 0 0 0;
-        text-align: left;
-        color: #333; }
+        text-align: left; }
       .media-package--iframe p.source {
         max-width: none;
         text-align: left; }
@@ -1339,6 +1335,8 @@ body {
     font-weight: bold; }
   .statTable td, .statTable th {
     padding: .5em; }
+  .statTable th {
+    text-transform: uppercase; }
   @media (max-width: 500px) {
     .statTable .mobile {
       display: none; } }
@@ -1436,7 +1434,7 @@ body {
 .exposure {
   margin: 0 auto;
   font-family: "franklin-gothic-urw", sans-serif;
-  color: #555;
+  color: #333;
   /* COLOR RAMP STYLES */
   /* NEW DROPDOWN STYLES */
   /* MAIN GRAPHIC STYLES */

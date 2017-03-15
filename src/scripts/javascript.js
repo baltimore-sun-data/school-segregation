@@ -373,8 +373,8 @@ var gallery_app = gallery_app || {
 };
 
 $(document).ready(function(){
-	app.init();
-	// video_grid.init();
-	gallery_app.init();
 	$('.animationToggle').addClass('animation');
+	// video_grid.init();
+	app.init();
+	gallery_app.init();
 });

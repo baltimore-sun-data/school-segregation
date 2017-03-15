@@ -7,7 +7,6 @@
 		font:
 			family: $bodyFont
 			size: 16px
-		color: #333
 		line-height: 1.6
 		margin-bottom: 25px
 		+links($blue, $green, none)
@@ -78,7 +77,6 @@
 			border: 0
 			border-top: 5px solid
 			border-image: url($datalink + 'images/border-h.svg') 1 stretch
-			color: #333
 			font:
 				family: $headFont-0
 				size: 36px
@@ -90,7 +88,6 @@
 	font:
 		family: $bodyFont
 		size: 20px
-	color: #333
 	line-height: 1.6
 	margin-bottom: 2em
 	+links($blue, $green, none)
@@ -204,7 +201,6 @@
 			font:
 				family: $accentFont-0
 				size: 14px
-			color: #333
 
 		&__source
 			text-align: right
@@ -278,28 +274,30 @@
 			margin: 0 auto
 	&--about
 		// text-align: center
-		padding-top: 0
-		color: #333
+		// padding-top: 0
 		background-color: lighten($blue, 57)
 		h2
+			margin-top: 0
 			text-align: center
 			text-transform: uppercase
 		p
 			max-width: none
+			margin-bottom: 0
 		&__sponsors
 			text-align: center
+			margin-top: 20px
 			p
 				max-width: 500px
 				margin: 0 auto
 				padding: 10px 0
-				border-top: 1px solid #ddd
+				border-top: 1px solid #888
 				color: #333
 				font-size: .8em
 			img
 				width: 150px
 				padding: 0 20px
 				&.first
-					border-right: 1px solid #333
+					border-right: 1px solid #888
 				@media(max-width: $header-bp5)
 					display: block
 					margin: 1em auto
@@ -317,7 +315,6 @@
 	padding: 1em
 	background-color: white	
 	box-shadow: 0 0 18px rgba($dkBlue,0.1)
-	color: #333
 	border: 0
 	.source
 		max-width: none
@@ -355,10 +352,9 @@
 		margin: 10px 0 5px 0
 		cursor: pointer
 		&:hover
-			color: #333green
+			color: $green
 	&--multTables
 		text-align: center
-		// color: #333
 		border-top: 3px solid
 		border-image: url($datalink + 'images/border-h.svg') 1 stretch
 		h3
@@ -389,7 +385,6 @@
 			&.linkOut
 				margin: 1em 0 0 0
 				text-align: left
-				color: #333
 			&.source
 				max-width: none
 				text-align: left
@@ -426,6 +421,8 @@
 			font-weight: bold
 	td, th
 		padding: .5em
+	th
+		text-transform: uppercase
 	.mobile
 		@media(max-width: 500px) 
 			display: none
