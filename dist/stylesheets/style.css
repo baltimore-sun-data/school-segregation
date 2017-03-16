@@ -892,6 +892,14 @@ body {
   .parts-menu__title {
     font-size: 20px;
     margin-top: 5px; }
+  .parts-menu__p {
+    font-size: 1em;
+    color: #999 !important;
+    text-align: left;
+    padding-top: 10px; }
+    @media (max-width: 500px) {
+      .parts-menu__p {
+        display: none; } }
 
 .featured-video {
   position: relative;
