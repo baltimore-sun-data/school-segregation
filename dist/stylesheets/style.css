@@ -499,7 +499,7 @@ body {
   overflow: hidden; }
   @media (max-width: 768px) {
     .header {
-      max-height: none; } }
+      height: 175vh; } }
   .header__splash {
     position: relative;
     width: 100%;
@@ -532,9 +532,6 @@ body {
       width: 100%;
       display: block;
       object-fit: cover; }
-      @media (max-width: 1024px) {
-        .header__bg video {
-          display: none; } }
   .header__seriesTitle {
     position: relative;
     display: table-cell;
@@ -933,7 +930,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/placeholder/ph-0.jpg");
+  background-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/photos/resized/btd-johnnycake-sanford-2.jpg");
   background-position: center center;
   background-size: cover;
   cursor: pointer;
@@ -1030,7 +1027,7 @@ body {
       padding-left: 3px; }
   .article__chapter-title {
     margin: 4em auto 1em auto;
-    max-width: 590px;
+    max-width: 650px;
     text-align: center; }
     .article__chapter-title__text {
       position: relative;

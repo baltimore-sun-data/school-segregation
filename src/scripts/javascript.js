@@ -213,37 +213,6 @@ var app = app || {
 			    }
 			});
 
-	},
-	adScriptsHeader: function() {
-		var gptadslots=[];
-		var googletag = googletag || {};
-		googletag.cmd = googletag.cmd || [];
-		(function(){ var gads = document.createElement('script');
-			gads.async = true; gads.type = 'text/javascript';
-			var useSSL = 'https:' == document.location.protocol;
-			gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
-			var node = document.getElementsByTagName('script')[0];
-			node.parentNode.insertBefore(gads, node);
-		})();
-		googletag.cmd.push(function() {
-
-			//Adslot 1 declaration
-			gptadslots[2]= googletag.defineSlot('/4011/trb.baltimoresun/news', [[728,90]],'div-gpt-ad-430294160021529928-1').setTargeting('pos',['1']).addService(googletag.pubads());
-
-			//Adslot 2 declaration
-			gptadslots[2]= googletag.defineSlot('/4011/trb.baltimoresun/news', [[728,90]],'div-gpt-ad-430294160021529928-2').setTargeting('pos',['1']).addService(googletag.pubads());
-
-			googletag.pubads().setTargeting('ptype',['sf']);
-			googletag.pubads().enableAsyncRendering();
-			googletag.enableServices();
-		});
-		app.adScriptsBody(googletag);
-	},
-	adScriptsBody: function() {
-
-		googletag.cmd.push(function() { googletag.display('div-gpt-ad-430294160021529928-2'); });
-
-		googletag.cmd.push(function() { googletag.display('div-gpt-ad-430294160021529928-1'); });
 	}
 };
 
@@ -252,31 +221,4 @@ $(document).ready(function(){
 });
 $(window).load(function() {
 	$('.animationToggle').addClass('animation');
-	
-	// var gptadslots=[];
-	// var googletag = googletag || {};
-	// googletag.cmd = googletag.cmd || [];
-	// (function(){ var gads = document.createElement('script');
-	// 	gads.async = true; gads.type = 'text/javascript';
-	// 	var useSSL = 'https:' == document.location.protocol;
-	// 	gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
-	// 	var node = document.getElementsByTagName('script')[0];
-	// 	node.parentNode.insertBefore(gads, node);
-	// })();
-	// googletag.cmd.push(function() {
-
-	// 	//Adslot 1 declaration
-	// 	gptadslots[2]= googletag.defineSlot('/4011/trb.baltimoresun/news', [[728,90]],'div-gpt-ad-430294160021529928-1').setTargeting('pos',['1']).addService(googletag.pubads());
-
-	// 	//Adslot 2 declaration
-	// 	gptadslots[2]= googletag.defineSlot('/4011/trb.baltimoresun/news', [[728,90]],'div-gpt-ad-430294160021529928-2').setTargeting('pos',['1']).addService(googletag.pubads());
-
-	// 	googletag.pubads().setTargeting('ptype',['sf']);
-	// 	googletag.pubads().enableAsyncRendering();
-	// 	googletag.enableServices();
-	// });
-
-	// googletag.cmd.push(function() { googletag.display('div-gpt-ad-430294160021529928-2'); });
-
-	// googletag.cmd.push(function() { googletag.display('div-gpt-ad-430294160021529928-1'); });
 });

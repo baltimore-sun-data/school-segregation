@@ -15,7 +15,8 @@ $header-bp5: 415px //Adjust title size again
 	background-color: #222 //temp?
 	overflow: hidden
 	@media (max-width: $header-bp3)
-		max-height: none
+		height: 175vh
+	// @media (max-width: $header-bp2)
 
 	// &:after
 	// 	content: ""
@@ -57,13 +58,14 @@ $header-bp5: 415px //Adjust title size again
 		opacity: 0
 		z-index: 5
 		@include transition(all 1.5s ease)
+
 		video
 			height: 100vh
 			min-height: 100%
 			+size(100%)
 			display: block
-			@media (max-width: $header-bp2)
-				display: none
+			// @media (max-width: $header-bp2)
+				// display: none
 			object-fit: cover
 
 	&__seriesTitle

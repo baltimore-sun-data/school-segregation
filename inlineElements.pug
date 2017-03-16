@@ -1,0 +1,222 @@
+
+
+	.container.container--article
+		.article
+
+			//small pull quote in sidebar
+			figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--small(data-sr)
+				.inline-media--pullquote__text &ldquo;&rdquo;
+				.inline-media--pullquote__src 
+
+
+			//large pull quote
+			figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--big(data-sr)
+				.inline-media--pullquote__text &ldquo;&rdquo;
+				.inline-media--pullquote__src 
+
+			//full-width link to photo gallery
+			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--full(data-sr="enter bottom")
+				img(src=datalink + "images/photos/resized/")
+				figcaption.inline-media--pic__caption Caption goes here
+				btn.inline-media--pic__open-gallery OPEN GALLERY
+
+			//sidebar photo
+			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--big(data-sr="enter bottom")
+				img(src=datalink + "images/photos/resized/")
+				figcaption.inline-media--pic__caption Caption goes here
+
+
+
+
+			figure.inline-media.inline-media--borderTop.inline-media--full.inline-media--interactive#exposureGraphic
+				include includes/exposure/index.html
+				p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project, College of Education, University of Maryland.
+
+			figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+				table.statTable(class="statTable--mix")
+					caption Percentage of schools that are >90% white
+					tr
+						th.blank
+						th 1990
+						th.mobile 2000
+						th.mobile 2010
+						th.shade 2014
+					each area in compRacialWhite
+						tr
+							td #{area.area}
+							td #{area.y1990}%
+							td.mobile #{area.y2000}%
+							td.mobile #{area.y2010}%
+							td.shade #{area.y2014}%
+				p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project.
+
+			figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+				table.statTable(class="statTable--mix")
+					caption Percentage of schools that are >90% racial minority
+					tr
+						th.blank
+						th 1990
+						th.mobile 2000
+						th.mobile 2010
+						th.shade 2014
+					each area in compRacialMin
+						tr
+							td #{area.area}
+							td #{area.y1990}%
+							td.mobile #{area.y2000}%
+							td.mobile #{area.y2010}%
+							td.shade #{area.y2014}%
+				p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project.
+
+			figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+				table.statTable(class="statTable--mix")
+					caption Percentage of schools that are 50-90% racial minority
+					tr
+						th.blank
+						th 1990
+						th.mobile 2000
+						th.mobile 2010
+						th.shade 2014
+					each area in compRacialMix
+						tr
+							td #{area.area}
+							td #{area.y1990}%
+							td.mobile #{area.y2000}%
+							td.mobile #{area.y2010}%
+								td.shade #{area.y2014}%
+				p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project.
+
+			figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+				table.statTable(class="statTable--mix")
+					caption Percentage of school of schools with >75% low-income students
+					tr
+						th.blank
+						th 1990
+						th.mobile 2000
+						th.mobile 2010
+						th.shade 2014
+					each area in compPov
+						tr
+							td #{area.name}
+							each stat in area.dataObj
+								if stat.year == 2014
+									td.shade #{stat.p100}
+								else if stat.year == 1990
+									td #{stat.p100}
+								else
+									td.mobile #{stat.p100}
+				p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project.
+
+
+			figure.media-package.media-package--chart-pkg
+				h3 With integration, achievement gap shrinks
+				p Researchers believe bringing students of different races together will help close the achievement gap.  As American schools began to desegregate under court orders in the 1970s and 1980s, black achievement rose dramatically. Results from the National Assessment of Educational Progress, given to a sampling of students in reading and math every few years, show the gap between black and white achievement was smallest when schools were most integrated, in the 1980s. As schools began to resegregate the achievement of black students dropped, then rose slowly. The gap has not closed.
+				.charts
+					.chart-left
+						h4 Average reading score for 17-year olds
+						canvas#readChart
+					.chart-right
+						h4 Average math score for 17-year olds
+						canvas#mathChart
+			
+			figure.inline-media.inline-media--borderTop.inline-media--full.inline-media--about
+				h2 About this series
+				p At a time when Maryland's population is growing more diverse, the schools are becoming more segregated. With a grant from the Education Writers Association, Baltimore Sun reporters Liz Bowie and Erica L. Green examined local attempts to better integrate schools by race and class. Along with photographer Lloyd Fox, they interviewed students, teachers, parents and researchers. The Sun also commissioned an analysis from the Maryland Equity Project at the University of Maryland to create a database that breaks down every public school's racial and socioeconomic makeup.
+				.inline-media--about__sponsors
+					p Produced with support from:
+					img(src="images/ewa-logo.png")
+
+			figure.inline-media.inline-media--borderLeft.inline-media--big.inline-media--about
+				h2 Join the conversation
+				p As a follow-up to the series, The Sun, Maryland Humanities Council and Loyola University of Maryland's Center for Innovation in Urban Education will be hosting a community dialogue about the path forward for school integration.
+				p The forum will be held Wednesday, March 29 from 6:30 - 8 p.m. at Loyola University. For more information and to RSVP go to 
+					a(href="http://www.loyola.edu/join-us/bridging-divide") www.loyola.edu/join-us/bridging-divide
+					| .
+				p The forum is funded through a grant from the Education Writers Association.
+
+			figure.inline-media.inline-media--borderLeft.inline-media--big.inline-media--about
+				h2 Support our journalism
+				p Become a Baltimore Sun subscriber today to support stories like this one. 
+					a(href="http://ad.baltimoresun.com/land-article/") Start getting full access to our signature journalism for just $4.99 for 3 months.
+
+
+
+			//- //small external link
+			//- figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--small(data-sr)
+			//- 	.inline-media--external-link__title External link title
+			//- 	.inline-media--external-link__content External link description
+			//- 	.inline-media--external-link__link
+			//- 		a(href="#" target="_blank") Learn more.
+
+	//multiphoto package - photos enter from left and right
+	figure.media-package
+		img.media-package__img.media-package__img--left(src=datalink + "images/placeholder/ph-1.jpg" data-sr="enter bottom")
+		img.media-package__img.media-package__img--right(src=datalink + "images/placeholder/ph-2.jpg" data-sr="enter bottom")
+		.media-package__caption Caption for multiphoto package
+
+
+	figure.media-package.media-package--iframe#schoolsMap
+		h2 Economic and racial composition of Maryland public schools
+		p Maryland is an economically and racially diverse state. However, that diversity is not always reflected in the composition of school districts. In fact, 28% of Maryland schools are considered "racially-isolated" (consisting of more than 90% of a single race).  Similarly, 23% of Maryland schools have student populations with higher than 75% low income students.
+		iframe(id="map" width="100%" frameborder="0" src="https://baltsun.carto.com/builder/9615e5dc-fa0e-11e6-b116-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen)
+		.mobile-map
+			#race-img
+				img(src=datalink + "images/mobile-map-race.png")
+			#poverty-img.hidden
+				img(src=datalink + "images/mobile-map-poverty.png")
+		.mobileLegend
+			.cartodb-legend.choropleth
+				.layer-select#race.selected(onClick="$('#poverty').removeClass('selected');$('#race').addClass('selected');$('#race-img').removeClass('hidden');$('#poverty-img').addClass('hidden');")
+					.legend-title Minority student population
+					ul
+						li.min 0%
+						li.max 100%
+						li.graph.count_315
+							.colors
+								.quartile(style="font-size:0.3em;background-color:#b0f2bc;")
+								.quartile(style="font-size:0.3em;background-color:#77e2a8;")
+								.quartile(style="font-size:0.3em;background-color:#4cc8a3;")
+								.quartile(style="font-size:0.3em;background-color:#31a6a2;")
+								.quartile(style="font-size:0.3em;background-color:#257d98;")
+						
+				.layer-select#poverty(onClick="$('#race').removeClass('selected');$('#poverty').addClass('selected');$('#poverty-img').removeClass('hidden');$('#race-img').addClass('hidden');")
+					.legend-title(style="margin-top:10px") Free & reduced lunch students
+					ul
+						li.min 0%
+						li.max 100%
+						li.graph.count_315
+							.colors
+								.quartile(style="font-size:0.3em;background-color:#ffffb2;")
+								.quartile(style="font-size:0.3em;background-color:#fecc5c;")
+								.quartile(style="font-size:0.3em;background-color:#fd8d3c;")
+								.quartile(style="font-size:0.3em;background-color:#f03b20;")
+								.quartile(style="font-size:0.3em;background-color:#bd0026;")
+
+		p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project, College of Education, University of Maryland.
+		p.linkOut 
+			a(href="http://data.baltimoresun.com/news/bridging-the-divide/maryland-schools-map/") For a fullscreen, interactive version, click here.
+
+	figure.media-package.media-package--multTables
+		h3 Change in student racial demographics, 1990 - 2014
+		each race,index in compRacial
+			table.statTable(class="statTable--"+race.id)
+				caption #{race.caption}
+				tr
+					th.blank
+					th 1990
+					th 2014
+					th Percentage point change
+				each area in race.dataObj
+					tr
+						td #{area.area}
+						td #{area.pct1990}
+						td #{area.pct2014}
+						if (index > 0)
+							td +#{area.pctDiff}
+						else
+							td #{area.pctDiff}
+
+		p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project.
+
+
+		
