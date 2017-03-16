@@ -21,9 +21,9 @@
     "watch:server": "onchange 'dist/**' -- npm run reload",
     "watch:all": "parallelshell 'npm run serve' 'npm run watch:html' 'npm run watch:css' 'npm run watch:js' 'npm run watch:server'",
     "pugmin": "pug -p src/index.pug < src/index.pug > dist/index.html",
-    "sassmin": "node-sass --output-style compressed -o dist/css src/sass", 
+    "sassmin": "node-sass --output-style compressed -o dist/css src/sass",
     "jsmin": "uglifyjs dist/scripts/app.js -m -c -o dist/scripts/app.min.js",
-    "build:min": "npm run pugmin && npm run sassmin && npm run jsmin" 
+    "build:min": "npm run pugmin && npm run sassmin && npm run jsmin"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/baltimore-sun-data/school-segregation#readme",
   "devDependencies": {
+    "imagemin-cli": "^3.0.0",
     "node-sass": "^3.8.0",
     "onchange": "^2.5.0",
     "uglify-js": "^2.7.0"

@@ -1320,6 +1320,27 @@ body {
         color: #35baa6; }
     .media-package--iframe iframe {
       height: 70vh; }
+  .media-package--chart-pkg {
+    text-align: center;
+    border-top: 3px solid;
+    border-image: url("http://data.baltimoresun.com/news/bridging-the-divide/images/border-h.svg") 1 stretch; }
+    .media-package--chart-pkg p {
+      max-width: 600px;
+      margin: 0 auto 1.5em auto; }
+    .media-package--chart-pkg .charts .chart-left {
+      width: 49%;
+      max-height: 400px;
+      float: left;
+      margin-right: 1%; }
+    .media-package--chart-pkg .charts .chart-right {
+      width: 49%;
+      max-height: 400px;
+      float: right;
+      margin-left: 1%; }
+    @media (max-width: 700px) {
+      .media-package--chart-pkg .charts .chart-left, .media-package--chart-pkg .charts .chart-right {
+        width: 100%;
+        margin: 0 0 10px 0; } }
 
 .statTable {
   width: 100%;

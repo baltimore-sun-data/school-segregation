@@ -148,7 +148,7 @@ block content
 	figure.media-package.media-package--iframe#schoolsMap
 		h2 Economic and racial composition of Maryland public schools
 		p Maryland is an economically and racially diverse state. However, that diversity is not always reflected in the composition of school districts. In fact, 28% of Maryland schools are considered "racially-isolated" (consisting of more than 90% of a single race).  Similarly, 23% of Maryland schools have student populations with higher than 75% low income students.
-		iframe(width="100%" frameborder="0" src="https://baltsun.carto.com/builder/9615e5dc-fa0e-11e6-b116-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen)
+		iframe(id="map" width="100%" frameborder="0" src="https://baltsun.carto.com/builder/9615e5dc-fa0e-11e6-b116-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen)
 		p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project, College of Education, University of Maryland.
 		p.linkOut 
 			a(href="http://data.baltimoresun.com/news/bridging-the-divide/maryland-schools-map/") For a fullscreen, interactive version, click here.
@@ -318,6 +318,17 @@ block content
 			p Aliquam eu enim eget dolor placerat dignissim. Nullam nec ligula fringilla, consectetur diam at, posuere neque. Phasellus porttitor quam at metus luctus, eu eleifend nisl elementum. Donec malesuada, lectus ac ultricies dapibus, leo turpis ultricies sem, sit amet euismod mi magna ut lorem.
 
 			p Etiam dapibus, turpis quis ullamcorper scelerisque, urna augue egestas urna, vel pellentesque velit risus in tortor. Vivamus felis ex, eleifend volutpat tortor volutpat, consequat laoreet mauris. Donec laoreet felis consequat, faucibus dolor ac, interdum orci. Nulla molestie elementum finibus. Proin arcu eros, feugiat pretium felis vitae, aliquet posuere purus.
+
+			figure.media-package.media-package--chart-pkg
+				h3 With integration, achievement gap shrinks
+				p Researchers believe bringing students of different races together will help close the achievement gap.  As American schools began to desegregate under court orders in the 1970s and 1980s, black achievement rose dramatically. Results from the National Assessment of Educational Progress, given to a sampling of students in reading and math every few years, show the gap between black and white achievement was smallest when schools were most integrated, in the 1980s. As schools began to resegregate the achievement of black students dropped, then rose slowly. The gap has not closed.
+				.charts
+					.chart-left
+						h4 Average reading score for 17-year olds
+						canvas#readChart
+					.chart-right
+						h4 Average math score for 17-year olds
+						canvas#mathChart
 
 			p Proin porta ut neque vitae ornare. Aenean maximus libero id turpis imperdiet porttitor. Vivamus ac erat egestas mauris fringilla accumsan. Etiam sit amet justo vitae lorem posuere egestas sed ut tellus. Donec a urna nec leo gravida pretium. Praesent viverra, magna id lobortis ultricies, dolor urna finibus arcu, ac fermentum odio nulla ac dolor.
 

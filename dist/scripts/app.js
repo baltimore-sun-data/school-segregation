@@ -1033,6 +1033,7 @@ var app = app || {
         app.mouseEvents();
         app.share();
         app.show_video();
+        app.charts();
     },
     readHash: function() {
         var anchor = window.location.hash.substring(1);
@@ -1105,6 +1106,126 @@ var app = app || {
                     headerBg.css("position", "fixed");
                 } else {
                     headerToggle = false;
+                }
+            }
+        });
+    },
+    charts: function() {
+        var ctx1 = document.getElementById("readChart");
+        var ctx2 = document.getElementById("mathChart");
+        var readChart = new Chart(ctx1, {
+            type: "line",
+            data: {
+                labels: [ "1975", "1980", "1984", "1988", "1990", "1992", "1994", "1996", "1999", "2004", "2008", "2012" ],
+                datasets: [ {
+                    label: "White",
+                    fill: false,
+                    lineTension: .1,
+                    backgroundColor: "rgba(16,68,83,0.4)",
+                    borderColor: "rgba(16,68,83,1)",
+                    borderCapStyle: "butt",
+                    borderDash: [],
+                    borderDashOffset: 0,
+                    borderJoinStyle: "miter",
+                    pointBorderColor: "rgba(16,68,83,1)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(16,68,83,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [ 293, 293, 295, 295, 297, 297, 296, 295, 295, 289, 295, 295 ],
+                    spanGaps: false
+                }, {
+                    label: "Black",
+                    fill: false,
+                    lineTension: .1,
+                    backgroundColor: "rgba(53,185,165,0.4)",
+                    borderColor: "rgba(53,185,165,1)",
+                    borderCapStyle: "butt",
+                    borderDash: [],
+                    borderDashOffset: 0,
+                    borderJoinStyle: "miter",
+                    pointBorderColor: "rgba(53,185,165,1)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(53,185,165,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [ 241, 243, 264, 274, 267, 261, 266, 266, 264, 262, 266, 269 ],
+                    spanGaps: false
+                } ]
+            },
+            options: {
+                scales: {
+                    yAxes: [ {
+                        ticks: {
+                            beginAtZero: false
+                        }
+                    } ]
+                }
+            }
+        });
+        var mathChart = new Chart(ctx2, {
+            type: "line",
+            data: {
+                labels: [ "1978", "1982", "1986", "1990", "1992", "1994", "1996", "1999", "2004", "2008", "2012" ],
+                datasets: [ {
+                    label: "White",
+                    fill: false,
+                    lineTension: .1,
+                    backgroundColor: "rgba(16,68,83,0.4)",
+                    borderColor: "rgba(16,68,83,1)",
+                    borderCapStyle: "butt",
+                    borderDash: [],
+                    borderDashOffset: 0,
+                    borderJoinStyle: "miter",
+                    pointBorderColor: "rgba(16,68,83,1)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(16,68,83,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [ 306, 304, 308, 309, 312, 312, 313, 315, 311, 314, 314 ],
+                    spanGaps: false
+                }, {
+                    label: "Black",
+                    fill: false,
+                    lineTension: .1,
+                    backgroundColor: "rgba(53,185,165,0.4)",
+                    borderColor: "rgba(53,185,165,1)",
+                    borderCapStyle: "butt",
+                    borderDash: [],
+                    borderDashOffset: 0,
+                    borderJoinStyle: "miter",
+                    pointBorderColor: "rgba(53,185,165,1)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(53,185,165,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [ 268, 272, 279, 289, 286, 286, 286, 283, 284, 287, 288 ],
+                    spanGaps: false
+                } ]
+            },
+            options: {
+                scales: {
+                    yAxes: [ {
+                        ticks: {
+                            beginAtZero: false
+                        }
+                    } ]
                 }
             }
         });
@@ -1735,10 +1856,8 @@ $(window).load(function() {
                     return G.test(e || "") || at.error("unsupported lang: " + e), e = e.replace(rt, it).toLowerCase(), 
                     function(t) {
                         var n;
-                        do {
-                            if (n = h ? t.lang : t.getAttribute("xml:lang") || t.getAttribute("lang")) return n = n.toLowerCase(), 
-                            n === e || 0 === n.indexOf(e + "-");
-                        } while ((t = t.parentNode) && 1 === t.nodeType);
+                        do if (n = h ? t.lang : t.getAttribute("xml:lang") || t.getAttribute("lang")) return n = n.toLowerCase(), 
+                        n === e || 0 === n.indexOf(e + "-"); while ((t = t.parentNode) && 1 === t.nodeType);
                         return !1;
                     };
                 }),
@@ -2431,8 +2550,8 @@ $(window).load(function() {
             }
         },
         propFix: {
-            for: "htmlFor",
-            class: "className"
+            "for": "htmlFor",
+            "class": "className"
         },
         prop: function(e, n, r) {
             var i, o, a, s = e.nodeType;
@@ -2879,9 +2998,7 @@ $(window).load(function() {
         }
     });
     function pt(e, t) {
-        do {
-            e = e[t];
-        } while (e && 1 !== e.nodeType);
+        do e = e[t]; while (e && 1 !== e.nodeType);
         return e;
     }
     x.each({
@@ -3185,7 +3302,7 @@ $(window).load(function() {
                 dataType: "script",
                 async: !1,
                 global: !1,
-                throws: !0
+                "throws": !0
             });
         }
     }), x.fn.extend({
@@ -3296,7 +3413,7 @@ $(window).load(function() {
             zoom: !0
         },
         cssProps: {
-            float: x.support.cssFloat ? "cssFloat" : "styleFloat"
+            "float": x.support.cssFloat ? "cssFloat" : "styleFloat"
         },
         style: function(e, n, r, i) {
             if (e && 3 !== e.nodeType && 8 !== e.nodeType && e.style) {
@@ -3817,9 +3934,7 @@ $(window).load(function() {
             var n = this.createTween(e, t), r = n.cur(), i = Yn.exec(t), o = i && i[3] || (x.cssNumber[e] ? "" : "px"), a = (x.cssNumber[e] || "px" !== o && +r) && Yn.exec(x.css(n.elem, e)), s = 1, l = 20;
             if (a && a[3] !== o) {
                 o = o || a[3], i = i || [], a = +r || 1;
-                do {
-                    s = s || ".5", a /= s, x.style(n.elem, e, a + o);
-                } while (s !== (s = n.cur() / r) && 1 !== s && --l);
+                do s = s || ".5", a /= s, x.style(n.elem, e, a + o); while (s !== (s = n.cur() / r) && 1 !== s && --l);
             }
             return i && (a = n.start = +a || +r || 0, n.unit = o, n.end = i[1] ? a + (i[1] + 1) * i[2] : +i[2]), 
             n;
@@ -4969,9 +5084,7 @@ window.Modernizr = function(window, document, undefined) {
             },
             getOffset: function(e) {
                 var t = 0, i = 0;
-                do {
-                    isNaN(e.offsetTop) || (t += e.offsetTop), isNaN(e.offsetLeft) || (i += e.offsetLeft);
-                } while (e = e.offsetParent);
+                do isNaN(e.offsetTop) || (t += e.offsetTop), isNaN(e.offsetLeft) || (i += e.offsetLeft); while (e = e.offsetParent);
                 return {
                     top: t,
                     left: i

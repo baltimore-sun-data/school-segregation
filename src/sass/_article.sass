@@ -398,6 +398,28 @@
 				color: $green
 		iframe
 			height: 70vh
+	&--chart-pkg
+		text-align: center
+		border-top: 3px solid
+		border-image: url($datalink + 'images/border-h.svg') 1 stretch
+		p
+			max-width: 600px
+			margin: 0 auto 1.5em auto
+		.charts
+			.chart-left
+				width: 49%
+				max-height: 400px
+				float: left
+				margin-right: 1%
+			.chart-right
+				width: 49%
+				max-height: 400px
+				float: right
+				margin-left: 1%
+			@media (max-width: 700px)
+				.chart-left, .chart-right
+					width: 100%
+					margin: 0 0 10px 0
 
 .statTable
 	width: 100%

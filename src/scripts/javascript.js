@@ -4,6 +4,7 @@ var app = app || {
 		app.mouseEvents();
 		app.share();
 		app.show_video();
+		app.charts();
 	},
 	readHash: function() {
 		var anchor = window.location.hash.substring(1);
@@ -85,6 +86,133 @@ var app = app || {
 			// console.log($('.header').height());
 
 		});
+	},
+	charts: function(){
+			var ctx1 = document.getElementById("readChart");
+			var ctx2 = document.getElementById("mathChart");
+			var readChart = new Chart(ctx1, {
+			    type: 'line',
+			    data: {
+			    labels: ["1975","1980","1984","1988","1990","1992","1994","1996","1999","2004","2008","2012"],
+			    datasets: [
+			        {
+			            label: "White",
+			            fill: false,
+			            lineTension: 0.1,
+			            backgroundColor: "rgba(16,68,83,0.4)",
+			            borderColor: "rgba(16,68,83,1)",
+			            borderCapStyle: 'butt',
+			            borderDash: [],
+			            borderDashOffset: 0.0,
+			            borderJoinStyle: 'miter',
+			            pointBorderColor: "rgba(16,68,83,1)",
+			            pointBackgroundColor: "#fff",
+			            pointBorderWidth: 1,
+			            pointHoverRadius: 5,
+			            pointHoverBackgroundColor: "rgba(16,68,83,1)",
+			            pointHoverBorderColor: "rgba(220,220,220,1)",
+			            pointHoverBorderWidth: 2,
+			            pointRadius: 1,
+			            pointHitRadius: 10,
+			            data: [293,293,295,295,297,297,296,295,295,289,295,295],
+			            spanGaps: false,
+			        },
+			        {
+			            label: "Black",
+			            fill: false,
+			            lineTension: 0.1,
+			            backgroundColor: "rgba(53,185,165,0.4)",
+			            borderColor: "rgba(53,185,165,1)",
+			            borderCapStyle: 'butt',
+			            borderDash: [],
+			            borderDashOffset: 0.0,
+			            borderJoinStyle: 'miter',
+			            pointBorderColor: "rgba(53,185,165,1)",
+			            pointBackgroundColor: "#fff",
+			            pointBorderWidth: 1,
+			            pointHoverRadius: 5,
+			            pointHoverBackgroundColor: "rgba(53,185,165,1)",
+			            pointHoverBorderColor: "rgba(220,220,220,1)",
+			            pointHoverBorderWidth: 2,
+			            pointRadius: 1,
+			            pointHitRadius: 10,
+			            data: [241,243,264,274,267,261,266,266,264,262,266,269],
+			            spanGaps: false,
+			        }
+			    ]
+			},
+			    options: {
+			        scales: {
+			            yAxes: [{
+			                ticks: {
+			                    beginAtZero:false
+			                }
+			            }]
+			        }
+			    }
+			});
+			var mathChart = new Chart(ctx2, {
+			    type: 'line',
+			    data: {
+			    labels: ["1978","1982","1986","1990","1992","1994","1996","1999","2004","2008","2012"],
+			    datasets: [
+			        {
+			            label: "White",
+			            fill: false,
+			            lineTension: 0.1,
+			            backgroundColor: "rgba(16,68,83,0.4)",
+			            borderColor: "rgba(16,68,83,1)",
+			            borderCapStyle: 'butt',
+			            borderDash: [],
+			            borderDashOffset: 0.0,
+			            borderJoinStyle: 'miter',
+			            pointBorderColor: "rgba(16,68,83,1)",
+			            pointBackgroundColor: "#fff",
+			            pointBorderWidth: 1,
+			            pointHoverRadius: 5,
+			            pointHoverBackgroundColor: "rgba(16,68,83,1)",
+			            pointHoverBorderColor: "rgba(220,220,220,1)",
+			            pointHoverBorderWidth: 2,
+			            pointRadius: 1,
+			            pointHitRadius: 10,
+			            data: [306,304,308,309,312,312,313,315,311,314,314],
+			            spanGaps: false,
+			        },
+			        {
+			            label: "Black",
+			            fill: false,
+			            lineTension: 0.1,
+			            backgroundColor: "rgba(53,185,165,0.4)",
+			            borderColor: "rgba(53,185,165,1)",
+			            borderCapStyle: 'butt',
+			            borderDash: [],
+			            borderDashOffset: 0.0,
+			            borderJoinStyle: 'miter',
+			            pointBorderColor: "rgba(53,185,165,1)",
+			            pointBackgroundColor: "#fff",
+			            pointBorderWidth: 1,
+			            pointHoverRadius: 5,
+			            pointHoverBackgroundColor: "rgba(53,185,165,1)",
+			            pointHoverBorderColor: "rgba(220,220,220,1)",
+			            pointHoverBorderWidth: 2,
+			            pointRadius: 1,
+			            pointHitRadius: 10,
+			            data: [268,272,279,289,286,286,286,283,284,287,288],
+			            spanGaps: false,
+			        }
+			    ]
+			},
+			    options: {
+			        scales: {
+			            yAxes: [{
+			                ticks: {
+			                    beginAtZero:false
+			                }
+			            }]
+			        }
+			    }
+			});
+
 	}
 };
 
