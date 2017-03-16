@@ -76,11 +76,6 @@ block content
 
 	p.chapterIntro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-	//- .chapterTitleImage
-	//- 	//- img.chapterTitleImage(src='http://data.baltimoresun.com/news/unsettled-journeys/part-1/images/placeholder/ph-inline/patterson.jpg')
-	//- 	.chapterTitleImage__text 
-	//- 		h2 Chapter title
-
 	.container.container--article
 		.article
 			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, accumsan et pellentesque vel, gravida ut augue. Praesent quis pretium ipsum, eget efficitur neque. Sed et congue libero. Praesent dapibus posuere lobortis. Suspendisse pretium sed ex nec tristique.
@@ -412,10 +407,12 @@ block content
 
 			p Nulla id ex ac mauris varius tristique at non turpis. Mauris purus quam, ultricies fringilla congue nec, vulputate sit amet dolor. Nam vulputate tellus nec ornare tempor. Ut tincidunt tristique ante, et dignissim magna sagittis ac. Donec id luctus libero. Ut malesuada erat ullamcorper, convallis ex eget, iaculis arcu. Etiam quis tristique eros, eget viverra massa.
 
-			p.reporter-email Contact Erica L. Green at 
-				a(href="mailto:#" target="_blank") #@baltsun.com
-			p.reporter-email Contact Liz Bowie at 
-				a(href="mailto:#" target="_blank") #@baltsun.com
+
+			p.reporter-email.reporter-email--first Contact Erica L. Green at 
+				a(href="mailto:erica.green@baltsun.com" target="_blank") erica.green@baltsun.com
+				br
+				| Contact Liz Bowie at 
+				a(href="mailto:liz.bowie@baltsun.com" target="_blank") liz.bowie@baltsun.com
 
 			//series menu for mobile
 			figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--full.inline-media--has-title.inline-media--mobile(data-sr)

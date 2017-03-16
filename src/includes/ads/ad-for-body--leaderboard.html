@@ -4,7 +4,11 @@
 	<!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[2]]) -->
 	<div id='div-gpt-ad-430294160021529928-1'>
 		<script type='text/javascript'>
-			googletag.cmd.push(function() { googletag.display('div-gpt-ad-430294160021529928-1'); });
+			window.addEventListener('load',function() {
+				setTimeout(function(){
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-430294160021529928-1'); });
+				}, 5000);
+			}, false);
 		</script>
 	</div>
 	<!-- End AdSlot 2 -->
