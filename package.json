@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pug": "pug  -P -p src/index.pug < src/index.pug > dist/index.html",
+    "pug-splash": "pug  -P -p src/splash.pug < src/splash.pug > dist/splash.html",
     "sass": "node-sass -o dist/stylesheets src/sass",
     "uglify": "mkdir -p dist/scripts && uglifyjs src/scripts/*.js -b -o dist/scripts/app.js && uglifyjs src/scripts/*.js -m -c -o dist/scripts/app.min.js",
     "imagemin": "imagemin src/images/* -o dist/images -p=mozjpeg",

@@ -1,0 +1,133 @@
+include includes/_mixins.pug
+
+- var datalink = "http://data.baltimoresun.com/news/bridging-the-divide/"
+- var datalink = ""
+
+doctype html
+//if lt IE 7
+	<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+//if IE 7
+	<html class="no-js lt-ie9 lt-ie8">
+//if IE 8
+	<html class="no-js lt-ie9">
+
+html(class="no-js", lang="en")
+	head
+		//Basic page needs
+		meta(charset="utf-8")
+		title Bridging the Divide | The Baltimore Sun
+		meta(name="description", content="The struggle to move past segregated schools.")
+		meta(name="author", content="The Baltimore Sun")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+		link(rel="stylesheet", type="text/css", href=datalink + "stylesheets/style.css?3161205")
+		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Montserrat|Prata|Roboto+Condensed")
+		//- link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Lato|Montserrat|Old+Standard+TT|PT+Sans|PT+Serif|Prata|Roboto+Condensed:400,700")
+
+		//Facebook OpenGraph
+		meta(property="og:title", content="Bridging the Divide")
+		meta(property="og:url", content="http://data.baltimoresun.com/news/bridging-the-divide/")
+		meta(property="og:image", content="http://data.baltimoresun.com/news/bridging-the-divide/images/thumb-fb.png")
+		meta(property="og:site_name", content="The Baltimore Sun")
+		meta(property="og:description", content="The struggle to move past segregated schools.")
+		meta(property="fb:app_id", content="310302989040998")
+
+		//Twitter 
+		meta(name="twitter:card", content="summary")
+		meta(name="twitter:site", content="@baltimoresun")
+		meta(name="twitter:creator", content="@baltimoresun")
+		meta(name="twitter:title", content="Bridging the Divide")
+		meta(name="twitter:description", content="The struggle to move past segregated schools.")
+		meta(name="twitter:image", content="http://data.baltimoresun.com/news/bridging-the-divide/images/thumb-twitter.png")
+		meta(name="twitter:domain", content="baltimoresun.com")
+
+		//Omniture Code
+		include includes/omniture.html
+
+		//BS Ad Code
+		include includes/ads/ad-for-header.html
+
+		//- //Prefetching gallery images
+		//- - for (var i = 1; i <= 3; i++)
+		//- 	link(rel="prefetch" href="")
+
+	body
+		script(src="http://www.baltimoresun.com/thirdpartyservice?disablessor=true")
+		.hideForIntro(data-trb-thirdpartynav style='position: fixed;')
+		.progressbar.hideForIntro
+			.colors
+		.socialButtons.hideForIntro
+			i.icon-twitter
+			i.icon-facebook
+		//block for story layout
+
+
+		include includes/_data.pug
+
+		.header(style="height:700px;")
+				.header__text.animationToggle
+					.container.container--header
+						h1.header__title.animationToggle
+							span.header__title--0.animationToggle Bridging 
+							span.header__title--1.animationToggle the 
+							span.header__title--2.animationToggle Divide
+						p.header__chatter.animationToggle The struggle to move past 
+							span segregated schools
+				//.header__bg
+					video(loop="true" width="100%" height="100%" autoplay muted)
+						source(src=datalink + "videos/opener.mp4" type="video/mp4")
+
+		.container.container--article.container--first
+			.article
+				.article__byline By Liz Bowie and Erica L. Green, The Baltimore Sun
+
+		.article__chapter-title
+			.article__chapter-title__text(style="width:300px;")
+
+		p.chapterIntro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		.container.container--article
+			.article
+		
+
+				//menu for series
+				figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--has-title.inline-media--not-mobile(data-sr)
+					.inline-media__title In the series
+					include includes/_parts-menu.pug
+
+
+				//series menu for mobile
+				figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--full.inline-media--has-title.inline-media--mobile(data-sr)
+					.inline-media__title In the series
+					include includes/_parts-menu.pug
+
+
+
+			section.footer__logo
+				img(src=datalink + "images/baltimore-sun-logo-white.png" width="300")
+			section.footer__comments
+				.commentsWrapper
+					include includes/comments.html
+
+		//Javascript
+		script(src="https://use.typekit.net/nta3eyd.js")
+		script.
+			try{Typekit.load({ async: true });}catch(e){}
+			var map;
+			var markers;
+		//Load jQuery CDN, fall back to local version if necessary		
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+		script.
+			window.jQuery || document.write('<script src="' + datalink + 'scripts/jquery-1.10.2.min.js">\x3C/script>')
+		//Load the rest
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js")
+		script(src=datalink + "scripts/app.js?3161205")
+		//Configuration for scrollReveal.js
+		script.
+			var config = {
+				enter: 'right',
+				move: '50px',
+			 	scale:    { direction: 'up', power: '0' },
+			 	vFactor: 0.5
+			}
+			window.sr = new scrollReveal(config);
