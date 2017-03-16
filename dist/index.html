@@ -17,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css?3161205">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat|Prata|Roboto+Condensed">
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css">
     <!--Facebook OpenGraph-->
     <meta property="og:title" content="Bridging the Divide">
     <meta property="og:url" content="http://data.baltimoresun.com/news/bridging-the-divide/">
@@ -614,6 +615,46 @@
       <h2>Economic and racial composition of Maryland public schools</h2>
       <p>Maryland is an economically and racially diverse state. However, that diversity is not always reflected in the composition of school districts. In fact, 28% of Maryland schools are considered "racially-isolated" (consisting of more than 90% of a single race).  Similarly, 23% of Maryland schools have student populations with higher than 75% low income students.</p>
       <iframe id="map" width="100%" frameborder="0" src="https://baltsun.carto.com/builder/9615e5dc-fa0e-11e6-b116-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+      <div class="mobile-map">
+        <div id="race-img"><img src="images/mobile-map-race.png"></div>
+        <div class="hidden" id="poverty-img"><img src="images/mobile-map-poverty.png"></div>
+      </div>
+      <div class="mobileLegend">
+        <div class="cartodb-legend choropleth">
+          <div class="layer-select selected" id="race" onClick="$('#poverty').removeClass('selected');$('#race').addClass('selected');$('#race-img').removeClass('hidden');$('#poverty-img').addClass('hidden');">
+            <div class="legend-title">Minority student population</div>
+            <ul>
+              <li class="min">0%</li>
+              <li class="max">100%</li>
+              <li class="graph count_315">
+                <div class="colors">
+                  <div class="quartile" style="font-size:0.3em;background-color:#b0f2bc"></div>
+                  <div class="quartile" style="font-size:0.3em;background-color:#77e2a8"></div>
+                  <div class="quartile" style="font-size:0.3em;background-color:#4cc8a3"></div>
+                  <div class="quartile" style="font-size:0.3em;background-color:#31a6a2"></div>
+                  <div class="quartile" style="font-size:0.3em;background-color:#257d98"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="layer-select" id="poverty" onClick="$('#race').removeClass('selected');$('#poverty').addClass('selected');$('#poverty-img').removeClass('hidden');$('#race-img').addClass('hidden');">
+            <div class="legend-title" style="margin-top:10px">Free & reduced lunch students</div>
+            <ul>
+              <li class="min">0%</li>
+              <li class="max">100%</li>
+              <li class="graph count_315">
+                <div class="colors">
+                  <div class="quartile" style="font-size:0.3em;background-color:#ffffb2"></div>
+                  <div class="quartile" style="font-size:0.3em;background-color:#fecc5c"></div>
+                  <div class="quartile" style="font-size:0.3em;background-color:#fd8d3c"></div>
+                  <div class="quartile" style="font-size:0.3em;background-color:#f03b20"></div>
+                  <div class="quartile" style="font-size:0.3em;background-color:#bd0026"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <p class="source">Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project, College of Education, University of Maryland.</p>
       <p class="linkOut"> <a href="http://data.baltimoresun.com/news/bridging-the-divide/maryland-schools-map/">For a fullscreen, interactive version, click here.</a></p>
     </figure>

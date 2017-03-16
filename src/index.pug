@@ -143,6 +143,39 @@ block content
 		h2 Economic and racial composition of Maryland public schools
 		p Maryland is an economically and racially diverse state. However, that diversity is not always reflected in the composition of school districts. In fact, 28% of Maryland schools are considered "racially-isolated" (consisting of more than 90% of a single race).  Similarly, 23% of Maryland schools have student populations with higher than 75% low income students.
 		iframe(id="map" width="100%" frameborder="0" src="https://baltsun.carto.com/builder/9615e5dc-fa0e-11e6-b116-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen)
+		.mobile-map
+			#race-img
+				img(src=datalink + "images/mobile-map-race.png")
+			#poverty-img.hidden
+				img(src=datalink + "images/mobile-map-poverty.png")
+		.mobileLegend
+			.cartodb-legend.choropleth
+				.layer-select#race.selected(onClick="$('#poverty').removeClass('selected');$('#race').addClass('selected');$('#race-img').removeClass('hidden');$('#poverty-img').addClass('hidden');")
+					.legend-title Minority student population
+					ul
+						li.min 0%
+						li.max 100%
+						li.graph.count_315
+							.colors
+								.quartile(style="font-size:0.3em;background-color:#b0f2bc;")
+								.quartile(style="font-size:0.3em;background-color:#77e2a8;")
+								.quartile(style="font-size:0.3em;background-color:#4cc8a3;")
+								.quartile(style="font-size:0.3em;background-color:#31a6a2;")
+								.quartile(style="font-size:0.3em;background-color:#257d98;")
+						
+				.layer-select#poverty(onClick="$('#race').removeClass('selected');$('#poverty').addClass('selected');$('#poverty-img').removeClass('hidden');$('#race-img').addClass('hidden');")
+					.legend-title(style="margin-top:10px") Free & reduced lunch students
+					ul
+						li.min 0%
+						li.max 100%
+						li.graph.count_315
+							.colors
+								.quartile(style="font-size:0.3em;background-color:#ffffb2;")
+								.quartile(style="font-size:0.3em;background-color:#fecc5c;")
+								.quartile(style="font-size:0.3em;background-color:#fd8d3c;")
+								.quartile(style="font-size:0.3em;background-color:#f03b20;")
+								.quartile(style="font-size:0.3em;background-color:#bd0026;")
+
 		p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project, College of Education, University of Maryland.
 		p.linkOut 
 			a(href="http://data.baltimoresun.com/news/bridging-the-divide/maryland-schools-map/") For a fullscreen, interactive version, click here.

@@ -398,6 +398,54 @@
 				color: $green
 		iframe
 			height: 70vh
+
+		.mobile-map
+			display: none
+
+			img 
+				width: 100%
+				height: auto
+				display: block
+
+			.hidden
+				display: none
+
+		.mobileLegend
+			position: relative
+			height: 10px
+			top: 0
+			display: none
+
+			div.cartodb-legend.choropleth, div.cartodb-legend
+				padding: 3px
+
+			div.cartodb-legend.choropleth li.graph div, div.cartodb-legend.choropleth li.graph
+				height: 5px
+			div.cartodb-legend
+				right: inherit
+				width: 50%
+			.selected
+				background-color: #F5F5F3
+			.layer-select
+				cursor: pointer
+				padding: 2px
+
+			@media (max-width: 550px)
+				div.cartodb-legend
+					width: 100%
+
+		@media (max-width: 700px)
+			#map 
+				display: none
+			.mobile-map
+				display: block
+			.mobileLegend
+				display: block
+		@media (max-width: 550px)
+			.mobileLegend
+				height: 130px
+				top: 30px
+
 	&--chart-pkg
 		text-align: center
 		border-top: 3px solid
