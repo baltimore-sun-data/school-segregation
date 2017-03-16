@@ -298,7 +298,7 @@ function load_exposure_data(race) {
 	if (race["race-dropdown"] == "All") {
 		exposureText = "the racial makeup of the average school";
 	} else {
-		exposureText = "the racial makeup of the average school";
+		exposureText = "the racial makeup of the school you are likely to attend";
 	}
 
 	//This formula calculates change in area

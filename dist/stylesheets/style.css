@@ -1620,6 +1620,9 @@ body {
   .exposure .small {
     padding-top: 10px !important;
     padding-bottom: 10px !important; }
+  .exposure .subtext {
+    margin-top: 20px;
+    font-size: .6em; }
   .exposure .grey {
     fill: #B7B7B7; }
   .exposure .red {
