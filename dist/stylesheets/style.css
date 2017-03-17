@@ -1284,14 +1284,14 @@ body {
   .media-package .inline-media--pic__open-gallery {
     clear: both; }
   .media-package__img--left {
-    width: 35%;
+    width: 36%;
     float: left; }
     .media-package__img--left img {
       width: 100%; }
       .media-package__img--left img:nth-child(2) {
         margin-top: 1em; }
   .media-package__img--right {
-    width: 63%;
+    width: 62%;
     float: right; }
     .media-package__img--right img {
       width: 100%; }
@@ -1304,6 +1304,10 @@ body {
     width: 60%; }
     .media-package__caption span {
       font-weight: bold; }
+    @media (max-width: 768px) {
+      .media-package__caption {
+        clear: both;
+        width: 100%; } }
     @media (max-width: 500px) {
       .media-package__caption {
         width: auto;

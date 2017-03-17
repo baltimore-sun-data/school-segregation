@@ -331,18 +331,19 @@
 
 	.inline-media--pic__open-gallery
 		clear: both
+		
 	&__img
 		//width: 49%
 		// display: inline-block
 		&--left
-			width: 35%		
+			width: 36%		
 			float: left
 			img
 				width: 100%
 				&:nth-child(2)
 					margin-top: 1em
 		&--right
-			width: 63%
+			width: 62%
 			float: right
 			img
 				width: 100%
@@ -357,6 +358,9 @@
 		width: 60%
 		span
 			font-weight: bold
+		@media (max-width: $header-bp3)
+			clear: both
+			width: 100%
 		@media (max-width: 500px)
 			width: auto
 			float: none
