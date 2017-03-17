@@ -48,11 +48,10 @@ Boxes
 
 Pullquotes
 
--used
 	You are dividing races. You’re dividing everyone. That is not what we are here for ... I am almost ashamed, but it had to be said. Do the right thing. It is about our children.
 	Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School
 
-
+-used
 	It was like, they were fighting to keep what they got, and we were fighting to keep what we got, instead of us fighting to figure out how to make what we had better.
 	Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School
 
@@ -89,7 +88,7 @@ Pullquotes
 	It was every man for himself.
 	Donna Knutson, a black parent from Hillcrest.
 
-
+-used
 	No, it’s because we’re black.
 	Fifth-grade African-American boy at Johnnycake Elementary.
 
