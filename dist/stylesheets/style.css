@@ -890,10 +890,12 @@ body {
     font-size: 20px;
     margin-top: 5px; }
   .parts-menu__p {
-    font-size: 1em;
-    color: #999 !important;
+    font-size: .9em;
+    line-height: 1.4em;
+    color: #000 !important;
     text-align: left;
-    padding-top: 10px; }
+    padding-top: 10px;
+    font-family: georgia, sans-serif; }
     @media (max-width: 500px) {
       .parts-menu__p {
         display: none; } }
