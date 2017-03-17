@@ -37,7 +37,6 @@ Photos
 
 
 
-
 Boxes
 
 	About - used
@@ -47,9 +46,9 @@ Boxes
 
 
 
-
 Pullquotes
 
+-used
 	You are dividing races. You’re dividing everyone. That is not what we are here for ... I am almost ashamed, but it had to be said. Do the right thing. It is about our children.
 	Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School
 
@@ -61,15 +60,15 @@ Pullquotes
 	They are going to ruin Catonsville. Who gets to benefit from the new Catonsville Elementary School and Westowne Elementary?....Unbelievable.
 	Comment from Catonsville parent on Facebook page
 
-
+-used
 	I felt as though we didn’t live on that side of Catonsville, so they didn’t want us on that side of Catonsville.
 	Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School
 
-
+-used
 	It was easier for me than it would have been if I was black. I didn’t have to worry about being the angry, black woman. Instead, I was just the naggy white woman. And that’s different.
 	Cara Detwiler, a white teacher at Johnnycake Elementary
 
-
+-used
 	For all the same reasons people are afraid to go into neighborhoods were the same reasons people didn’t want Johnnycake. And it was very black and white.
 	Johnnycake Principal Bre-Anne Fortkamp
 
@@ -78,9 +77,10 @@ Pullquotes
 	I would put my two kids up against anybody on that side of 40. 
 	Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School
 
-
+-used
 	Honestly, it is hard to hold it against parents. They are looking at what is going to happen to my child, and not the greater good.
 	Erica Mah, a Hillcrest parent
+
 
 	There is an overlap between race, poverty and childhood trauma. They have learning issues that lead to behavioral struggles, behavioral needs. We don’t want to talk about these things. They are too hard.
 	Justine Stull, PTA president of Westowne Elementary
@@ -89,8 +89,10 @@ Pullquotes
 	It was every man for himself.
 	Donna Knutson, a black parent from Hillcrest.
 
+
 	No, it’s because we’re black.
 	Fifth-grade African-American boy at Johnnycake Elementary.
+
 
 	I was not prepared for that. Maybe, shame on me. As a parent, I understand that they felt they had their child’s best interest. I just didn’t think it would get so ugly. We decided we’d rather stay overcrowded - and have them be loved.
 	Johnnycake Principal Bre-Anne Fortkamp
