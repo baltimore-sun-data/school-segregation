@@ -1,15 +1,16 @@
+-side photo
 images/photos/resized/btd-hillcrest-1.jpg
-
+UNUSED
 images/photos/resized/btd-hillcrest-2.jpg
-
+UNUSED
 images/photos/resized/btd-hillcrest-3.jpg
 
 
-
+-side photo
 images/photos/resized/btd-westowne-1.jpg
-
+UNUSED GOOD SHOT
 images/photos/resized/btd-westowne-2.jpg
-
+UNUSED GOOD SHOT
 images/photos/resized/btd-westowne-3.jpg
 
 
@@ -20,19 +21,23 @@ images/photos/resized/btd-johnnycake-1.jpg
 -used photo package
 images/photos/resized/btd-johnnycake-2.jpg
 
+-side photo
 images/photos/resized/btd-johnnycake-sanford.jpg
 -feature vid cover
 images/photos/resized/btd-johnnycake-sanford-2.jpg
 
-
-
+-side photo, killable
 images/photos/resized/btd-cara-detwiler.jpg
-
+-full photo
 images/photos/resized/btd-cara-detwiler-2.jpg
 
+-side photo
 images/photos/resized/btd-dallas-dance.jpg
 
 
+About - used
+Support this - used
+Join the convo - used
 
 
 

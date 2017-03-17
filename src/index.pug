@@ -369,13 +369,12 @@ block content
 
 	.container.container--article
 		.article
-			
-			p At the committee’s October meeting, the 5th-grade teacher took the microphone.
 
 			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--big(data-sr="enter bottom")
 				img(src=datalink + "images/photos/resized/btd-cara-detwiler.jpg")
 				figcaption.inline-media--pic__caption Caption goes here
-
+			
+			p At the committee’s October meeting, the 5th-grade teacher took the microphone.
 
 			p “No one is talking about the fact that there is no diversity change north,” she said, adding that the school would remain 94 percent minority.
 
@@ -477,6 +476,11 @@ block content
 
 			p Parents said they feared their children’s education would suffer if students weren’t being pushed to perform at the highest levels.
 
+			figure.inline-media.inline-media--borderLeft.inline-media--big.inline-media--about
+				h2 Support our journalism
+				p Become a Baltimore Sun subscriber today to support stories like this one. 
+					a(href="http://ad.baltimoresun.com/land-article/") Start getting full access to our signature journalism for just $4.99 for 3 months.
+
 			p The parents’ worries were not baseless. The highest-performing schools are usually those with the wealthiest families. The percentage of Hillcrest fifth graders who passed state standardized tests in 2016 in English and math was double that at Johnnycake.
 
 			p Other parents worried the poor, black children might carry their struggles with them into the schools.
@@ -491,9 +495,17 @@ block content
 
 			p “We don’t want to talk about these things,” Stull said. “They are too hard.”
 
-			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--big(data-sr="enter bottom")
-				img(src=datalink + "images/photos/resized/btd-westowne-1.jpg")
-				figcaption.inline-media--pic__caption Caption goes here
+	//multiphoto package - photos enter from left and right
+	figure.media-package
+		.media-package__img--left
+			img(src=datalink + "images/photos/resized/btd-westowne-1.jpg" data-sr="enter bottom")
+			img(src=datalink + "images/photos/resized/btd-westowne-3.jpg" data-sr="enter bottom")
+		.media-package__img--right
+			img(src=datalink + "images/photos/resized/btd-westowne-2.jpg" data-sr="enter bottom")
+		.media-package__caption Caption for multiphoto package
+
+	.container.container--article
+		.article
 
 			p Race wasn’t the only issue. Class divisions emerged as well. Kitchel, who had long advocated for solutions to overcrowding at Hillcrest, had collaborated with parents from the other Catonsville-area schools — Westchester, Westowne and Catonsville — for years. But now they were fighting about how many students Hillcrest would unload to the others.
 
