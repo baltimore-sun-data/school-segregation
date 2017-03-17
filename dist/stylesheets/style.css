@@ -1280,17 +1280,22 @@ body {
     text-align: left;
     font-family: "franklin-gothic-urw", sans-serif;
     color: #888; }
-  .media-package__img {
+  .media-package__img--left {
+    width: 35%;
     float: left; }
-    .media-package__img--left {
-      width: 35%;
-      margin-right: 2%; }
-    .media-package__img--right {
-      width: 63%; }
-    @media (max-width: 500px) {
-      .media-package__img--left, .media-package__img--right {
-        width: 100%;
-        margin: 0 0 10px 0; } }
+    .media-package__img--left img {
+      width: 100%; }
+      .media-package__img--left img:nth-child(2) {
+        margin-top: 1em; }
+  .media-package__img--right {
+    width: 63%;
+    float: right; }
+    .media-package__img--right img {
+      width: 100%; }
+  @media (max-width: 500px) {
+    .media-package__img--left, .media-package__img--right {
+      width: 100%;
+      margin: 0 0 10px 0; } }
   .media-package__caption {
     float: left;
     width: 60%; }

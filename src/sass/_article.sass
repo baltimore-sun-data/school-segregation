@@ -310,6 +310,7 @@
 		text-align: center
 		h2
 			text-transform: uppercase
+
 .media-package
 	+clearfix
 	width: 100%
@@ -319,20 +320,29 @@
 	background-color: white	
 	box-shadow: 0 0 18px rgba($dkBlue,0.1)
 	border: 0
+	
 	.source
 		max-width: none
 		margin: 1em auto 0 auto
 		text-align: left
 		font-family: $accentFont-0
 		color: #888
+
 	&__img
 		//width: 49%
-		float: left
+		// display: inline-block
 		&--left
-			width: 35%
-			margin-right: 2%
+			width: 35%		
+			float: left
+			img
+				width: 100%
+				&:nth-child(2)
+					margin-top: 1em
 		&--right
 			width: 63%
+			float: right
+			img
+				width: 100%
 		@media (max-width: 500px)
 			&--left, &--right
 				width: 100%

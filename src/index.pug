@@ -45,6 +45,11 @@ block content
 
 	.container.container--article.container--first
 		.article
+
+			figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--small(data-sr)
+				.inline-media--pullquote__text &ldquo;It was like, they were fighting to keep what they got, and we were fighting to keep what we got, instead of us fighting to figure out how to make what we had better.&rdquo;
+				.inline-media--pullquote__src Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School
+
 			p He was hurt, but he didn’t yell. He admonished them in almost a gentle tone.
 
 			p “You are dividing races,” he said. “You’re dividing everyone. That is not what we are here for.
@@ -53,15 +58,47 @@ block content
 
 			p People of every race and class live in the southwest county. But many have moved into neighborhoods — and sent their children to schools — with people who look like them.
 
-			figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--small(data-sr)
-				.inline-media--pullquote__text &ldquo;It was like, they were fighting to keep what they got, and we were fighting to keep what we got, instead of us fighting to figure out how to make what we had better.&rdquo;
-				.inline-media--pullquote__src Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School
-
 			p To the south of Route 40 are the predominantly white communities that feed Catonsville, Hillcrest, Westchester and Westowne elementary schools. To the north are the largely black communities that feed Edmondson Heights and Johnnycake elementaries.
 
 			p At the start of the redistricting process, county schools Superintendent Dallas Dance looked at the map and saw a rare opportunity: to better integrate students of different races and classes.
 
+			figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+				table.statTable(class="statTable--mix")
+					caption Percentage of schools that are >90% white
+					tr
+						th.blank
+						th 1990
+						th.mobile 2000
+						th.mobile 2010
+						th.shade 2014
+					each area in compRacialWhite
+						tr
+							td #{area.area}
+							td #{area.y1990}%
+							td.mobile #{area.y2000}%
+							td.mobile #{area.y2010}%
+							td.shade #{area.y2014}%
+				p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project.
+
 			p “When you have a diverse school population, all students thrive,” Dance said, adding that not just low-income, students of color benefit, but also affluent students. “When you have integrated schools, students have the opportunity to push each other.”
+
+			figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+				table.statTable(class="statTable--mix")
+					caption Percentage of schools that are 50-90% racial minority
+					tr
+						th.blank
+						th 1990
+						th.mobile 2000
+						th.mobile 2010
+						th.shade 2014
+					each area in compRacialMix
+						tr
+							td #{area.area}
+							td #{area.y1990}%
+							td.mobile #{area.y2000}%
+							td.mobile #{area.y2010}%
+								td.shade #{area.y2014}%
+				p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project.
 
 			p Dance and some other educators are now looking back to the successes that followed the Supreme Court’s 1954 order that forced schools to desegregate. In the 1970s and 1980s, when schools were the most integrated they would be, black students made stunning gains in national tests in reading and math. In some subjects, they cut the so-called achievement gap with white students in half — and white achievement did not suffer.
 
@@ -69,9 +106,24 @@ block content
 
 			p Schools have gradually resegregated, and progress in closing the achievement gap has mostly stalled.
 
-			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--big(data-sr="enter bottom")
-				img(src=datalink + "images/photos/resized/btd-johnnycake-1.jpg")
-				figcaption.inline-media--pic__caption Caption goes here
+			figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+				table.statTable(class="statTable--mix")
+					caption Percentage of schools that are >90% racial minority
+					tr
+						th.blank
+						th 1990
+						th.mobile 2000
+						th.mobile 2010
+						th.shade 2014
+					each area in compRacialMin
+						tr
+							td #{area.area}
+							td #{area.y1990}%
+							td.mobile #{area.y2000}%
+							td.mobile #{area.y2010}%
+							td.shade #{area.y2014}%
+				p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project.
+
 
 			p Efforts to shrink it — by setting higher standards, imposing more testing, holding teachers more accountable — have mostly failed.
 
@@ -136,11 +188,17 @@ block content
 
 			p The school had 105 more students than it had room for. Children learned in six trailers lined up next to the main building. Special education students met in a former supply room. Students attended math class in the cafeteria.
 
-			//full-width link to photo gallery
-			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--full(data-sr="enter bottom")
-				img(src=datalink + "images/photos/resized/btd-johnnycake-cafeteria.jpg")
-				figcaption.inline-media--pic__caption Caption goes here
-				btn.inline-media--pic__open-gallery OPEN GALLERY
+	//multiphoto package - photos enter from left and right
+	figure.media-package
+		.media-package__img--left
+			img(src=datalink + "images/photos/resized/btd-johnnycake-2.jpg" data-sr="enter bottom")
+			img(src=datalink + "images/photos/resized/btd-johnnycake-1.jpg" data-sr="enter bottom")
+		.media-package__img--right
+			img(src=datalink + "images/photos/resized/btd-johnnycake-cafeteria.jpg" data-sr="enter bottom")
+		.media-package__caption Caption for multiphoto package
+
+	.container.container--article
+		.article
 
 			p Sanford believed the portable classrooms were a safety risk and an eyesore in a community where he and others paid property taxes for their well-maintained, single-family homes.
 
@@ -292,6 +350,10 @@ block content
 
 			p Still, segregation persists. In 1990, only one in 10 county schools had a student body that was more than half minority. The proportion has tripled to about one in three today, according to the Maryland Equity Project analysis.
 
+			figure.inline-media.inline-media--borderTop.inline-media--full.inline-media--interactive#exposureGraphic
+				include includes/exposure/index.html
+				p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project, College of Education, University of Maryland.
+
 			p The typical white student in Baltimore County attends a school that is mostly white. The typical black student attends a school that is mostly black.
 
 			p Students from low-income familes are similarly segregated from students from wealthy families.
@@ -373,6 +435,10 @@ block content
 	.container.container--article
 		.article
 
+			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--big(data-sr="enter bottom")
+				img(src=datalink + "images/photos/resized/btd-hillcrest-1.jpg")
+				figcaption.inline-media--pic__caption Caption goes here
+
 			p One night they went to Matthew’s 1600, a local restaurant, to try to hammer out a compromise among themselves over their shared boundary lines.
 
 			p When the consultant found out, he shut them down. He said he didn’t want them to work outside of the committee.
@@ -385,9 +451,27 @@ block content
 
 			p They offered to embrace some of Johnnycake’s students, as long as the balance of their schools did not shift so that the majority were students of color or low income. And some research suggests that once a school has more than 40 percent of its students living in poverty, achievement starts to drop off.
 
-			figure.inline-media.inline-media--borderTop.inline-media--pic.inline-media--big(data-sr="enter bottom")
-				img(src=datalink + "images/photos/resized/btd-hillcrest-1.jpg")
-				figcaption.inline-media--pic__caption Caption goes here
+			figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--table(data-sr)
+				table.statTable(class="statTable--mix")
+					caption Percentage of school of schools with >75% low-income students
+					tr
+						th.blank
+						th 1990
+						th.mobile 2000
+						th.mobile 2010
+						th.shade 2014
+					each area in compPov
+						tr
+							td #{area.name}
+							each stat in area.dataObj
+								if stat.year == 2014
+									td.shade #{stat.p100}
+								else if stat.year == 1990
+									td #{stat.p100}
+								else
+									td.mobile #{stat.p100}
+				p.source Source: U.S. Department of Education, National Center for Education Statistics, Common Core of Data. Data analysis by the Maryland Equity Project.
+
 
 			p “Honestly, it is hard to hold it against parents,” said Erica Mah, an Asian-American Hillcrest parent and teacher. “They are looking at what is going to happen to my child, and not the greater good.”
 
@@ -436,7 +520,7 @@ block content
 		.article
 
 			p Given the large number of students that would have been affected, it was clearly just a theoretical exercise. It was quickly voted down.
-
+			
 			p But teacher Detwiler, upset that they’d never discussed diversity, didn’t let the moment go.
 
 			p “It is a real disappointment that we weren’t brave enough to have the conversation about this earlier,” she told fellow committee members. “Wouldn’t it have been important to have gone to public discussion, so that people couldn’t hide behind property values as the reason why they don’t want really integrate their schools?”

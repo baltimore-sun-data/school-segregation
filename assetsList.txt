@@ -13,11 +13,11 @@ images/photos/resized/btd-westowne-2.jpg
 images/photos/resized/btd-westowne-3.jpg
 
 
--used
+-used photo package
 images/photos/resized/btd-johnnycake-cafeteria.jpg
--used
+-used photo package
 images/photos/resized/btd-johnnycake-1.jpg
-
+-used photo package
 images/photos/resized/btd-johnnycake-2.jpg
 
 images/photos/resized/btd-johnnycake-sanford.jpg
