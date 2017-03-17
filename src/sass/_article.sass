@@ -20,7 +20,8 @@
 	a
 		color: $blue
 		text-decoration: none
-		&:hover
+		&:hover, &:active
+			text-decoration: none
 			color: $green
 	&__byline
 		font:
@@ -328,6 +329,8 @@
 		font-family: $accentFont-0
 		color: #888
 
+	.inline-media--pic__open-gallery
+		clear: both
 	&__img
 		//width: 49%
 		// display: inline-block
@@ -352,6 +355,8 @@
 		@extend .inline-media--pic__caption
 		float: left
 		width: 60%
+		span
+			font-weight: bold
 		@media (max-width: 500px)
 			width: auto
 			float: none
@@ -469,11 +474,13 @@
 				max-height: 400px
 				float: left
 				margin-right: 1%
+				margin-bottom: 1em
 			.chart-right
 				width: 49%
 				max-height: 400px
 				float: right
 				margin-left: 1%
+				margin-bottom: 1em
 			@media (max-width: 700px)
 				.chart-left, .chart-right
 					width: 100%

@@ -1,84 +1,100 @@
--side photo
-images/photos/resized/btd-hillcrest-1.jpg
-UNUSED
-images/photos/resized/btd-hillcrest-2.jpg
-UNUSED
-images/photos/resized/btd-hillcrest-3.jpg
+Photos
 
+	-side photo
+		images/photos/resized/btd-hillcrest-1.jpg
+	UNUSED
+		images/photos/resized/btd-hillcrest-2.jpg
+	UNUSED
+		images/photos/resized/btd-hillcrest-3.jpg
 
--side photo
-images/photos/resized/btd-westowne-1.jpg
-UNUSED GOOD SHOT
-images/photos/resized/btd-westowne-2.jpg
-UNUSED GOOD SHOT
-images/photos/resized/btd-westowne-3.jpg
+	-used photo package
+		images/photos/resized/btd-westowne-1.jpg
+	-used photo package
+		images/photos/resized/btd-westowne-2.jpg
+	-used photo package
+		images/photos/resized/btd-westowne-3.jpg
 
+	-used photo package
+		images/photos/resized/btd-johnnycake-cafeteria.jpg
+	-used photo package
+		images/photos/resized/btd-johnnycake-1.jpg
+	-used photo package
+		images/photos/resized/btd-johnnycake-2.jpg
 
--used photo package
-images/photos/resized/btd-johnnycake-cafeteria.jpg
--used photo package
-images/photos/resized/btd-johnnycake-1.jpg
--used photo package
-images/photos/resized/btd-johnnycake-2.jpg
+	-side photo
+		images/photos/resized/btd-johnnycake-sanford.jpg
+	-feature vid cover
+		images/photos/resized/btd-johnnycake-sanford-2.jpg
 
--side photo
-images/photos/resized/btd-johnnycake-sanford.jpg
--feature vid cover
-images/photos/resized/btd-johnnycake-sanford-2.jpg
+	-side photo, killable
+		images/photos/resized/btd-cara-detwiler.jpg
+	-full photo
+		images/photos/resized/btd-cara-detwiler-2.jpg
 
--side photo, killable
-images/photos/resized/btd-cara-detwiler.jpg
--full photo
-images/photos/resized/btd-cara-detwiler-2.jpg
-
--side photo
-images/photos/resized/btd-dallas-dance.jpg
-
-
-About - used
-Support this - used
-Join the convo - used
+	-side photo
+		images/photos/resized/btd-dallas-dance.jpg
 
 
 
-“You are dividing races. You’re dividing everyone. That is not what we are here for...I am almost ashamed, but it had to be said. Do the right thing. It is about our children,"said Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School.
 
 
-“It was like, they were fighting to keep what they got, and we were fighting to keep what we got, instead of us fighting to figure out how to make what we had better,” Sanford said.
+Boxes
+
+	About - used
+	Support this - used
+	Join the convo - used
 
 
-“They are going to ruin Catonsville. Who gets to benefit from the new Catonsville Elementary School and Westowne Elementary?....Unbelievable.” Comment from Catonsville parent on Facebook page.
 
 
-“I felt as though we didn’t live on that side of Catonsville,” Jeff Sanford said, “so they didn’t want us on that side of Catonsville.”
+
+Pullquotes
+
+	You are dividing races. You’re dividing everyone. That is not what we are here for ... I am almost ashamed, but it had to be said. Do the right thing. It is about our children.
+	Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School
 
 
-“It was easier for me than it would have been if I was black,” said Cara Detwiler, a white teacher at Johnnycake Elementary. “I didn’t have to worry about being the angry, black woman. Instead, I was just the naggy white woman. And that’s different.
+	It was like, they were fighting to keep what they got, and we were fighting to keep what we got, instead of us fighting to figure out how to make what we had better.
+	Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School
 
 
-“For all the same reasons people are afraid to go into neighborhoods were the same reasons people didn’t want Johnnycake. And it was very black and white," said Johnnycake Principal 
-Bre-Anne Fortkamp.
+	They are going to ruin Catonsville. Who gets to benefit from the new Catonsville Elementary School and Westowne Elementary?....Unbelievable.
+	Comment from Catonsville parent on Facebook page
 
 
-“All they saw was a black man whose kids go to Johnnycake,” Sanford said. “They thought, ‘You’re black, I’m white, I can do things you can’t do.’ Maybe -- but your kids can’t do things my kids can.
-I would put my two kids up against anybody on that side of 40.” 
+	I felt as though we didn’t live on that side of Catonsville, so they didn’t want us on that side of Catonsville.
+	Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School
 
 
-“Honestly, it is hard to hold it against parents. They are looking at what is going to happen to my child, and not the greater good,” said Erica Mah, a Hillcrest parent. IS SHE WHITE OR BLACK?
+	It was easier for me than it would have been if I was black. I didn’t have to worry about being the angry, black woman. Instead, I was just the naggy white woman. And that’s different.
+	Cara Detwiler, a white teacher at Johnnycake Elementary
 
 
-“There is an overlap between race, poverty and childhood trauma. They have learning issues that lead to behavioral struggles, behavioral needs,” said Justine Stull, who is white and PTA president of Westowne Elementary. “We don’t want to talk about these things. They are too hard.”
+	For all the same reasons people are afraid to go into neighborhoods were the same reasons people didn’t want Johnnycake. And it was very black and white.
+	Johnnycake Principal Bre-Anne Fortkamp
 
 
-“It was every man for himself," Donna Knutson, a black parent from Hillcrest.
+	All they saw was a black man whose kids go to Johnnycake. They thought, ‘You’re black, I’m white, I can do things you can’t do.’ Maybe -- but your kids can’t do things my kids can.
+	I would put my two kids up against anybody on that side of 40. 
+	Jeff Sanford, an African-American father of twin boys at Johnnycake Elementary School
 
 
-“No, it’s because we’re black," said a fifth-grade African-American boy at Johnnycake Elementary.
+	Honestly, it is hard to hold it against parents. They are looking at what is going to happen to my child, and not the greater good.
+	Erica Mah, a Hillcrest parent
+
+	There is an overlap between race, poverty and childhood trauma. They have learning issues that lead to behavioral struggles, behavioral needs. We don’t want to talk about these things. They are too hard.
+	Justine Stull, PTA president of Westowne Elementary
 
 
-“I was not prepared for that. Maybe, shame on me. As a parent, I understand that they felt they had their child’s best interest. I just didn’t think it would get so ugly,” said Johnnycake principal Bre-Anne Fortkamp, who is white.
+	It was every man for himself.
+	Donna Knutson, a black parent from Hillcrest.
+
+	No, it’s because we’re black.
+	Fifth-grade African-American boy at Johnnycake Elementary.
+
+	I was not prepared for that. Maybe, shame on me. As a parent, I understand that they felt they had their child’s best interest. I just didn’t think it would get so ugly. We decided we’d rather stay overcrowded - and have them be loved.
+	Johnnycake Principal Bre-Anne Fortkamp
 
 
-"We decided we’d rather stay overcrowded - and have them be loved.”
 
 
