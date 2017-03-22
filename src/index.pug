@@ -690,22 +690,20 @@ block content
 
 			br
 
-		.article__chapter-title__text Coming soon:
+		
+			//menu for series
+			figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--has-title.inline-media--not-mobile(data-sr style="box-shadow:none;")
+				.inline-media__title(style="font-size:2em;") More In the series
+				br
+				br
+				include includes/_parts-menu-bottom.pug
 
-		.container.container--article
-		.article
 
-			span <b>Part Two:</b> 
-			| When Henderson-Hopkins school opened three years ago, city parents were drawn to the promise of strong academics and a student body that would include the children of Hopkins' staff. Today, the school is struggling - and starting over. 
+			//series menu for mobile
+			figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--full.inline-media--has-title.inline-media--mobile(data-sr)
+				.inline-media__title More In the series
+				include includes/_parts-menu-bottom.pug
 
-			p
-			span <b>Part Three:</b> 
-			| Black and white students are more likely to sit next to each other in Howard County schools than almost anywhere else in Maryland. But within those integrated schools, when it comes to advanced classes, school officials have found a de facto system of segregation.
- 
-
-			p
-			span <b>Part Four:</b> 
-			| As a way to shrink the achievement gap, some education leaders in Maryland are trying to find a path to integrate schools by race and class. They're looking to models like Hartford, with its regional magnet schools. 
 
 
 			p.reporter-email.reporter-email--first Contact Liz Bowie at 
@@ -716,12 +714,12 @@ block content
 
 
 			//menu for series
-			// figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--has-title.inline-media--not-mobile(data-sr)
+			//figure.inline-media.inline-media--borderLeft.inline-media--full.inline-media--has-title.inline-media--not-mobile(data-sr)
 			//	.inline-media__title More in the series
 			//	include includes/_parts-menu.pug
 
 
 			//series menu for mobile
-			// figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--full.inline-media--has-title.inline-media--mobile(data-sr)
+			//figure.inline-media.inline-media--borderLeft.inline-media--pullquote.inline-media--full.inline-media--has-title.inline-media--mobile(data-sr)
 			//	.inline-media__title More in the series
 			//	include includes/_parts-menu.pug
